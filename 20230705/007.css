@@ -1,0 +1,33 @@
+/* 아이디 선택자 */
+#title {
+  text-decoration: underline;
+}
+/* 클래스 선택자 */
+.my {
+  color: slateblue;
+}
+/* 형제 인접 선택자 */
+.my + p {
+  color: aqua;
+}
+/* 자손 선택자 */
+/* .sect2 strong {
+  background-color: yellow;
+} 
+.sect2 * {
+  border: 2px solid red;
+}
+*/
+
+/* 자식 선택자 */
+.sect2 > strong {
+  background-color: yellow;
+}
+.sect2 > * {
+  border: 2px solid red;
+}
+
+.my + p,
+.sect3 p {
+  background-color: beige;
+}
