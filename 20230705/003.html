@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* 자손(하위) 선택자 */
+    /* section p {
+      border: 3px solid skyblue;
+    }
+
+    .sect .text {
+      border: 3px solid skyblue;
+    } */
+
+    /* 자식 선택자(직계자손) */
+    /* section>p {
+      background: gold;
+    } */
+
+    /* 일반 형제 선택자 */
+    /* section~p {
+      border: 3px solid seagreen;
+    } */
+
+    /* 인접 형제 선택자 */
+    /* section+p {
+      background: pink;
+    } */
+    section {
+      color: red;
+      border: 2px solid salmon;
+      width: 100px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: inherit;
+      border: inherit;
+      color: initial;
+    }
+  </style>
+</head>
+
+<body>
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+
+  <section class="sect">
+    <div>
+      <p class="text">넷</p>
+    </div>
+    <p class="text">다섯</p>
+    <p class="text">여섯</p>
+    <button type="button">버튼</button>
+  </section>
+
+  <p>일곱</p>
+  <p>여덟</p>
+  <p>아홉</p>
+
+
+
+</body>
+
+</html>
