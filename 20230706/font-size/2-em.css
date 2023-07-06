@@ -1,0 +1,22 @@
+.em {
+  font-size: 2.5em;
+  /* 40px / 16px(부모 body) = 2.5 */
+}
+.em .btn1 {
+  font-size: 0.5em;
+  /* 20px / 40px(부모 .em) = 0.5 */
+}
+.em .btn2 {
+  font-size: 1em;
+  /* 40px / 40px(부모 .em) = 1 */
+}
+.em .btn3 {
+  font-size: 2em;
+  /* 80px / 40px(부모 .em) = 2 */
+}
+.em .btn1,
+.em .btn2,
+.em .btn3 {
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+}

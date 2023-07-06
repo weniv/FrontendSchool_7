@@ -1,0 +1,22 @@
+/* 폰트 사이즈 */
+html {
+  font-size: 10px;
+}
+.rem-em {
+  font-size: 4rem;
+}
+.rem-em .btn1 {
+  font-size: 2rem;
+}
+.rem-em .btn2 {
+  font-size: 4rem;
+}
+.rem-em .btn3 {
+  font-size: 8rem;
+}
+.rem-em .btn1,
+.rem-em .btn2,
+.rem-em .btn3 {
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+}

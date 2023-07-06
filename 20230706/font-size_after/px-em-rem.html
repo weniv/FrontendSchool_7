@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      font-size: 16px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 4px 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eee;
+    }
+  </style>
+  <link rel="stylesheet" href="1-px.css">
+  <link rel="stylesheet" href="2-em.css">
+  <link rel="stylesheet" href="3-rem.css">
+  <link rel="stylesheet" href="4-rem-em.css">
+</head>
+
+<body>
+
+  <p>
+    기본 텍스트 사이즈 40px => 20px 수정
+  </p>
+  <table>
+    <tr>
+      <th rowspan="2">구분</th>
+      <th colspan="3">이전</th>
+      <th colspan="3">수정 요청</th>
+    </tr>
+    <tr>
+      <th>btn1</th>
+      <th>btn2</th>
+      <th>btn3</th>
+      <th>btn1</th>
+      <th>btn2</th>
+      <th>btn3</th>
+    </tr>
+    <tr>
+      <th>font-size</th>
+      <td>20px</td>
+      <td>40px</td>
+      <td>80px</td>
+
+      <td>16px</td>
+      <td>32px</td>
+      <td>48px</td>
+    </tr>
+    <tr>
+      <th>padding</th>
+      <td>5px 20px</td>
+      <td>10px 40px</td>
+      <td>20px 80px</td>
+
+      <td>4px 16px</td>
+      <td>8px 32px</td>
+      <td>12px 48px</td>
+    </tr>
+    <tr>
+      <th>border-radius</th>
+      <td>5px</td>
+      <td>10px</td>
+      <td>20px</td>
+
+      <td>4px</td>
+      <td>8px</td>
+      <td>12px</td>
+    </tr>
+  </table>
+
+
+  <section class="px">
+    px<br>
+    <button class="btn1">button</button>
+    <button class="btn2">button</button>
+    <button class="btn3">button</button>
+  </section>
+
+  <section class="em">
+    em<br>
+    <button class="btn1">button</button>
+    <button class="btn2">button</button>
+    <button class="btn3">button</button>
+  </section>
+
+  <section class="rem">
+    rem<br>
+    <button class="btn1">button</button>
+    <button class="btn2">button</button>
+    <button class="btn3">button</button>
+  </section>
+
+  <section class="rem-em">
+    rem-em<br>
+    <button class="btn1">button</button>
+    <button class="btn2">button</button>
+    <button class="btn3">button</button>
+  </section>
+</body>
+
+</html>

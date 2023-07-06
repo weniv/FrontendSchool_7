@@ -1,0 +1,28 @@
+.px {
+  /* font-size: 40px; */
+  font-size: 20px;
+}
+.px .btn1 {
+  /* font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px; */
+  font-size: 16px;
+  padding: 4px 16px;
+  border-radius: 5px;
+}
+.px .btn2 {
+  /* font-size: 40px;
+  padding: 10px 40px;
+  border-radius: 10px; */
+  font-size: 32px;
+  padding: 8px 32px;
+  border-radius: 8px;
+}
+.px .btn3 {
+  /* font-size: 80px;
+  padding: 20px 80px;
+  border-radius: 20px; */
+  font-size: 48px;
+  padding: 12px 48px;
+  border-radius: 12px;
+}
