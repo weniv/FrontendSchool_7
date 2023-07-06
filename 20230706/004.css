@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'UhBeeGENWOO';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeGENWOO.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Shilla_CultureB-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: UhBeeGENWOO;
+  text-align: center;
+}
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  text-decoration: #ddd underline 3px;
+}
+p {
+  margin: 0;
+}
+.emoji {
+  font-size: 60px;
+  text-shadow: 10px -5px 0 #ffbc40, 20px -10px 0 rgba(255, 188, 64, 0.4),
+    40px -20px 0 rgba(255, 188, 64, 0.2);
+  letter-spacing: 20px;
+}
+.text1 {
+  color: royalblue;
+  font-size: 60px;
+  text-shadow: 10px 0px 0px rgba(137, 207, 235, 0.5), 10px 0px 20px skyblue;
+  letter-spacing: 20px;
+}
+.text2 {
+  font-family: Shilla_CultureB-Bold;
+  text-decoration: skyblue underline wavy 3px;
+  font-size: 40px;
+}
+
+.shilla {
+  font-family: 'Shilla_CultureB-Bold';
+}

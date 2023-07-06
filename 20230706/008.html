@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전역변수</title>
+  <style>
+    :root {
+      --main-color: rgb(160, 182, 220);
+      --pane-padding: 4px 40px;
+    }
+
+    .color1 {
+      --point-color: red;
+    }
+
+    .color2 {
+      --point-color: yellow;
+    }
+
+    p {
+      color: var(--main-color);
+    }
+
+    button {
+      color: var(--main-color);
+      border: 1px solid var(--main-color);
+      padding: var(--pane-padding);
+      background-color: var(--point-color);
+    }
+  </style>
+</head>
+
+<body>
+  <p>안녕하세요</p>
+  <button>버튼</button>
+  <div class="color1">
+    <p>안녕하세요</p>
+    <button>버튼</button>
+  </div>
+  <div class="color2">
+    <p>안녕하세요</p>
+    <button>버튼</button>
+  </div>
+</body>
+
+</html>
