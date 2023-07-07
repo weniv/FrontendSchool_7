@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .box1,
+    .box2,
+    .box3 {
+      width: 100px;
+      height: 100px;
+    }
+
+    .box1 {
+      background-color: royalblue;
+      margin: 40px;
+    }
+
+    .box2 {
+      background-color: salmon;
+      margin: 60px;
+    }
+
+    .box3 {
+      background-color: gold;
+    }
+
+    span {
+      background-color: slateblue;
+      margin: 20px;
+
+    }
+
+    .parent {
+      background-color: skyblue;
+      /* border: 1px solid transparent; */
+      padding: 20px;
+      /* overflow: hidden; */
+    }
+
+    .child {
+      width: 100px;
+      height: 100px;
+      background-color: slateblue;
+      margin: 20px;
+    }
+
+    .parent {
+      position: relative;
+      /* overflow: scroll; */
+      overflow-y: auto;
+      /* overflow-x: auto;
+      overflow-y: hidden; */
+    }
+
+    .tooltip {
+      width: 400px;
+      height: 500px;
+      position: absolute;
+      top: 70px;
+      left: 70px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    box1
+  </div>
+  <div class="box2">
+    box2
+  </div>
+  <div class="box3">
+    box3
+  </div>
+
+  <span>span1</span><span>span2</span><span>span3</span>
+
+  <div class="parent">
+    <div class="child">child</div>
+    <div class="tooltip">
+      툴팁에 대한 컨텐츠툴팁에 대한 컨텐츠툴팁에 대한 컨텐츠툴팁에 대한 컨텐츠툴팁에 대한 컨텐츠
+    </div>
+  </div>
+</body>
+
+</html>

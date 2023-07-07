@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width</title>
+  <style>
+    p {
+      background: pink;
+    }
+
+    .max-content {
+      width: max-content;
+    }
+
+    .min-content {
+      width: min-content;
+    }
+
+    .fit-content {
+      width: fit-content;
+    }
+
+    .parent {
+      width: 500px;
+      background: gray;
+    }
+
+    .parent p {
+      width: 200px;
+      margin: auto;
+    }
+
+    .parent p {
+      width: 200px;
+      margin: auto 0 auto auto;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+
+  </p>
+  <p class="max-content">
+    Lorem ipsum dolor sit
+  </p>
+  <p class="max-content">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+  </p>
+  <p class="min-content">
+    Lo r e m ipsum dolor sit
+  </p>
+  <p class="min-content">
+    한글로 작성하면요?
+  </p>
+  <p class="fit-content">
+    Lorem ipsum dolor sit
+  </p>
+
+  <p class="fit-content">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo molestias animi error nobis ut sapiente magni ipsa
+    eaque eveniet voluptatibus illo alias ex, at aut enim pariatur, tenetur harum obcaecati?
+  </p>
+
+  <div class="parent">
+    <p>Lorem ipsum dolor sit</p>
+  </div>
+
+</body>
+
+</html>

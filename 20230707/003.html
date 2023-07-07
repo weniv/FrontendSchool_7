@@ -5,13 +5,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>블록/인라인</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    div,
+    span,
+    button {
+      border: 2px solid salmon;
+      padding: 20px;
+
+      /* 블록만 */
+      width: 200px;
+      height: 50px;
+
+      /*  margin: 인라인 요소는 상하적용 안됨 */
+      margin: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <div></div>
-
-
+  <div>안녕하세요</div>
+  <div>안녕하세요</div>
+  <span>안녕하세요</span>
+  <div>안녕하세요</div>
+  <div>
+    <span>안녕하세요</span>
+    <span>안녕하세요</span>
+    <span>안녕하세요</span>
+  </div>
+  <button>버튼</button>
+  <!-- <span>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+  </span> -->
 </body>
 
 </html>
