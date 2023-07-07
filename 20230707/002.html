@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <style>
+    /* 101 */
+    p#id1 {
+      color: black;
+    }
+
+    /* 101 */
+    div #id1 {
+      color: green;
+    }
+
+
+    /* 1 */
+    p {
+      color: black;
+    }
+
+    /* 100 */
+    #id1 {
+      color: blue;
+    }
+
+    /* 10 */
+    .class {
+      color: yellow;
+    }
+
+    #id .class.class1 {
+      color: royalblue !important;
+    }
+  </style>
+  <link rel="stylesheet" href="./002.css">
+</head>
+
+<body>
+  <p>안녕하세요</p>
+  <div>
+    <p id="id1" class="class">
+      1. 이 글자는 어떤 색일까요?
+    </p>
+    <p id="id2" class="class class1 class3" style="color:red">
+      2. 이 글자는 어떤 색일까요??
+    </p>
+  </div>
+
+
+
+</body>
+
+</html>
