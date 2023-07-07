@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스그리기 실습</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: slateblue;
+      margin: 10px;
+    }
+
+    .box1 {
+      border-radius: 50%;
+    }
+
+    .width2 {
+      width: 200px;
+      border-radius: 50px;
+    }
+
+    .box2 {
+      border-radius: 10px;
+    }
+
+    .box3 {
+      border-radius: 100% 0 0 0;
+    }
+
+    .box4 {
+      border-radius: 100% 0;
+    }
+
+    .box5 {
+      border-radius: 0 50%;
+    }
+
+    .box6 {
+      height: 50px;
+      border-radius: 100px 100px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box1 width2"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  <div class="box5"></div>
+  <div class="box6"></div>
+
+  <div class="box5" style="width:400px;height:400px"></div>
+  <div class="box5" style="width:400px; height:400px; border-radius:0 50px;"></div>
+</body>
+
+</html>

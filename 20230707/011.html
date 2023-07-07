@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경넣기</title>
+  <style>
+    body {
+      background-color: royalblue;
+    }
+
+    .bg {
+      height: 400px;
+      font-size: 200px;
+      font-weight: bold;
+      color: transparent;
+
+      background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / cover;
+      background-color: skyblue;
+      background-image: url(./images/main-visual.jpg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .bg2 {
+      height: 400px;
+      /* background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / cover; */
+      background-color: skyblue;
+      background-image: url(./images/main-visual.jpg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg">
+    content
+  </div>
+  <div class="bg2">
+    content
+  </div>
+
+
+
+</body>
+
+</html>
