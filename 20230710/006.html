@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index</title>
+  <style>
+    .box1,
+    .box2,
+    .box3 {
+      width: 100px;
+      height: 100px;
+    }
+
+    .box1 {
+      background-color: royalblue;
+      position: relative;
+      z-index: 3;
+    }
+
+    .box2 {
+      background-color: slateblue;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      z-index: 2;
+    }
+
+    .box3 {
+      background-color: salmon;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      z-index: 1;
+    }
+
+    .parent {
+      background-color: rgba(0, 255, 255, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="box1">a</div>
+    <div class="box2">b</div>
+    <div class="box3">c</div>
+  </div>
+</body>
+
+</html>

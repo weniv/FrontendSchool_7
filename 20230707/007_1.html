@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    p,
+    h2 {
+      margin: 0;
+    }
+
+    code {
+      display: inline-block;
+      padding: 5px;
+      margin: 0 5px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #eee;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+
+    .wrap1,
+    .wrap2,
+    .wrap3 {
+      border: 2px solid #ddd;
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    .parent {
+      background-color: skyblue;
+    }
+
+    .child {
+      width: 100px;
+      height: 100px;
+      background-color: slateblue;
+    }
+
+    .wrap1 .parent {
+      padding: 20px;
+    }
+
+    /* 마진값 적용 */
+    .wrap2 .child {
+      margin: 20px;
+    }
+
+    .wrap3 .child {
+      margin: 0 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>원래 의도한 디자인</h2>
+  <div class="wrap1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum ad, nisi a autem ullam rerum suscipit magni
+      qui quo omnis mollitia dignissimos rem officia, id quis eos veritatis maiores.</p>
+    <div class="parent">
+      <div class="child">child</div>
+    </div>
+  </div>
+
+
+
+  <h2>부모 - 자식 마진병합현상</h2>
+  <p>
+    <code>p</code>와 <code>.parent</code> 사이에 마진 영역은 있음
+    하지만 부모의 높이에는 영향을 미치지 않음
+  </p>
+  <div class="wrap2">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum ad, nisi a autem ullam rerum suscipit magni
+      qui
+      quo omnis mollitia dignissimos rem officia, id quis eos veritatis maiores.</p>
+    <div class="parent">
+      <div class="child">child</div>
+    </div>
+  </div>
+
+  <h2>좌우 마진만 준 경우</h2>
+  <div class="wrap3">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum ad, nisi a autem ullam rerum suscipit magni
+      qui
+      quo omnis mollitia dignissimos rem officia, id quis eos veritatis maiores.</p>
+    <div class="parent">
+      <div class="child">child</div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1,
+h2 {
+  font: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+  color: #29363d;
+}
+.card-ui {
+  width: 288px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  /* display: inline-block; */
+}
+.card-ui img {
+  width: 100%;
+  aspect-ratio: 288/196;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-ui .text-group {
+  padding: 24px 16px 16px;
+}
+
+.card-ui h2 {
+  font-family: 'Pretendard-Bold';
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-ui .content {
+  font-size: 14px;
+  color: #5a6a72;
+  margin: 16px 0;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.6;
+  height: calc(14px * 1.6 * 2);
+}
+
+.card-ui .read {
+  text-decoration: underline;
+  font-family: 'Pretendard-Bold';
+  font-size: 14px;
+}
