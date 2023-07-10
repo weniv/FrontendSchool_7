@@ -66,7 +66,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-height: 1.6;
-  height: calc(14px * 1.6 * 2);
+  height: calc(1em * 1.6 * 2);
 }
 
 .card-ui .read {
