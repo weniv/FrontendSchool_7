@@ -46,26 +46,40 @@ body {
   font-size: 12px;
 }
 .btn-login {
-  display: flex;
-  width: 100%;
+  background-color: #711bff;
+  color: white;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+/* flex 방법 */
+.btn-login {
   height: 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background-color: #711bff;
-  margin: 16px 0;
-  border-radius: 4px;
 }
+
+/* block padding 방법 */
+/* .btn-login {
+  display: block;
+  text-align: center;
+  padding: 11px 0;
+}
+.btn-login img {
+  vertical-align: middle;
+} */
+
 .btn-login img {
   width: 64px;
   margin-right: 3px;
 }
 
+/* 아이디, 비밀번호찾기, 회원가입  */
 .login-link {
   color: #767676;
 }
 .login-link img {
-  width: 16px;
+  height: 16px;
   vertical-align: middle;
   margin-right: 4px;
 }
