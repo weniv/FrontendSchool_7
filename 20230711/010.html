@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-shrink</title>
+  <style>
+    .container {
+      width: 500px;
+      height: 200px;
+      display: flex;
+      background-color: #ddd;
+      /* align-items: center; */
+    }
+
+    .item {
+      background-color: skyblue;
+      border: 2px solid royalblue;
+    }
+
+    .item1 {
+      flex-basis: 200px;
+      flex-shrink: 0;
+      align-self: center;
+      order: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">item A ddddd</div>
+    <div class="item item2">item B dddd</div>
+    <div class="item item3">item C ddd</div>
+    <div class="item item4">item D dd</div>
+    <!-- <div class="item">item A ddddd</div>
+    <div class="item">item B dddd</div>
+    <div class="item">item C ddd</div>
+    <div class="item">item D dd</div> -->
+  </div>
+
+
+</body>
+
+</html>

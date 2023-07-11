@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    [class^="box"] {
+      width: 100px;
+      height: 100px;
+      background: rgba(141, 75, 246, 0.6);
+      /* color: #fff; */
+      line-height: 100px;
+      text-align: center;
+
+    }
+
+    [class^="box"]:first-child {
+      background: rgba(46, 111, 242, 0.6)
+    }
+
+    [class^="box"]:last-child {
+      background: rgba(250, 128, 114, 0.5);
+    }
+
+    .container {
+      background: skyblue;
+    }
+
+    .box1 {
+      float: left;
+
+
+    }
+
+    .box2 {
+      float: left;
+    }
+
+    .box3 {
+      clear: left;
+      position: relative;
+      z-index: 10;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    /* .layout {
+      height: 100px;
+    } */
+
+    .layout img {
+      border-radius: 50%;
+      float: left;
+      margin-right: 20px;
+    }
+
+    .layout h2 {
+      padding-top: 24px;
+    }
+
+    .clear-fix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .layout div {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    container
+    <div class="box box1">A</div>
+    <div class="box box2">B</div>
+    <div class="box box3">C</div>
+  </div>
+
+  <div class="layout">
+    <img src="http://placehold.it/100x100" alt="">
+    <h2>Lorem ipsum dolor</h2>
+    <p>ipsum dolo</p>
+  </div>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eius maiores hic distinctio tenetur illum
+    explicabo et minima totam? Modi ea vel, corporis eaque rem nisi nobis ipsa aut consequuntur.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eius maiores hic distinctio tenetur illum
+    explicabo et minima totam? Modi ea vel, corporis eaque rem nisi nobis ipsa aut consequuntur.
+  </p>
+
+
+</body>
+
+</html>

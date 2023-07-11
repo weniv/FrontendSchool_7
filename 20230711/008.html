@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    .wrap {
+      background: #ddd;
+      width: 200px;
+      height: 200px;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      background: royalblue;
+    }
+
+    /* flex 방법 1 */
+    /* .wrap {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    } */
+
+    /* 방법2 */
+    /* .wrap {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    } */
+
+    /* 방법 3*/
+    /* .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+    } */
+
+    /* 방법 4 */
+    /* .wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: end;
+    } */
+
+    /* 방법 5 */
+    .wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    .box {
+      margin-left: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="box">A</div>
+  </div>
+
+</body>
+
+</html>

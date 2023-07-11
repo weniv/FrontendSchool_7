@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 숨김처리</title>
+  <style>
+    .hidden {
+      /* display: none; */
+      /* visibility: hidden; */
+      /* width: 0;
+      height: 0;
+      font-size: 0;
+      line-height: 0; */
+      /* text-indent: -9999px; */
+    }
+
+    .a11y-hidden {
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="a11y-hidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ullam est tempora, cupiditate
+    error
+    doloribus
+    voluptatem quos itaque perspiciatis molestiae magnam nam dignissimos quam, soluta sapiente quo enim minus quaerat!
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio autem quisquam qui laborum repellendus dolorum
+    doloribus quis ducimus mollitia esse illo suscipit, ab labore sit doloremque itaque ut, maxime illum.
+
+  </p>
+</body>
+
+</html>

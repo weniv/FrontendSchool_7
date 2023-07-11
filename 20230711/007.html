@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justify-content</title>
+  <style>
+    p {
+      margin: 0;
+    }
+
+    .wrap {
+      background: #ddd;
+      width: 350px;
+      height: 300px;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+    }
+
+    .blue {
+      background: royalblue;
+    }
+
+    .pink {
+      background: salmon;
+    }
+
+    .yellow {
+      background: gold;
+    }
+
+    .wrap>div {
+      height: 300px;
+    }
+
+    /* flex */
+    /* .wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-side,
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    } */
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-side,
+    .center {
+      flex-direction: column;
+    }
+
+    .right-side {
+      flex-direction: column-reverse;
+    }
+
+
+    .box.blue.new {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="left-side">
+      <p class="box blue new">A</p>
+      <p class="box pink">B</p>
+      <p class="box yellow">C</p>
+    </div>
+    <div class="center">
+      <p class="box blue">D</p>
+      <p class="box yellow">E</p>
+    </div>
+    <div class="right-side">
+      <p class="box blue">F</p>
+      <p class="box pink">G</p>
+      <p class="box yellow">H</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

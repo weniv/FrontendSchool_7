@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    .container {
+      height: 300px;
+      display: flex;
+      gap: 20px 50px;
+      /* flex-direction: row-reverse; */
+      flex-direction: column;
+      /* flex-direction: column-reverse; */
+      justify-content: center;
+      /* justify-content: space-between; */
+      /* justify-content: space-evenly; */
+      /* justify-content: space-around; */
+      background-color: #ddd;
+      align-items: center;
+
+      /* 2줄 */
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    .item {
+      background-color: skyblue;
+      flex-basis: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">item A</div>
+    <div class="item">item B</div>
+    <div class="item">item C</div>
+    <div class="item">item D</div>
+    <div class="item">item A</div>
+    <div class="item">item B</div>
+    <div class="item">item C</div>
+    <div class="item">item D</div>
+    <div class="item">item A</div>
+    <div class="item">item B</div>
+    <div class="item">item C</div>
+    <div class="item">item D</div>
+  </div>
+
+
+</body>
+
+</html>
