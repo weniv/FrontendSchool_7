@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    div {
+      display: flex;
+      align-items: center;
+      background-color: #eee;
+    }
+
+    p {
+      background-color: skyblue;
+      width: 100px;
+      height: 100px;
+      /* flex-basis: 0; */
+    }
+
+    .item1 {
+      flex-grow: 0;
+      order: 10
+    }
+
+    .item2 {
+      flex-grow: 1;
+      background-color: aliceblue;
+    }
+
+    .item3 {
+      flex-grow: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p class="item1">Lorem ipsum, sit amet consectetur adipisicing elit. </p>
+    <p class="item2">Lorem ipsum, dolor amet consectetur adipisicing elit. </p>
+    <p class="item3">Lorem ipsum, dolor sit consectetur adipisicing elit. </p>
+  </div>
+</body>
+
+</html>
