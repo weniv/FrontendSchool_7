@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 변수</title>
+  <style>
+    :root {
+      --main-color: royalblue;
+      --pane-padding: 0.5em 2em;
+      --border-radius: 0.4em;
+    }
+
+    .dark {
+      --bg1: #000;
+      --color1: white;
+    }
+
+    .light {
+      --bg1: #eee;
+      --color1: black
+    }
+
+    section {
+      --color2: red;
+      background-color: var(--bg1);
+      color: var(--color1)
+    }
+
+    button {
+      --border-width: 1px 2px 3px 4px;
+
+      padding: var(--pane-padding);
+      border-style: solid;
+      border-color: var(--main-color, blue);
+      border-width: var(--border-width);
+      border-bottom: 3px solid var(--color2)
+    }
+
+
+    p {
+      border-style: solid;
+      border-color: var(--main-color, blue);
+      border-width: var(--border-width, 1px 2px);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="light">
+    <section>
+      <button type="button">버튼</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quos, unde dolor adipisci iste
+        explicabo
+        consequatur ullam doloremque, aliquam necessitatibus voluptas exercitationem, eveniet voluptatum sunt!
+        Voluptate,
+        accusantium. Te
+        mporibus, facere maiores!</p>
+    </section>
+  </div>
+
+  <div class="dark">
+    <section>
+      <button type="button">버튼</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quos, unde dolor adipisci iste explicabo
+        consequatur ullam doloremque, aliquam necessitatibus voluptas exercitationem, eveniet voluptatum sunt!
+        Voluptate,
+        accusantium. Temporibus, facere maiores!</p>
+    </section>
+  </div>
+
+  <button type="button">버튼</button>
+</body>
+
+</html>

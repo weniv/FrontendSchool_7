@@ -1,0 +1,52 @@
+:root {
+  --bg-color: #343f50;
+  --main-color: #343f50;
+  --text-color: #cbd5df;
+}
+.positive {
+  --bg-color: #343f50;
+  --main-color: #439aff;
+  --text-color: #439aff;
+}
+.negative {
+  --bg-color: #343f50;
+  --main-color: #eb5757;
+  --text-color: #eb5757;
+}
+
+.btn {
+  width: 88px;
+  height: 32px;
+  border-radius: 0;
+  /* transition: color 0.3s ease, background-color 2s; */
+  transition: all 0.3s;
+}
+.btn:enabled {
+  border: 1px solid var(--bg-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.1);
+  text-decoration: underline transparent;
+}
+
+.btn:disabled {
+  border: 1px solid #343e4e;
+  background-color: #3a4556;
+  color: #4a5568;
+}
+.btn:enabled:hover {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: underline white;
+}
+.btn:enabled:active {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  color: var(--main-color);
+}

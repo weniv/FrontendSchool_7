@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 함수</title>
+  <style>
+    div {
+      background-color: skyblue;
+      width: calc((4px + 100px) * 2)
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      float: left;
+      background-color: gold;
+      width: calc((100% - (20px * 3))/4);
+    }
+
+    li:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    /* li~li {} */
+
+    li:nth-child(even) {
+      background-color: seagreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    hello
+  </div>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+
+</body>
+
+</html>

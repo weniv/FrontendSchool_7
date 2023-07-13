@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    [title] {
+      background-color: gold;
+    }
+
+    [title="hello1"] {
+      border: 2px solid royalblue;
+    }
+
+    [target] {
+      color: red;
+    }
+
+    [href^='https'] {
+      border: 5px solid green;
+    }
+  </style>
+</head>
+
+<body>
+  <p title="hello1">안녕하세요 1</p>
+  <p>안녕하세요 2</p>
+  <p>안녕하세요 3</p>
+  <p title="hello2">안녕하세요 4</p>
+  <p>안녕하세요 5</p>
+
+  <a href="https://www.naver.com/" title="새창" target="_blank">이동 1</a>
+  <a href="#section1" title="새창" target="_blank">이동 2</a>
+  <a href="https://www.google.com/" title="새창" target="_blank">이동 3</a>
+  <a href="http://www.google.com/" title="새창" target="_blank">이동 3</a>
+
+  <section id="#section1">
+
+  </section>
+</body>
+
+</html>

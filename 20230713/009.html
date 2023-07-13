@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: royalblue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box:nth-child(even) {
+      background-color: seagreen;
+    }
+
+    .translate {
+      transform: translate(50px, 50px);
+    }
+
+    .position {
+      position: relative;
+      top: 50px;
+      left: 50px
+    }
+
+    .bar {
+      background-color: #ddd;
+      width: 400px;
+      margin: auto;
+      /* overflow: hidden; */
+    }
+
+    .bar2 {
+      background-color: rgb(65, 105, 225, 0.5);
+      height: 30px;
+      width: 100%;
+      transform-origin: 0 0;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+    }
+
+    .bar:hover .bar2 {
+      transform: translateX(0);
+    }
+
+    .bar2:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box translate">translate</div>
+  <div class="box position"> position</div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="bar">
+    <div class="bar2"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h2>테이블의 제목</h2> -->
+  <table>
+    <caption>테이블의 제목, 설명</caption>
+    <colgroup>
+      <col style="width:100px;">
+      <col style="width:100px;">
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th scope="col">제목제목 제목제목제 목제목제 목제목제목</th>
+        <th scope="col">제목</th>
+        <th scope="col">제목</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">안녕하세요요요</th>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quam officiis nostrum porro, quis
+          quaerat, architecto harum nobis dolorem, est incidunt ex ut similique magnam! Corporis autem nulla obcaecati
+          aspernatur?</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quo quae fugit vitae similique, magnam dicta
+          quos in consequatur vel sapiente incidunt mollitia eaque quia perferendis corrupti illum saepe dolorem!</td>
+        <td>없음</td>
+      </tr>
+      <tr>
+        <th>제목</th>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+      </tr>
+      <tr>
+        <th>제목</th>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>합계</th>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+
+</body>
+
+</html>
