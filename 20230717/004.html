@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .container {
+      display: grid;
+      /* width: 600px; */
+      gap: 10px;
+      background: #ddd;
+      margin-bottom: 10px;
+      border: 10px solid #aaa;
+
+    }
+
+    .container div {
+      background: skyblue;
+      height: 100px;
+      /* border: 10px solid royalblue; */
+      box-sizing: border-box;
+    }
+
+
+    .autofill {
+      grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+      /* grid-template-rows: repeat(auto-fill, minmax(200px, auto)); */
+      /* grid-template-columns: repeat(auto-fill, 200px); */
+    }
+
+    .autofit {
+      grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container autofill">
+    <div>
+      Lorem ipsum dolor sit amet sequi omnis aperiam dolorem! A similique aliquid necessitatibus in
+      aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+  </div>
+
+  <div class="container autofit">
+    <div>
+      Lorem ipsum dolor sit amet sequi omnis aperiam dolorem! A similique aliquid necessitatibus in
+      aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nam, nisi nobis eligendi a numquam itaque
+      architecto nesciunt id consequuntur, sequi omnis aperiam dolorem! A similique aliquid necessitatibus in aliquam.
+    </div>
+
+  </div>
+
+</body>
+
+</html>

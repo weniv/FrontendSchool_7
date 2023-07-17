@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .container {
+      width: 500px;
+      height: 500px;
+      display: grid;
+
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+      background-color: #ddd;
+
+      /* 컨테이너 안에서의 정렬 */
+      align-content: center;
+      justify-content: center;
+
+      /* 생성된 셀 안에서의 정렬 */
+      align-items: center;
+      justify-items: center;
+    }
+
+    .item {
+      width: 50px;
+      height: 50px;
+      background-color: skyblue;
+    }
+
+    .item:nth-child(odd) {
+      background-color: seagreen;
+    }
+
+    .item:nth-child(3) {
+      background-color: salmon;
+      align-self: end;
+      justify-self: end;
+
+    }
+
+    .item-b {
+      align-self: start;
+    }
+
+    .align-seft-start {
+      align-self: start;
+      border: 4px solid royalblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item align-seft-start">A</div>
+    <div class="item item-b">B</div>
+    <div class="item">C</div>
+    <div class="item  align-seft-start">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 실습</title>
+  <style>
+    .container {
+      width: 520px;
+      height: 520px;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .container div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container div:nth-child(1) {
+      background-color: royalblue;
+      grid-area: 1/1/3/4;
+    }
+
+    .container div:nth-child(2) {
+      background-color: gold;
+      grid-area: 1/4/4/6;
+    }
+
+    .container div:nth-child(3) {
+      background-color: slateblue;
+      grid-area: 3/1/4/3;
+    }
+
+    .container div:nth-child(4) {
+      background-color: orange;
+      grid-area: 3/3/4/4;
+    }
+
+    .container div:nth-child(5) {
+      background-color: salmon;
+      grid-area: 4/1/6/3;
+    }
+
+    .container div:nth-child(6) {
+      background-color: seagreen;
+      grid-area: 4/3/6/6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+  </div>
+</body>
+
+</html>

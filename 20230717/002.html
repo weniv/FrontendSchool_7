@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 3px solid #000;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    caption {
+      caption-side: bottom;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 6px 20px;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    tfoot {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <caption>2023 학년도 대학수능능력시험 성적통지표</caption>
+    <!-- <colgroup>
+      <col style="width:100px">
+      <col style="background-color: yellow;">
+      <col style="background-color: green;">
+    </colgroup> -->
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th id="col1" rowspan="2">한국사 영역</th>
+        <th id="col2">국어 영역</th>
+        <th id="col3">수학 영역</th>
+        <th id="col4" rowspan="2">영어 영역</th>
+        <th id="col5" colspan="2">탐구 영역</th>
+        <th id="col6">제 2 외국어 /한문 영역</th>
+      </tr>
+      <tr>
+        <th id="row1">선택과목</th>
+        <th id="col2-1">화법과 작문</th>
+        <th id="col3-1">확률과 통계</th>
+        <th id="col5-1">생활과 윤리</th>
+        <th id="col5-2">지구과학 1</th>
+        <th id="col6-1">독일어</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th id="row2">표준점수</th>
+        <td headers="col1 row2" rowspan="2">&nbsp;</td>
+        <td headers="col2 col2-1 row2">131</td>
+        <td headers="col3 col3-1 row2">137</td>
+        <td headers="col4 row2" rowspan="2">&nbsp;</td>
+        <td headers="col5 col5-1 row2">53</td>
+        <td headers="col5 col5-2 row2">64</td>
+        <td headers="col6 col6-1 row2" rowspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <th id="row3">백분위</th>
+        <td headers="col2 col2-1 row3">93</td>
+        <td headers="col3 col3-1 row3">95</td>
+        <td headers="col5 col5-1 row3">75</td>
+        <td headers="col5 col5-2 row3">93</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th id="row4">등급</th>
+        <td headers="col1 row4">2</td>
+        <td headers="col2 col2-1 row4">2</td>
+        <td headers="col3 col3-1 row4">2</td>
+        <td headers="col4 row4">1</td>
+        <td headers="col5 col5-1 row4">1</td>
+        <td headers="col5 col5-2 row4">2</td>
+        <td headers="col6 col6-1 row4">2</td>
+      </tr>
+    </tfoot>
+  </table>
+
+
+</body>
+
+</html>
