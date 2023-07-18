@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .a11y-hidden {
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+    }
+
+    button {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #ddd;
+      padding: 0;
+      background: none;
+      vertical-align: top;
+    }
+
+    .btn-img img {
+      width: 32px;
+      vertical-align: top;
+    }
+
+    .btn-bg {
+      /* background: url(./img/icon-home.svg) no-repeat 50% 50% / 32px; */
+      background-image: url(./img/icon-home.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 32px;
+      transition: all 0.3s;
+    }
+
+    .btn-bg:hover {
+      background-image: url(./img/icon-home-hover.svg);
+    }
+
+    .btn-svg1 svg,
+    .btn-svg2 svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .btn-svg1 svg path,
+    .btn-svg2 svg path {
+      fill: white;
+      transition: all 0.3s;
+    }
+
+    /* 선 색상 바꾸기 */
+    .btn-svg1:hover svg path {
+      stroke: royalblue;
+    }
+
+    /* fill 사용하기 */
+    .btn-svg2:hover svg path:first-child {
+      stroke: royalblue;
+      fill: royalblue;
+    }
+
+    .btn-svg2:hover svg path:last-child {
+      stroke: royalblue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button type="button" class="btn-img">
+    <img src="./img/icon-home.svg" alt="home" />
+  </button>
+  <button type="button" class="btn-bg">
+    <span class="a11y-hidden">Home</span>
+  </button>
+
+  <button type="button" class="btn-svg1">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+        stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9 21V12H15V21" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span class="a11y-hidden">Home</span>
+  </button>
+
+  <button type="button" class="btn-svg2">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+        stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9 21V12H15V21" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span class="a11y-hidden">Home</span>
+  </button>
+</body>
+
+</html>

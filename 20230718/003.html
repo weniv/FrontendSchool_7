@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    @keyframes slide {
+      0% {
+        margin-left: 40%;
+        background-color: royalblue;
+      }
+
+      50% {
+        margin-left: 0%;
+        background-color: royalblue;
+      }
+
+      100% {
+        margin-left: 80%;
+        background-color: royalblue;
+      }
+    }
+
+    .wrap {
+      width: 500px;
+      background-color: #eee;
+    }
+
+    .wrap div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .wrap div~div {
+      margin-top: 20px;
+    }
+
+    .animation {
+      animation-name: slide;
+      animation-duration: 5s;
+      animation-delay: 2s;
+      /* animation-iteration-count: infinite; */
+
+    }
+
+    .forwards {
+      animation-fill-mode: forwards;
+    }
+
+    .backwards {
+      animation-fill-mode: backwards;
+    }
+
+    .both {
+      animation-fill-mode: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="animation">normal</div>
+    <div class="animation backwards">backwards</div>
+    <div class="animation forwards">forwards</div>
+    <div class="animation both">both</div>
+  </div>
+
+
+</body>
+
+</html>

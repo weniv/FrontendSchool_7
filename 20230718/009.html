@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+
+<body>
+  <label>
+    오늘의 점심
+    <select>
+      <option value="lunch1">햄버거</option>
+      <option value="lunch2" selected>김밥</option>
+      <option value="lunch3">피자</option>
+    </select>
+  </label>
+  <label>
+    오늘의 점심
+    <select size="3" multiple>
+      <option value="lunch1">햄버거</option>
+      <option value="lunch2" selected>김밥</option>
+      <option value="lunch3">피자</option>
+    </select>
+  </label>
+
+  <br>
+  <label for="user-tech">여러분이 사용해본 기술을 모두 선택해주세요</label>
+  <select id="user-tech" name="user-tech" multiple size="5">
+    <optgroup label="front-end">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="javascript">JavaScript</option>
+      <option value="react">React</option>
+      <option value="typescript">TypeScript</option>
+    </optgroup>
+    <optgroup label="back-end">
+      <option value="nodejs">Node.js</option>
+      <option value="java">JAVA</option>
+      <option value="python">Python</option>
+      <option value="django">Django</option>
+    </optgroup>
+  </select>
+
+  <label>
+    오늘의 점심
+    <input list="today-lunch">
+    <datalist id="today-lunch">
+      <!-- <option>햄버거</option>
+      <option>김밥</option>
+      <option>피자</option> -->
+      <option value="햄버거">
+      <option value="김밥">
+      <option value="피자">
+    </datalist>
+  </label>
+
+  <br>
+  <label>자기소개
+    <textarea rows="10" cols="50" minlength="10" maxlength="100" placeholder="10자 이상 100자 이하로 내용을 입력해주세요"></textarea>
+  </label>
+
+</body>
+
+</html>

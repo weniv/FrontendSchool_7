@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <section>
+    <h2>키보드 입력</h2>
+    <form>
+      <div>
+        <label for="input-text">text</label><br>
+        <input type="text" id="input-text" value="text" minlength="3">
+      </div>
+      <button type="submit">전송</button>
+    </form>
+    <div>
+      <label for="input-email">email</label><br>
+      <input type="email" id="input-email" value="email@gmail.com">
+      <br>
+      <label>
+        email<br>
+        <input type="email" value="email@gmail.com">
+      </label>
+    </div>
+    <div>
+      <label for="input-pw">password</label><br>
+      <input type="password" id="input-pw" value="1234">
+    </div>
+    <div>
+      <label for="input-url">url</label><br>
+      <input type="url" id="input-url">
+    </div>
+    <div>
+      <label for="input-num">number</label><br>
+      <input type="number" id="input-num" max="100" min="10" step="10">
+    </div>
+    <div>
+      <label for="input-search">search</label><br>
+      <input type="search" id="input-search">
+    </div>
+    <div>
+      <label for="input-tel">tel</label><br>
+      <input type="tel" id="input-tel">
+    </div>
+    <div>
+      <label for="textarea">textarea</label><br>
+      <textarea id="textarea"></textarea>
+    </div>
+  </section>
+
+
+  <section>
+    <h2>checkbox vs radio</h2>
+    <fieldset>
+      <legend>사용 기술</legend>
+      <input type="checkbox" id="tech1" checked><label for="tech1">HTML</label>
+      <input type="checkbox" id="tech2"><label for="tech2">CSS</label>
+      <input type="checkbox" id="tech3"><label for="tech3">Sass</label>
+      <input type="checkbox" id="tech4"><label for="tech4">JavaScript</label>
+      <input type="checkbox" id="tech5"><label for="tech5">React</label>
+      <input type="checkbox" id="tech6"><label for="tech6">Vue</label>
+      <input type="checkbox" id="tech7"><label for="tech7">Svelte</label>
+      <input type="checkbox" id="tech8"><label for="tech8">TypeScript</label>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>연령</legend>
+      <input type="radio" name="age" id="age1"><label for="age1">10대</label>
+      <input type="radio" name="age" id="age2"><label for="age2">20대</label>
+      <input type="radio" name="age" id="age3" checked><label for="age3">30대</label>
+      <input type="radio" name="age" id="age4"><label for="age4">40대 이상</label>
+    </fieldset>
+  </section>
+
+
+
+  <section>
+    <h2>선택하기</h2>
+
+    <input type="color"><br>
+    <input type="datetime-local"><br>
+    <input type="date"><br>
+    <input type="month"><br>
+    <input type="week"><br>
+
+    <input type="time"><br>
+    <input type="file" accept="image/png" multiple><br>
+    <input type="range">
+
+    <div>
+      <label for="dino-select">Choose a dinosaur:</label><br>
+      <select id="dino-select">
+        <optgroup label="Theropods">
+          <option>Tyrannosaurus</option>
+          <option>Velociraptor</option>
+          <option>Deinonychus</option>
+        </optgroup>
+        <optgroup label="Sauropods">
+          <option>Diplodocus</option>
+          <option>Saltasaurus</option>
+          <option>Apatosaurus</option>
+        </optgroup>
+      </select>
+    </div>
+  </section>
+
+
+
+  <section>
+    <h2>버튼</h2>
+    <input type="button" value="버튼">
+    <input type="reset" value="초기화">
+    <input type="submit" value="전송">
+
+    <button type="button">버튼</button>
+    <button type="reset">초기화</button>
+    <button type="submit">전송</button>
+  </section>
+
+
+
+
+
+
+</body>
+
+</html>

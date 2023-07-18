@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    @keyframes slide {
+      from {
+        margin-left: 0
+      }
+
+      to {
+        margin-left: 80%
+      }
+    }
+
+    .wrap {
+      width: 500px;
+      background-color: #eee;
+    }
+
+    .wrap div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .wrap div~div {
+      margin-top: 20px;
+    }
+
+    .animation {
+      animation-name: slide;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    div.alternate {
+      background-color: royalblue;
+    }
+
+    .alternate {
+      animation-direction: alternate;
+    }
+
+    .reverse {
+      animation-direction: reverse;
+    }
+
+    .alternate-reverse {
+      animation-direction: alternate-reverse;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="animation">normal</div>
+    <div class="animation alternate">alternate</div>
+    <div class="animation reverse">reverse</div>
+    <div class="animation alternate-reverse">alternate-reverse</div>
+  </div>
+
+
+</body>
+
+</html>
