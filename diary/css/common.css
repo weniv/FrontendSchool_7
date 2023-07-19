@@ -1,0 +1,153 @@
+/* font --------------------------------- */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* reset --------------------------------- */
+body {
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+button {
+  font: inherit;
+}
+
+/* CSS 적용 --------------------------------- */
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+  background-color: #fffaf0;
+}
+.max-width {
+  width: 1284px;
+  max-width: 100%;
+  max-width: calc(100% - 60px);
+  margin: auto;
+}
+
+/* header */
+.header {
+  background-color: #fff;
+}
+.header .max-width {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  width: 156px;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  color: #677880;
+  font-size: 12px;
+}
+
+/* 버튼 */
+.btn-join {
+  display: inline-flex;
+  height: 40px;
+  padding: 0 20px 0 52px;
+  background-color: #fff;
+  background-image: url(../img/icon-join.svg);
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 10px 50%;
+  align-items: center;
+}
+
+/* 로그인 */
+.login {
+  margin-top: 70px;
+}
+.main-title {
+  width: 250px;
+  margin: auto;
+  text-align: center;
+}
+.main-title svg {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+.svg-heart {
+  stroke: transparent;
+  stroke-width: 0;
+  transform-origin: 50% 20px;
+  scale: 0.8;
+  animation: heart 0.5s cubic-bezier(0.69, 1.08, 0.74, 0.35) infinite alternate;
+}
+
+@keyframes heart {
+  100% {
+    stroke: #ffc7d1;
+    stroke-width: 2px;
+    scale: 2.5;
+  }
+}
+
+.main-title strong {
+  color: #29363d;
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+  box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.2);
+  border-bottom: 2px solid #ff4f6e;
+}
+
+/* 로그인 form */
+.form {
+  width: 392px;
+  margin: 40px auto 50px;
+}
+.form label {
+  display: block;
+  font-size: 14px;
+  color: #29363d;
+  margin-bottom: 8px;
+}
+.form input {
+  width: 100%;
+  height: 48px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #677880;
+  border-radius: 4px 4px 0 0;
+}
+.form > div {
+  margin-bottom: 24px;
+}
+.form button[type='submit'] {
+  width: 100%;
+  height: 48px;
+
+  background-color: #29363d;
+  color: #f4f5f5;
+  border-radius: 4px;
+}
