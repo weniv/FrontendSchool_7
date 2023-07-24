@@ -1,0 +1,132 @@
+/* reset */
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3 {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+button:enabled {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/* CSS 적용 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.cinema-card {
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.cinema-inner {
+  padding: 19px 20px;
+}
+
+.cinema-inner img {
+  width: 100%;
+  aspect-ratio: 180/250;
+  object-fit: cover;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cinema-title {
+  font-weight: 900;
+  margin: 12px 0;
+
+  /* 말줄임 처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cinema-info {
+  font-size: 13px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+.cinema-info .type {
+  color: #828282;
+  margin-right: 5px;
+}
+
+.cinema-info .star {
+  background-image: url(../img/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0.3em;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
+
+.btn-group {
+  display: flex;
+  border-top: 1px solid #bdbdbd;
+}
+.btn-go,
+.btn-view {
+  background-color: #f2f2f2;
+  width: 100%;
+  font-size: 14px;
+  height: 41px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.btn-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 10px;
+  border-right: 1px solid #bdbdbd;
+}
+.btn-go:focus-visible {
+  z-index: 1;
+}
+.btn-view {
+  border-radius: 0 0 10px 0;
+}
+.btn-view::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  background-image: url(../img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  vertical-align: middle;
+  margin: -2px 2px 0 -0.4em;
+}
