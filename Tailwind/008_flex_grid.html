@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- https://tailwindcss.com/docs/grid-template-columns -->
+    <!-- https://tailwindcss.com/docs/grid-column -->
+    <!-- https://tailwindcss.com/docs/grid-template-rows -->
+    <div class="space-y-4">
+        <p class="text-3xl">1</p>
+        <div class="grid grid-cols-4 border-2 border-red-500">
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+        </div>
+
+        <p class="text-3xl">2</p>
+        <div class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 border-2 border-red-500">
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+            <div class="border-2 border-sky-500">hello</div>
+        </div>
+
+        <!-- 중요한 예제는 아닙니다. -->
+        <p class="text-3xl">3</p>
+        <div class="grid grid-cols-2 grid-rows-3 grid-flow-col gap-2 border-2 border-red-400">
+            <div class="border-2 border-blue-200">hello 1</div>
+            <div class="border-2 border-blue-200">hello 2</div>
+            <div class="border-2 border-blue-200">hello 3</div>
+            <div class="border-2 border-blue-200">hello 4</div>
+        </div>
+
+        <p class="text-3xl">4</p>
+        <div class="grid grid-cols-2 grid-rows-3 gap-2 border-2 border-red-400">
+            <div class="border-2 border-blue-200">hello 1</div>
+            <div class="border-2 border-blue-200">hello 2</div>
+            <div class="border-2 border-blue-200">hello 3</div>
+            <div class="border-2 border-blue-200">hello 4</div>
+        </div>
+
+        <p class="text-3xl">5</p>
+        <div class="grid grid-cols-4 grid-rows-3 gap-2 border-2 border-red-400">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 border-2 border-blue-200">hello 1</div>
+            <div class="border-2 border-blue-200">hello 2</div>
+            <div class="border-2 border-blue-200">hello 3</div>
+            <div class="border-2 border-blue-200">hello 4</div>
+            <div class="border-2 border-blue-200">hello 5</div>
+            <div class="border-2 border-blue-200">hello 6</div>
+        </div>
+
+        <p class="text-3xl">6</p>
+        <div class="grid grid-cols-4 grid-rows-3 gap-2 border-2 border-red-400">
+            <div class="md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 border-2 border-blue-200">hello 1</div>
+            <div class="border-2 border-blue-200">hello 2</div>
+            <div class="border-2 border-blue-200">hello 3</div>
+            <div class="border-2 border-blue-200">hello 4</div>
+            <div class="border-2 border-blue-200">hello 5</div>
+            <div class="border-2 border-blue-200">hello 6</div>
+        </div>
+
+        <!-- justify-items-start, justify-items-end, justify-items-center -->
+        <p class="text-3xl">7</p>
+        <div
+            class="grid grid-cols-4 grid-rows-4 justify-items-strech gap-2 border-4 border-red-400"
+        >
+            <div class="h-20 border-4 border-blue-500">hello 1</div>
+            <div class="border-4 border-blue-500">hello 2</div>
+            <div class="h-20 border-4 border-blue-500">hello 3</div>
+            <div class="h-20 border-4 border-blue-500">hello 4</div>
+            <div class="h-20 border-4 border-blue-500">hello 5</div>
+            <div class="h-20 border-4 border-blue-500">hello 6</div>
+        </div>
+
+        <!-- content-start, content-end, content-center, content-between, content-around -->
+        <p class="text-3xl">8</p>
+        <div
+            class="h-80 grid grid-cols-4 content-around gap-2 border-4 border-red-400"
+        >
+            <div class="h-20 border-4 border-blue-500">hello 1</div>
+            <div class="border-4 border-blue-500">hello 2</div>
+            <div class="h-20 border-4 border-blue-500">hello 3</div>
+            <div class="h-20 border-4 border-blue-500">hello 4</div>
+            <div class="h-20 border-4 border-blue-500">hello 5</div>
+            <div class="h-20 border-4 border-blue-500">hello 6</div>
+        </div>
+
+        <p class="text-3xl">9</p>
+        <div class="grid grid-cols-4 gap-2 border-4 border-red-400">
+            <div class="border-4 border-blue-500">hello 1</div>
+            <div class="border-4 border-blue-500 order-first">hello 2</div>
+            <div class="border-4 border-blue-500">hello 3</div>
+            <div class="border-4 border-blue-500">hello 4</div>
+            <div class="border-4 border-blue-500">hello 5</div>
+            <div class="border-4 border-blue-500">hello 6</div>
+        </div>
+    </div>
+</body>
+</html>

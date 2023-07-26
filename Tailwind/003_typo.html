@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+        <!-- 
+        https://tailwindcss.com/docs/font-family
+            font-sans
+            font-serif
+            font-mono
+        -->
+
+        <!-- 
+        https://tailwindcss.com/docs/font-size
+        text-xs	    font-size: 0.75rem; /* 12px */
+                    line-height: 1rem; /* 16px */
+        text-sm	    font-size: 0.875rem; /* 14px */
+                    line-height: 1.25rem; /* 20px */
+        text-base   font-size: 1rem; /* 16px */
+                    line-height: 1.5rem; /* 24px */
+        text-lg	    font-size: 1.125rem; /* 18px */
+                    line-height: 1.75rem; /* 28px */
+        text-xl	    font-size: 1.25rem; /* 20px */
+                    line-height: 1.75rem; /* 28px */
+        text-2xl	font-size: 1.5rem; /* 24px */
+                    line-height: 2rem; /* 32px */
+        ...
+    -->
+    <!--
+        <p class="text-[14px]">
+            Arbitrary values
+        </p>
+    -->
+    <div class="space-y-5">
+        <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-sm border-b">font-sans</h3>
+            <p class="font-sans">
+            The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+        <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-xs border-b">font-serif</h3>
+            <p class="font-serif">
+            The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+        <div class="p-3 bg-white shadow rounded-lg">
+            <h3 class="text-xs border-b">font-mono</h3>
+            <p class="font-mono">
+            The quick brown fox jumps over the lazy dog.
+            </p>
+        </div>
+    </div>
+    <p class="text-[24px]">
+        Arbitrary values
+    </p>
+</body>
+</html>

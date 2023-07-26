@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tailwindcss</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <!-- https://tailwindcss.com/docs/hover-focus-and-other-states#media-queries -->
+        <div
+            class="w-16 h-16 bg-red-300 sm:w-20 sm:h-20 sm:bg-blue-300 md:w-32 md:h-32 md:bg-green-300"
+        >
+            hello world
+        </div>
+        <div class="landscape:hidden">
+            <p>
+                This experience is designed to be viewed in landscape. Please
+                rotate your device to view the site.
+            </p>
+        </div>
+        <!-- https://play.tailwindcss.com/에서 config 수정 후 가능합니다. -->
+        <!-- 
+            /** @type {import('tailwindcss').Config} */
+            module.exports = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                // ...
+                },
+            },
+            plugins: [],
+            }
+        -->
+        <div class="dark">
+            <div
+                class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+            >
+                <div>
+                    <span
+                        class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+                    >
+                        <svg
+                            class="h-6 w-6 text-white"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <!-- ... -->
+                        </svg>
+                    </span>
+                </div>
+                <h3
+                    class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight"
+                >
+                    Writes Upside-Down
+                </h3>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+                    The Zero Gravity Pen can be used to write in any
+                    orientation, including upside-down. It even works in outer
+                    space.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

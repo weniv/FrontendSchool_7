@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- https://tailwindcss.com/docs/flex -->
+    <!-- https://tailwindcss.com/docs/width -->
+    <!-- https://tailwindcss.com/docs/gap -->
+    <div class="space-y-4">
+        <!-- flex-wrap과 비교해보세요. -->
+        <div class="flex border-4 border-red-500">
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+        </div>
+        <div class="flex flex-col border-4 border-red-500">
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+        </div>
+        <div class="flex flex-wrap border-4 border-red-500">
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+            <div class="border-2 p-2 border-sky-500">hello</div>
+        </div>
+        <!-- 
+        justify-content: center        - justify-center
+        justify-content: space-between - justify-between
+        align-items: flex-start        - items-start
+        align-items: center            - items-center
+        align-self: auto               - self-auto
+        align-slef: flex-start         - self-start
+        align-slef: flex-end           - self-end
+        flex: 1 1 0%                   - flex-1
+        flex: 1 1 auto                 - flex-auto
+        flex: 0 1 auto                 - flex-initial
+        flex: none                     - flex-none
+        -->
+        <div class="flex w-72 h-72 bg-red-400 justify-center items-center">
+            <div class="w-8 h-8 bg-sky-500"></div>
+        </div>
+
+        <div class="flex flex-row-reverse">
+            <div class="border-2 p-2 border-sky-500">1</div>
+            <div class="border-2 p-2 border-sky-500">2</div>
+            <div class="border-2 p-2 border-sky-500">3</div>
+        </div>
+        <!-- 
+            space-x-1 > margin-left: 0.25rem; /* 4px */
+            space-y-1 > margin-top: 0.25rem; /* 4px */
+        -->
+        <!-- 
+            gap-px        gap: 1px;
+            gap-x-px    column-gap: 1px;
+            gap-1        gap: 0.25rem; /* 4px */
+        -->
+        <div class="flex gap-6 flex-wrap">
+            <div class="border-2 p-2 border-sky-500">1</div>
+            <div class="border-2 p-2 border-sky-500">2</div>
+            <div class="border-2 p-2 border-sky-500">3</div>
+        </div>
+
+        <div class="flex flex-wrap border-2 border-red-500">
+            <div class="w-1/3 border-2 border-sky-500 bg-[#323b4c]">
+                <div class="flex flex-col">
+                    <div class="text-gray-200">img</div>
+                    <div class="text-white">contact</div>
+                    <div class="text-white">education</div>
+                    <div class="text-white">expertise</div>
+                    <div class="text-white">language</div>
+                </div>
+            </div>
+            <div class="w-2/3 border-2 border-sky-500">2</div>
+        </div>
+
+        <div class="border-2 bg-red-500 flex justify-between">
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+        </div>
+
+        <div class="border-2 bg-red-500 flex justify-between">
+            <div class="border-2 bg-sky-500">logo</div>
+            <div class="flex justify-between bg-sky-500 w-72">
+                <div class="border-2 bg-blue-200">about</div>
+                <div class="border-2 bg-blue-200">product</div>
+                <div class="border-2 bg-blue-200">profile</div>
+                <div class="border-2 bg-blue-200">contact</div>
+            </div>
+        </div>
+
+        <!-- 접근성과 모바일 고려 -->
+        <!-- https://tailwindcss.com/docs/responsive-design#targeting-a-breakpoint-range -->
+        <!-- 
+            max-sm	@media not all and (min-width: 640px) { ... }
+            max-md	@media not all and (min-width: 768px) { ... }
+            max-lg	@media not all and (min-width: 1024px) { ... }
+            max-xl	@media not all and (min-width: 1280px) { ... }
+            max-2xl	@media not all and (min-width: 1536px) { ... } 
+        -->
+        <!-- 
+            768px 이상일 때 : row
+            768px 미만일 때 : col
+            md:flex-row가 뜻하는 바는 768px 이상일 때 flex-row이고, 768px 미만일 때는 flex-col입니다.
+        -->
+        <div class="flex md:flex-row flex-col border-2 bg-red-500">
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+            <div class="border-2 bg-sky-500">hello</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>transition</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <!-- https://tailwindcss.com/docs/transition-property -->
+        <!-- transition-timing-function -->
+        <div class="flex h-64 justify-center items-center">
+            <button
+                class="transition ease-in-out delay-300 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded p-5 m-3 text-white"
+            >
+                Save Changes
+            </button>
+            <button
+                class="transition ease-linear bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded p-5 m-3 text-white"
+            >
+                Save Changes
+            </button>
+            <button
+                class="transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100 rounded p-5 m-3 text-white"
+            >
+                Save Changes
+            </button>
+        </div>
+    </body>
+</html>

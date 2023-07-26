@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- h${hello}*6 -->
+    <!-- reset css가 기본으로 들어가 있습니다. -->
+
+    <!-- space-y-8 : 각 요소의 간격, 1이 0.25rem -->
+    
+    <!--
+        0.25 rem이 아닌 것 중 자주 사용하는 것 
+        board-2 : 2px 
+        divide-y-2 : 2px
+        outline-2 : 2px
+    -->
+    
+    <!-- bg-red-200 : red color 숫자가 높아질수록 진해짐 -->
+    
+    <!-- shadow : 그림자, rounded : radius -->
+    
+    <!--
+        w-96 : 96%나 96px이 아님, 0.25rem*96임
+        https://tailwindcss.com/docs/width
+    -->
+
+    <h1 class="text-3xl">hello</h1>
+    <h2>hello</h2>
+    <h3>hello</h3>
+    <h4>hello</h4>
+    <h5>hello</h5>
+    <h6>hello</h6>
+    <hr>
+    <div class="divide-y-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="border-4 border-red-500">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <div class="space-y-4 bg-red-200 mt-4">
+        <!-- div{$번째 div요소}*8 -->
+        <div class="w-96 bg-white">1번째 div요소</div>
+        <div class="w-80 bg-white">2번째 div요소</div>
+        <div class="w-72 bg-white">3번째 div요소</div>
+        <div class="w-64 bg-white">4번째 div요소</div>
+        <div class="w-60 bg-white">5번째 div요소</div>
+        <div class="w-56 bg-white">6번째 div요소</div>
+        <div class="w-52 bg-white">7번째 div요소</div>
+        <div class="w-48 bg-white">8번째 div요소</div>
+    </div>
+
+    <!-- 많이 사용하는 넓이 단위 -->
+    <div class="space-y-4 bg-red-200 mt-4">
+        <!-- div{$번째 div요소}*8 -->
+        <div class="w-1/4 bg-white">test 번째 div요소</div>
+        <div class="w-2/4 bg-white">test 번째 div요소</div>
+        <div class="w-3/4 bg-white">test 번째 div요소</div>
+    </div>
+
+    <!-- 많이 사용하는 넓이 단위 -->
+    <div class="space-y-4 bg-red-200 mt-4 w-72">
+        <!-- div{$번째 div요소}*8 -->
+        <div class="w-1/4 bg-white">test 번째 div요소</div>
+        <div class="w-2/4 bg-white">test 번째 div요소</div>
+        <div class="w-3/4 bg-white">test 번째 div요소</div>
+    </div>
+</body>
+</html>

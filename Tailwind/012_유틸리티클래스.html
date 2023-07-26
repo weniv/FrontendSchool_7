@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tailwindcss</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <!-- https://tailwindcss.com/docs/functions-and-directives#apply -->
+        <!-- https://play.tailwindcss.com/에서는 apply 문법을 사용하실 수 있습니다. -->
+
+        <!-- 
+        아래처럼 사용하기 위해서는
+        .grid-i{
+            @apply border-4 border-blue-500;
+        }
+        를 styles.scss에 @apply를 통해 적용해야 한다.
+        -->
+        <h2>1</h2>
+        <div class="grid grid-cols-3 gap-2 border-4 border-red-400">
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+        </div>
+
+        <h2>2</h2>
+        <div
+            class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 border-4 border-red-400"
+        >
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+            <div class="border-4 border-blue-500">hello</div>
+        </div>
+    </body>
+</html>
