@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>javascript console</title>
+</head>
+<body>
+    <script>
+        // 자주 사용하는 console 종류
+        console.clear() // 콘솔창 청소해줌
+        console.dir() // 가지고 있는 요소(점으로 찍어서 접근할 수 있는 요소)를 보여줌
+        console.log() // 콘솔창에 출력
+
+        let data = {a:1, b:2, c:3}
+        console.table(data)
+
+        function leehojun() {
+            x = 10;
+            y = 20;
+            return x + y
+        }
+        console.table(leehojun)
+
+        console.group('one')
+        console.log('호준/팀원')
+        console.log('길동/팀원')
+        console.log('춘향/팀원')
+        console.group('two')
+        console.log('철수/팀원')
+        console.log('영희/팀원')
+        console.groupEnd()
+        console.log('갑돌이/팀장')
+        console.groupEnd()
+        console.log('End')
+
+        console.group('one')
+        console.log('1')
+        console.log('2')
+        console.log('3')
+        console.groupEnd()
+        console.group('two')
+        console.log('1')
+        console.log('2')
+        console.log('3')
+        console.groupEnd()
+
+        console.group('one')
+        console.log('1')
+        console.log('2')
+        console.log('3')
+        console.group('three')
+        console.log('3.1')
+        console.log('3.2')
+        console.groupEnd()
+        console.groupEnd()
+        console.group('two')
+        console.log('1')
+        console.log('2')
+        console.log('3')
+        console.groupEnd()
+
+        // 디버깅 : 버그를 잡는 것
+        console.group('one')
+        for (let i = 0; i < 3; i++) {
+            console.log(i)
+            console.group('two')
+            for (let j = 0; j < 10; j++) {
+                console.log(j)
+            }
+            console.groupEnd()
+        }
+        console.groupEnd()
+
+        console.error('에러발생')
+        console.warn('경고발생')
+        console.info('정보')
+
+        // 잊으셔도 괜찮습니다.
+        // color가 아니어도 %c입니다.
+        // %s: String 
+        // %d: Number 
+        // %i: parseInt(value, 10)
+        // %f: parseFloat(value)
+        // %j: JSON
+        // %o: Object (including non-enumerable properties and proxies)
+        // %O: Object (not including non-enumerable properties and proxies)
+        // %c: CSS
+        // %%: single p
+        console.log("%chello world", "color:red;font-size:32px");
+        console.log(
+            "%chello world%chello",
+            "color:red;font-size:32px",
+            "color:blue;font-size:16px"
+        );
+        // https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+    </script>
+</body>
+</html>

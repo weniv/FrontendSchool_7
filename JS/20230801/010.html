@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>javascript type</title>
+</head>
+<body>
+    <script>
+        // 원시타입
+        // string, number, bigint, boolean, undefined, symbol, null
+
+        // 특징1: 변경 불가!
+        let x = 'hello'
+        console.log(x)
+        console.log(x[0]) // indexing
+        console.log(x[1])
+        x[0] = 10 // 변경 불가
+        // 특징2: 값의 참조가 저장되는 것이 아닌, 값 자체를 가리키게 됩니다.
+        let xx = 10
+        let yy = xx
+        xx = 20
+        console.log(xx, yy)
+
+        // 참조타입
+        // 객체, 배열, 함수, 정규표현식
+    </script>
+</body>
+</html>

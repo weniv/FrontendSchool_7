@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript type</title>
+</head>
+<body>
+    <script>
+        let x = 10;
+        let y = 20;
+        let z = 'a'; // 97
+        let k = 'b'; // 98
+        console.log(x + y); // 30
+        console.log(z + k); // ab, 왜 195가 아니라 97+98이 나올까?
+
+        // typeof가 정확하게 나오긴 하지만 우리가 원하는 값이 아닐 수도 있습니다.
+        console.log(typeof(10))
+        console.log(typeof('10'))
+        console.log(typeof([1, 2, 3]))
+
+        ///////////////////////////////////
+        console.log(typeof(null)) // javascript의 버그 // object로 나옴 // 자바스크립트가 어려운 이유
+        console.log(typeof([]))
+        console.log(typeof({}))
+        console.log(typeof(function(){}))
+        console.log(typeof(/a/g))
+        console.log(typeof(true))
+        console.log(typeof(NaN))
+        console.log(typeof(undefined))
+        //////////////////////////////////
+
+
+        function typeCheck(value) {
+            const return_value = Object.prototype.toString.call(value);
+            const type = return_value.substring(
+                return_value.indexOf(" ") + 1,
+                return_value.indexOf("]")
+            );
+            return type.toLowerCase();
+        }
+
+        console.log(typeCheck(10))
+        console.log(typeCheck('10'))
+        console.log(typeCheck([1, 2, 3]))
+
+        ///////////////////////////////////
+        console.log(typeCheck(null))
+        console.log(typeCheck([]))
+        console.log(typeCheck({}))
+        console.log(typeCheck(function(){}))
+        console.log(typeCheck(/a/g))
+        console.log(typeCheck(true))
+        console.log(typeCheck(NaN))
+        console.log(typeCheck(undefined))
+        //////////////////////////////////
+    </script>
+</body>
+</html>

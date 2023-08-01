@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>String</title>
+</head>
+<body>
+<script>
+// 문자열은 작은따옴표(')나 큰따옴표("), 빽틱(`)로 둘러싼 일련의 문자를 가르킵니다.
+
+// 줄바꿈(2개 모두 가능합니다.)
+let s = 'hello\nworld'
+// let s = `hello
+//         world`
+console.log(s)
+
+let age = 10
+console.log(`홍길동의 나이는 ${age}살 입니다.`)
+console.log(`홍길동의 나이는 ${2 * age}살 입니다.`)
+console.log('홍길동의 나이는 ' + age + '살 입니다.') 
+
+// 순서 출력
+let name = '홍길동'
+console.log(name[0])
+console.log(name[100]) // 자바스크립트에서는 문자열의 순서를 넘어갔을 때 에러가 발생하지 않고 undefined를 출력합니다.
+console.log(name[-1]) // undefined // 다른언어 마지막 문자를 출력합니다.
+
+// 문자열의 사칙연산
+console.log('1' + 2 + 3) // 다른언어 error
+console.log(2 + 3 + '1') // 다른언어 error
+console.log(2 + 3 + +'1') // 다른언어 error
+console.log('b' + 'a' + + 'a') // +'a'이 NaN
+console.log('lee' + 'hojun')
+console.log('hojun' * 3) // 다른언어는 'hojunhojunhojun'
+
+// 형변환
+console.log('1' + '1') // 11이 아니라 2가 출력되게 할 수 있을까요?
+console.log(+'1' + +'1') // 권하지 않습니다.
+console.log(Number('1') + Number('1')) // 권하지 않습니다.
+console.log(parseInt('1') + parseInt('1')) // 권합니다!
+// parseFloat('10.5')
+console.log(parseInt(undefined))
+console.log(1 + 1) // 2가 아니라 11이 출력되게 할 수 있을까요?
+console.log(String(1) + String(1)) // 권하지 않습니다.
+// console.log(1.toString() + 1.toString()) // 가능한 코드가 아닙니다.
+console.log((1).toString() + (1).toString()) // 가능한 코드입니다.
+let x = 10
+console.log(x.toString() + x.toString())
+
+</script>
+</body>
+</html>

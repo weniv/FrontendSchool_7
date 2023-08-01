@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>javascript console</title>
+</head>
+<body>
+    <script>
+        valueA = 1; // 매우 안좋은 습관입니다.
+        const my_name ="WADE";
+
+        if(true){ // -- 코드블록의 시작입니다. -- //
+
+            let valueB = 'Hello!';
+            const my_name ="HOJUN";       // 코드블록 밖의 my_name과 별개의 상수입니다.
+            console.log(valueB, my_name)
+
+        } // -- 코드블록의 끝입니다. -- //
+
+        // console.log(valueB) // valueB 변수는 없습니다!
+        let valueB = 'Hi!';            // 코드블록 안의 valueB와 별개의 변수입니다.
+    </script>
+</body>
+</html>
