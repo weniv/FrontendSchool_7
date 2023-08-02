@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>숫자를 표현하는 여러가지 기법</title>
+</head>
+<body>
+<script>
+// Infinity
+// -Infinity
+// Infinity > 10
+// Infinity : 무한대를 의미하는 숫자로 아주 큰 수를 표현하거나 불가능한 연산(0으로 나누기)이 발생했을 때 그 결과 값을 Infinity로 취급합니다.
+console.log("무한대 : ", 1/0); 
+
+// 숫자형 데이터에 알파벳e를 붙이면 0을 손쉽게 추가할 수 있습니다.
+console.log(3e10);
+
+let num = 9999e10000;
+console.log(num === Infinity); 
+
+
+// NaN : Not a Number 의 약자로 산술연산이 불가능한 데이터 타입과 연산을 진행하려고 할 때 반환됩니다.
+console.log("숫자가 아님" / 2); 
+console.log("aa" * 2); 
+</script>
+</body>
+</html>

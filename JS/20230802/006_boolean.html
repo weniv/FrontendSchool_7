@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>boolean</title>
+</head>
+<body>
+<!-- true, false -->
+<script>
+// true(참, 1), false(거짓, 0)
+// &&(and, 논리곱), ||(or, 논리합), !(not, 부정)
+// &(and, 비트논리곱), |(or, 비트논리합), ~(not, 비트부정)
+
+// and나 or도 뒤를 볼 필요가 없으면 보지 않습니다!
+
+Boolean('가')
+!!'가'
+!!''
+
+// and(논리곱)
+console.log(true && true)
+console.log(true && false)
+console.log(false && true)
+console.log(false && false)
+// 어려운 내용입니다.
+console.log('가' && '나')
+console.log('' && '나')
+
+// or(논리합)
+console.log(true || true)
+console.log(true || false)
+console.log(false || true)
+console.log(false || false)
+// 어려운 내용입니다.
+let username = 'leehojun'
+console.log(username || '이름없음')
+
+let username = ''
+console.log(username || '이름없음')
+
+// not(부정)
+console.log(!true)
+console.log(!false)
+
+// 안배운 문법을 사용할 것입니다! 그렇기 때문에 and, or에만 집중해주세요.
+for (let i = 0; i < 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log(i)
+    }
+}
+
+for (let i = 0; i < 100; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+        console.log(i)
+    }
+}
+
+// 매우 중요하지 않습니다. 실무에서는 거의 사용하지 않습니다. 알고리즘 문제에서는 간혹 등장합니다.
+console.log(3 & 5)
+
+// 0011
+// 0101
+//-----
+// 0001
+
+console.log(3 | 5)
+
+// 0011
+// 0101
+//-----
+// 0111
+
+// https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
+// https://school.programmers.co.kr/learn/courses/30/lessons/17681?language=javascript
+(9 | 30)
+    .toString(2)
+    .replaceAll('0', ' ')
+    .replaceAll('1', '#')
+
+(20 | 1)
+    .toString(2)
+    .replaceAll('0', ' ')
+    .replaceAll('1', '#')
+
+
+// 안배운 문법을 사용할 것입니다! 그렇기 때문에 and, or에만 집중해주세요.
+for (let i = 0; i < 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) { // and는 둘 다 만족하면? 실행해라!
+        console.log(i)
+    }
+}
+
+for (let i = 0; i < 100; i++) {
+    if (i % 3 == 0 || i % 5 == 0) { // or 둘 중에 하나만 만족하면? 실행해라!
+        console.log(i)
+    }
+}
+
+// if의 중첩은 논리연산자로 대체할 수 있습니다.
+for (let i = 0; i < 100; i++) {
+    if (i % 3 == 0 ) {
+        if (i % 5 == 0) {
+            console.log(i)
+        }
+    }
+}
+
+</script>
+</body>
+</html>

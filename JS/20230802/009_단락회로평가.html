@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>할당연산</title>
+</head>
+<body>
+<script>
+// 단락회로평가(***)
+// true : 1
+// false : 0
+// and(&&) : 곱
+// or(||) : 합
+// not(!) : 부정
+
+console.log(!"false") // false
+console.log(!"hello") // false
+console.log(!"0") // false
+
+console.log(!false) // true
+console.log(!0) // true
+
+console.log('abc' / 2) // NaN
+
+console.log(!!NaN) // false
+console.log(!!undefined) // false
+console.log(!!null) // false
+
+// 단락회로 평가는 값이 비어있는지 아닌지를 체크하는 용도로 많이 사용하며, 특히나 or 연산자를 많이 사용합니다!
+let username = ''
+username = username || 'Guest'
+
+let username = 'leehojun'
+username = username || 'Guest'
+
+// 아래 코드는 리엑트 가셔야 이해가 가능하실겁니다.
+let logintemplate = ''
+if (username) {
+    logintemplate = '<li>로그아웃</li>'
+}
+
+logintemplate = logintemplate || '<li>로그인</li>'
+</script>
+</body>
+</html>
