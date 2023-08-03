@@ -108,27 +108,95 @@ function two() { // 카메라
 one()
 two()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 다시 알아보고 답변 드리겠습니다.
-// 찾으면 읽을 수 있습니다!
-// 수정할 수 있진 않습니다!(다음 시간에 알려드리겠습니다.)
+// 찾으면 읽고 쓸 수 있습니다!
+// 전역변수는 읽고 수정할 수 있습니다.
+// 다만 별도 함수 영역에 있는 지역변수는 서로 읽을 수 없습니다.
 
 let a = 10; // 전역변수
 function test() {
-    let b = a + 100 // 단순히 읽어왔기 때문에 됩니다!
+    let b = a + 100
     return b
 }
 test()
+
+let a = 10; // 전역변수
+function test() {
+    let a = 100
+    return a
+}
+test()
+console.log(a) // 10
+
+
+let a = 10;
+function test() {
+    let a = 100
+    function test2() {
+        a = 1000
+    }
+    test2()
+    console.log(a) // 1000
+}
+test()
+console.log(a) // 10
+
+
+// 지역변수는 서로 간섭하지 않습니다.
+function test1() {
+    let x = 10
+    let a = 10
+}
+
+function test2() {
+    let x = 100
+    // console.log(a)
+}
+
+test1()
+test2()
+console.log(x)
+
+
+// 지역변수는 서로 간섭하지 않습니다.
+function test1() {
+    let x = 100
+}
+
+function test2() {
+    // 이렇게 하면 window에 등록이 되어 버립니다.
+    // let이나 const, var 키워드를 꼭 써주세요.
+    x = 100
+}
+
+test1()
+test2()
+console.log(x)
+console.log(window.x)
+
+
+let battery = 100; // 전역변수
+
+function 메모장() {
+    battery -= 1
+    return b
+}
+
+function 사진() {
+    battery -= 1
+    return b
+}
+
+test()
+
+// 순수함수
+function add(a, b, c) {
+    return a + b + c
+}
+add(1, 2, 3)
+
+// 순수함수X
+let c = 10
+function add(a, b) {
+    return a + b + c
+}
+add(1, 2)
