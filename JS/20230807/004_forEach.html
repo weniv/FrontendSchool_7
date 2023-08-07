@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title></title>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+    // nodelist와 array는 다릅니다!
+    let div = document.querySelectorAll('div')
+    // 아래 코드는 익스플로러에서 작동하지 않습니다.
+    div.forEach(v=>console.log(v))
+    div.forEach(v=>v.innerText = 'hi')
+    // 대안: 아래처럼 배열로 바꿔 사용할 수 있습니다!
+    div = [...div]
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>실무에서 map이 어떻게 사용되는지 확인</title>
+</head>
+<body>
+    <p>목적 : '실무에서 이렇게 한다'인 것이지 이 코드를 이해할 필요 없습니다.</p>
+    <div id="app"></div>
+    <script>
+        // step1
+        // fetch('https://test.api.weniv.co.kr/mall')
+        // .then(response => response.json())
+        // .then(data => {
+        //     console.log(data)
+        // })
+
+        // step2
+        // fetch('https://test.api.weniv.co.kr/mall')
+        // .then(response => response.json())
+        // .then(data => {
+        //     data.forEach(v => {
+        //         console.log(v['thumbnailImg'])
+        //         console.log(v['productName'])
+        //         console.log(v['price'])
+        //     });
+        // })
+
+        // step3(final)
+        // https://test.api.weniv.co.kr/asset/img/1/thumbnailImg.jpg
+        let s = ''
+        fetch('https://test.api.weniv.co.kr/mall')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(v => {
+                s += `
+                <section>
+                    <img src="https://test.api.weniv.co.kr/${v['thumbnailImg']}">
+                    <h2>${v['productName']}</h2>
+                    <p>${v['price']}</p>
+                </section>
+                `
+            });
+        })
+        .then(() => {
+            console.log(s)
+            document.getElementById('app').innerHTML = s
+        })
+        
+    </script>
+</body>
+</html>
