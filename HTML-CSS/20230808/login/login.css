@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/* base */
+/* @font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Spoqa Han Sans Neo;
+    src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+body {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+} */
+
+/* 메인 화면 */
+#appLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cont-login {
+    width: 500px;
+    padding: 38px 30px 30px;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+}
+
+.cont-login .tit-weniv {
+    display: inline-block;
+    width: 122px;
+    margin-bottom: 36px;
+}
+
+.cont-login .txt-login {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* 모달 스타일 */
+.modal-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.modal-login.on {
+    display: block;
+    /* height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; */
+
+}
+
+.modal-login::before {
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .7;
+}
+
+.modal-login .cont-form-login {
+    /* overflow: hidden; */
+    position: relative;
+    /* width: 100%; */
+    max-width: 520px;
+    margin: 30px auto;
+    background-color: #fff;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+}
+
+.cont-form-login .tit-form {
+    padding: 20px 0 18px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.cont-form-login .txt-form {
+    padding: 0 24px 0;
+    margin: 26px 0 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.cont-form-login .form-login {
+    padding: 0 24px 0;
+}
+
+.form-login .labl-hold {
+    display: inline-block;
+    height: 22px;
+    margin: 17px 0 21px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767676;
+    cursor: pointer;
+}
+
+.form-login .labl-hold::before {
+    display: inline-block;
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    vertical-align: -5px;
+    /* background-image: url("images_login/icon_check_empty.png"); */
+    background: url("images_login/sprites_checkbox.png") -10px -10px no-repeat;
+}
+
+.form-login .inp-hold:focus-visible+.labl-hold::before {
+    outline: 2px solid #000;
+    outline-offset: 5px;
+}
+
+.form-login .inp-hold:checked+.labl-hold::before {
+    /* background-image: url("images_login/icon_check.png"); */
+    background: url("images_login/sprites_checkbox.png") -52px -10px no-repeat;
+
+}
+
+.link-userinfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-userinfo a[class^="link"] {
+    font-size: 14px;
+    line-height: 18px;
+    color: #767676;
+}
+
+.link-userinfo .link-signup::after {
+    content: '\007C';
+    margin: 0 8px 0 12px;
+}
+
+.cont-form-login .cont-sns-login {
+    position: relative;
+    margin-top: 30px;
+    padding: 38px 24px 25px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #767676;
+}
+
+.cont-sns-login::before {
+    content: "또는";
+    display: block;
+    width: 52px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+
+.cont-sns-login::after {
+    content: "";
+    display: block;
+    width: calc(100% - 48px);
+    position: absolute;
+    top: 9px;
+    height: 1px;
+    margin-top: -1px;
+    background-color: #C4C4C4;
+}
+
+.cont-sns-login li+li {
+    margin-top: 10px;
+}
+
+.cont-form-login .btn-close {
+    position: absolute;
+    padding: 22px 24px;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    background-color: transparent;
+    box-sizing: content-box;
+}

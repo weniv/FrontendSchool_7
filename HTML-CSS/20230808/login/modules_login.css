@@ -1,0 +1,137 @@
+/* 모듈 */
+/* 로그인 버튼 모듈 */
+.btn-login {
+    width: 100%;
+    padding: 17px 0 15px;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: #2F80ED;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-close {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    /* box-sizing: content-box; */
+}
+
+/* 인풋 모듈 */
+.module-inp .inp-login {
+    display: block;
+    width: 100%;
+    padding: 15px 16px 15px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.module-inp.module-inp-id.error .inp-login {
+    position: relative;
+    border: 2px solid #F4492E;
+}
+
+.module-inp .inp-error {
+    display: none;
+    margin: 6px 0 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #F4492E;
+    text-align: left;
+}
+
+.module-inp.error .inp-error {
+    display: block;
+
+}
+
+.module-inp~.module-inp {
+    margin-top: 10px;
+}
+
+/* 소셜 로그인 버튼 모듈 */
+.link-sns-login {
+    display: block;
+    padding: 15px 14px;
+    border: 1px solid #767676;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #767676;
+}
+
+[class^="icon"]::before {
+    position: absolute;
+    /* absolute 포지션의 top, left, right, button 의 값이 없을 때 즉, auto 일 경우 요소는 움직지 않고 자기의 원래 위치를 지킵니다. */
+    /* float: left; 가상요소의 경우 float 값을 줘도 display 값이 block이 되지 않는다.*/
+    display: block;
+    /* text-align:center 의 영향을 피하기 위해 */
+    content: "";
+    width: 22px;
+    height: 22px;
+    /* background-image: url("images_login/css_sprites_retina.png");
+    background-size:117px 84px; */
+}
+
+.link-sns-login.icon-facebook {
+    border: 1px solid #2D9CDB;
+}
+
+.link-sns-login.icon-naver {
+    border: 1px solid #00BF18;
+}
+
+.link-sns-login.icon-kakao {
+    border: 1px solid #F2C94C;
+}
+
+.icon-google::before {
+    /* background-position: -52px -10px; */
+    background: url("images_login/icon_google.png") no-repeat;
+}
+
+.icon-naver::before {
+    /* background-position: -10px -10px; */
+    background: url("images_login/icon_naver.png") no-repeat;
+}
+
+.icon-kakao::before {
+    /* background-position: -10px -52px; */
+    background: url("images_login/icon_kakao.png") no-repeat;
+}
+
+.icon-facebook::before {
+    /* background-position: -94px -10px; */
+    height: 24px;
+    background: url("images_login/icon_facebook.png") center no-repeat;
+
+}
+
+
+/* @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    [class^="icon"]::before{
+        background-image: url("images_login/css_sprites_retina.png");
+        background-size:117px 84px;
+    }
+
+    .icon-google::before{
+        background-position: -52px -10px;
+    }
+    .icon-naver::before{
+        background-position: -10px -10px;
+    }
+    .icon-kakao::before{
+        background-position: -10px -52px;
+    }
+    .icon-facebook::before{
+        background-position: -94px -10px;;
+    }
+} */

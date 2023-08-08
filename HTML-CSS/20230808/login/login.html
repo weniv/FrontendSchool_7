@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위니브 로그인</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="modules_login.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main id="appLogin">
+        <article class="cont-login">
+            <h1 class="tit-weniv"><img src="images_login/logo.png" alt="weniv"></h1>
+            <p class="txt-login">위니브를 더 즐겁고 편리하게 이용하세요.</p>
+            <button type="button" class="btn-login">로그인</button>
+        </article>
+    </main>
+    <article class="modal-login on">
+        <h2 class="txt-hide">회원가입, 로그인 또는 소셜서비스로 로그인</h2>
+        <section class="cont-form-login">
+            <h3 class="tit-form">로그인 또는 회원가입</h3>
+            <p class="txt-form">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+            <form class="form-login">
+
+                <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+                <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+                <button type="button" class="btn-login">로그인</button>
+            </form>
+            <div class="link-userinfo">
+                <a href="javascript:void(0);" class="link-signup">회원가입</a>
+                <a href="javascript:void(0);" class="link-lost">아이디/비밀번호 찾기</a>
+            </div>
+            <section class="cont-sns-login">
+                <h3 class="txt-hide">소셜서비스로 로그인</h3>
+                <ul>
+                    <li><a href="javascript:void(0);" class="icon-google link-sns-login">구글 계정으로 로그인</a></li>
+                    <li><a href="javascript:void(0);" class="icon-facebook link-sns-login">페이스북 계정으로 로그인</a></li>
+                    <li><a href="javascript:void(0);" class="icon-naver link-sns-login">네이버 계정으로 로그인</a></li>
+                    <li><a href="javascript:void(0);" class="icon-kakao link-sns-login">카카오 계정으로 로그인</a></li>
+                </ul>
+            </section>
+            <button type="button" class="btn-close"><img src="images_login/close.png" alt="로그인 닫기"></button>
+        </section>
+
+    </article>
+    <script>
+        const targetModal = document.querySelector(".modal-login");
+        document.querySelector('#appLogin .btn-login').addEventListener('click', (e) => {
+            toggleModal()
+        });
+        document.querySelector('.modal-login .btn-close').addEventListener('click', (e) => {
+            toggleModal()
+        });
+        function toggleModal() {
+            targetModal.classList.toggle('on');
+        }
+    </script>
+</body>
+
+</html>
