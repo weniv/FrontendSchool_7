@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let price = 5000;
+        const text = `hello ${(price > 6000) ? '비싸요!' : (price < 3000) ? '엄청싸요!' : '적당해요!'}`;
+
+        console.log(text);
+
+        let message = '';
+
+        if (price > 6000) {
+            message = '비싸요!';
+        } else if (price < 3000) {
+            message = '엄청싸요!';
+        } else {
+            message = '적당해요!';
+        }
+
+        const text2 = `hello ${message}`;
+
+
+        // let score = 69;
+        // let money = 1000;
+
+        // if (score > 90) {
+        //     document.write('참 잘했습니다!<br>');
+        //     money += 100000
+        // } else if (score > 80) {
+        //     document.write('잘했습니다!<br>');
+        //     money += 10000
+        // } else if (score > 70) {
+        //     document.write('했습니다!<br>');
+        //     money += 1000
+        // } else {
+        //     money = 0
+        // }
+
+
+        // if (score > 90) {
+        //     document.write('참 잘했습니다!<br>');
+        //     money += 100000
+        // }
+        // if (score > 80) {
+        //     document.write('잘했습니다!<br>');
+        //     money += 10000
+        // }
+        // if (score > 70) {
+        //     document.write('했습니다!<br>');
+        //     money += 1000
+        // }
+        // else {
+        //     money = 0
+        // }
+
+        // document.write(money);
+
+        const age = prompt('나이를 입력해주세요');
+
+
+
+        function myFunc() {
+            var temp3 = 20;
+        }
+
+
+        if (true) {
+            let temp = 20;
+            const temp2 = 20;
+        }
+
+        if (age >= 18) {
+
+            console.log('안녕하세요');
+        } else if (age >= 10) {
+            console.log('안녕 반가워 꼬마친구!');
+        } else {
+            console.log('부럽다...');
+        }
+    </script>
+</body>
+
+</html>
