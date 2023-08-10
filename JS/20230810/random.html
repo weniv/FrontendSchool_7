@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math.random(); // 0 ~ 0.999999... 사이의 실수
+
+        // Math.random() * 10 // 0 ~ 9.99999999...
+
+        // Math.random * 10 + 2 // 2 ~ 11.99999999...
+
+        // Math.random * 8 + 2 // 2 ~ 9.9999999 ....
+
+        // parseInt(Math.random * 8 + 2);
+
+        function lottoGenerator() {
+            const lottArr = [];
+
+            while (lottArr.length < 6) {
+
+                // 1 ~ 44.999999
+                const result = parseInt(Math.random() * 45 + 1);
+
+                if (!lottArr.includes(result)) {
+                    lottArr.push(result);
+                }
+            }
+
+            return lottArr;
+        }
+
+        console.log(lottoGenerator());
+
+    </script>
+</body>
+
+</html>
