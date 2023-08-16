@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: 'hojun',
+            age: 25,
+            a() {
+                console.log(this);
+                console.log(this.name);
+                let b = () => {
+                    console.log(this);
+                    console.log(this.name);
+                    let c = () => {
+                        console.log(this);
+                        console.log(this.name);
+                    }
+                    c()
+                }
+                b()
+            }
+        }
+        person.a()
+
+
+        // const person = {
+        //     name: 'hojun',
+        //     age: 25,
+        //     a() {
+        //         console.log(this);
+        //         console.log(this.name);
+        //         function b() {
+        //             console.log(this);
+        //             console.log(this.name);
+        //             function c() {
+        //                 console.log(this);
+        //                 console.log(this.name);
+        //             }
+        //             c();
+        //         }
+        //         b();
+        //     }
+        // }
+
+        // person.a();
+
+        // const func = function a() {
+        //     console.log(this);
+        //     console.log(this.name);
+        //     function b() {
+        //         console.log(this);
+        //         console.log(this.name);
+        //         function c() {
+        //             console.log(this);
+        //             console.log(this.name);
+        //         }
+        //         c();
+        //     }
+        //     b();
+        // }
+        // func();
+
+    </script>
+</body>
+
+</html>
