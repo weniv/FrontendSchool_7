@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Info(age, address) {
+            this.address = address;
+            this.age = age;
+        }
+
+        function Person(name, age, address) {
+            const newInfo = new Info(age, address);
+            return {
+                name: name,
+                getInfo() {
+                    return newInfo;
+                },
+                setAge(age) {
+                    newInfo.age = age;
+                }
+            }
+        }
+        const my = Person('지현', 26, "인천");
+        my.getInfo();
+        const you = Person('멋사', 7, '서울');
+        you.getInfo();
+
+
+
+        let book = {
+            책이름: '알잘딱깔센 JavaScript 비동기 프로그래밍 - 비동기 너 내 동기가 돼라',
+            책가격: 0,
+            저자: ['구나영', '김경림'],
+            출판일: '2022.08.12'
+        }
+        // 책이 100권이라면?
+
+
+        function Book(책이름, 책가격, 저자, 출판일) {
+            console.log(this);
+            this.책이름 = 책이름;
+            this.책가격 = 책가격;
+            this.저자 = 저자;
+            this.출판일 = 출판일;
+            this.read = function () {
+                console.log('reading....');
+            }
+        }
+
+
+        let book1 = new Book('JS', 0, ['이호준'], '2099.10.30')
+        let book2 = new Book('Python', 100000, ['이호준'], '2099.11.30')
+
+
+
+    </script>
+</body>
+
+</html>

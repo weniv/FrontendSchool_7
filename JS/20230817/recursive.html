@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function () {
+
+            function addElements(arr) {
+                console.log(arr);
+
+                if (arr.length === 0) {
+                    return 0
+                }
+                return arr[0] + addElements(arr.slice(1));
+            }
+
+            console.log(addElements([1, 2, 3, 4]));
+            // 1 + 2 + 3 + 4 + addElements([]])
+
+        })()
+
+    </script>
+</body>
+
+</html>

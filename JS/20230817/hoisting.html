@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverse(text) {
+            console.log(text);
+            if (text.length <= 1) {
+                return text
+            }
+            return reverse(text.slice(1)) + text[0]
+        }
+
+
+
+        console.log(reverse('hello'));
+
+        function factorial(n) {
+            if (n <= 1) {
+                return n
+            }
+            return n * factorial(n - 1)
+        }
+
+        console.log(factorial(5));
+        // 5 * 4 * 3 * 2 * 1
+
+        // var x;
+        // console.log(x);
+        // console.log(y);
+        // console.log(z);
+
+
+
+        var x = 1;
+        let y = 2;
+        const z = 3;
+
+        const test = function () {
+            console.log('test');
+        }
+
+        test();
+
+
+    </script>
+</body>
+
+</html>

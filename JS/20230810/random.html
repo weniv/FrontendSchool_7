@@ -21,19 +21,24 @@
         // parseInt(Math.random * 8 + 2);
 
         function lottoGenerator() {
-            const lottArr = [];
+            // const lottArr = [];
+            const lottoSet = new Set();
 
-            while (lottArr.length < 6) {
+            // while (lottArr.length < 6) {
+            while (lottoSet.size < 6) {
 
                 // 1 ~ 44.999999
                 const result = parseInt(Math.random() * 45 + 1);
 
-                if (!lottArr.includes(result)) {
-                    lottArr.push(result);
-                }
+                // if (!lottArr.includes(result)) {
+                //     lottArr.push(result);
+                // }
+
+                lottoSet.add(result);
             }
 
-            return lottArr;
+            // return lottArr;
+            return lottoSet;
         }
 
         console.log(lottoGenerator());
