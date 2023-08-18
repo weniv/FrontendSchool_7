@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../reset.css"> -->
+    <style>
+        .canvas {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        .canvas.red {
+            background-color: red;
+        }
+
+        .canvas.yellow {
+            background-color: yellow;
+        }
+
+        .canvas.green {
+            background-color: green;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            margin: 50px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas"></div>
+    <ul>
+        <li><button type="button" class="red">빨강</button></li>
+        <li><button type="button" class="yellow">노랑</button></li>
+        <li><button type="button" class="green">초록</button></li>
+    </ul>
+
+    <script>
+        const canvas = document.querySelector('.canvas'),
+            btns = document.querySelectorAll('button');
+
+        btns.forEach(function (itemBtn) {
+            itemBtn.addEventListener('click', function () {
+                canvas.className = 'canvas';
+                canvas.classList.add(itemBtn.className);
+            });
+        });
+
+
+        // btns.forEach((itemBtn) => {
+        //     itemBtn.addEventListener('click', () => {
+        //         canvas.classList.remove('red', 'yellow', 'green');
+        //         if (itemBtn.classList.contains('btn-red')) {
+        //             canvas.classList.add('red');
+        //         } else if (itemBtn.classList.contains('btn-yellow')) {
+        //             canvas.classList.add('yellow');
+        //         } else if (itemBtn.classList.contains('btn-green')) {
+        //             canvas.classList.add('green');
+        //         }
+        //     });
+        // });
+
+
+        // btnRed.addEventListener('click', function () {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('red');
+        // });
+
+        // btnYellow.addEventListener('click', function () {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('yellow');
+        // });
+
+        // btnGreen.addEventListener('click', function () {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('green');
+        // });
+
+    </script>
+
+</body>
+
+</html>

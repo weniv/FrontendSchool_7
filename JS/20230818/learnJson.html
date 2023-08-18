@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const json = '{"result": true, "count": 42}';
+        const obj = JSON.parse(json);
+        console.log(obj);
+
+        const json2 = '[1,2,3 , [1,2,3]]';
+        const arr = JSON.parse(json2);
+        console.log(arr);
+
+        const obj2 = { result: true, count: 42 }
+        const json3 = JSON.stringify(obj2);
+        console.log(json3);
+
+
+        let l = { ten: 10, twenty: 20, thirty: { forty: 40 } };
+        let a = structuredClone(l);
+        // let a = JSON.parse(JSON.stringify(l));
+
+
+    </script>
+</body>
+
+</html>

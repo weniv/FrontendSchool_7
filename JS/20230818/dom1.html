@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    점심 식단
+    <article id="container">
+        <ul>
+            <li>탕수육</li>
+            <li class="item-second">유산슬</li>
+            <li>짜장면<button>버튼</button></li>
+        </ul>
+    </article>
+    저녁 식단
+    <article>
+        <ul>
+            <li>된장국</li>
+            <li class="item-second">김치찌게</li>
+            <li>해장국</li>
+        </ul>
+    </article>
+
+    <script>
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function () {
+            btn.classList.toggle("blue");
+        });
+
+        const firstLi = document.querySelector('#container+article .item-second');
+
+        const lis = document.getElementsByTagName('li');
+        const lis2 = document.querySelectorAll('li');
+
+        const container = document.querySelector('#container ul');
+
+        container.append(document.createElement('li'));
+
+        console.log(lis);
+
+        console.log(lis2);
+
+        // const lis2 = document.getElementsByClassName('item-second');
+
+        // const container = document.getElementById('container');
+        // const innerLis = container.getElementsByTagName('li');
+    </script>
+</body>
+
+</html>
