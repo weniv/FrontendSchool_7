@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='myTxt'>hello lions</p>
+    <div>
+        <img
+            src='https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg'>
+    </div>
+
+
+    <script>
+        const target = document.querySelector('p');
+        const myimg = document.querySelector('img');
+        const idAttr = target.getAttribute('id');
+        console.log(idAttr);
+        myimg.setAttribute("src", "https://img.wendybook.com/image_detail/img159/159599_01.jpg");
+
+        const div = document.querySelector('div');
+        div.innerHTML = "<img src='https://img.wendybook.com/image_detail/img159/159599_01.jpg'><p>hello</p><button>push!!</button>";
+    </script>
+</body>
+
+</html>

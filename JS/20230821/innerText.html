@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h3>원본 요소:</h3>
+    <p id="source">
+        <style>
+            #source {
+                color: red;
+            }
+        </style>
+        아래에서<br />이 글을<br />어떻게 인식하는지 살펴보세요.
+        <span style="display:none">숨겨진 글</span>
+    </p>
+
+
+    <h3>textContent 결과:</h3>
+    <textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+    <h3>innerText 결과:</h3>
+    <textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea> -->
+
+    <!-- 로그인 상태에 따라서 숨겨야 하는 텍스트가 있는 경우 -->
+    <figure>
+        <img src="" alt="청바지 삼종세트">
+        <figcaption>상품 가격 : 29,900원 <span class="hidden">VIP 회원이라면 29,900원!!</span></figcaption>
+    </figure>
+
+    <script>
+
+        const cost = document.querySelector('figcaption');
+        const msg = '경고!!';
+        console.log(cost.textContent);
+        console.log(cost.innerText);
+        cost.innerHTML =
+            `<dialog>
+                <div>
+                    <p>${msg}</p>
+                </div >
+            </dialog>`;
+
+
+        // const source = document.getElementById("source");
+        // const textContentOutput = document.getElementById("textContentOutput");
+        // const innerTextOutput = document.getElementById("innerTextOutput");
+
+        // textContentOutput.innerHTML = source.textContent;
+        // innerTextOutput.innerHTML = source.innerText;
+    </script>
+</body>
+
+</html>
