@@ -9,22 +9,45 @@
 </head>
 
 <body>
+    <ul>
+        <li>
+            <button data-name="redcola" data-cost="1000">
+                <img src="" alt="콜라이미지">
+                <span>redcola</span>
+                <strong>1000</strong>
+            </button>
+        </li>
+    </ul>
+
+    <!-- <img class="terran battle-cruiser" src="battle-cruiser.png" data-ship-id="324" data-weapons="laser"
+        data-health="400" data-mana="250" data-skill="yamato-cannon" />
+
     <p id='myTxt'>hello lions</p>
     <div>
         <img
             src='https://static.ebs.co.kr/images/public/lectures/2014/06/19/10/bhpImg/44deb98d-1c50-4073-9bd7-2c2c28d65f9e.jpg'>
-    </div>
+    </div> -->
 
 
     <script>
-        const target = document.querySelector('p');
-        const myimg = document.querySelector('img');
-        const idAttr = target.getAttribute('id');
-        console.log(idAttr);
-        myimg.setAttribute("src", "https://img.wendybook.com/image_detail/img159/159599_01.jpg");
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            console.log(this.dataset.name, this.dataset.cost);
+            console.log(this.querySelector('span').textContent);
+        });
 
-        const div = document.querySelector('div');
-        div.innerHTML = "<img src='https://img.wendybook.com/image_detail/img159/159599_01.jpg'><p>hello</p><button>push!!</button>";
+
+        const image = document.querySelector('.terran');
+
+
+        // const target = document.querySelector('p');
+        // const myimg = document.querySelector('img');
+        // const idAttr = target.getAttribute('id');
+        // console.log(idAttr);
+        // myimg.setAttribute("src", "https://img.wendybook.com/image_detail/img159/159599_01.jpg");
+
+        // const div = document.querySelector('div');
+        // div.innerHTML = "<img src='https://img.wendybook.com/image_detail/img159/159599_01.jpg'><p>hello</p><button>push!!</button>";
     </script>
 </body>
 

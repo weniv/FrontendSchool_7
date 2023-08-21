@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <article class="parent">
+        <button class="btn" type="button">버튼</button>
+    </article>
+
+    <script>
+        const parent = document.querySelector('.parent');
+        const btnFirst = document.querySelector('.btn');
+        btnFirst.addEventListener('click', (event) => {
+            console.log("btn capture!");
+        }, true);
+
+        window.addEventListener('click', () => {
+            console.log("window capture!");
+        }, true); // true : 캡처링 단계의 이벤트가 발생하도록 합니다.
+
+        document.addEventListener('click', () => {
+            console.log("document capture!");
+        }, true);
+
+        parent.addEventListener('click', () => {
+            console.log("parent capture!");
+        }, true);
+
+        btnFirst.addEventListener('click', (event) => {
+            console.log("btn bubble!");
+        })
+
+        parent.addEventListener('click', () => {
+            console.log("parent bubble!");
+        });
+
+        document.addEventListener('click', () => {
+            console.log("document bubble!");
+        });
+
+        window.addEventListener('click', () => {
+            console.log("window bubble!");
+        });
+    </script>
+</body>
+
+</html>

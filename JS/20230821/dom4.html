@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 주석입니다 주석. -->
+    <article class="cont">
+        <div class="cont">
+            <h1>안녕하세요 저는 이런 사람입니다.</h1>
+            <p>지금부터 자기소개 올리겠습니다</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt incidunt voluptates laudantium fugit,
+            omnis
+            dolore itaque esse exercitationem quam culpa praesentium, quisquam repudiandae aut. Molestias qui quas ea
+            iure
+            officiis.
+            <strong class="cont">감사합니다!</strong>
+        </div>
+    </article>
+
+    <strong class="sayHi">
+        반갑습니다.
+    </strong>
+
+    <script>
+        const container = document.querySelector('.cont');
+
+        console.log(container.querySelector('strong').closest('.cont1'));
+
+        console.log(container.firstElementChild);
+        console.log(container.firstChild);
+        console.log(container.lastElementChild);
+        console.log(container.lastChild);
+        console.log(container.nextElementSibling);
+        console.log(container.nextSibling);
+        console.log(container.previousSibling);
+        console.log(container.children);
+        console.log(container.parentNode);
+
+
+        const sayHi = document.querySelector('.sayHi');
+        sayHi.insertAdjacentHTML('beforebegin', '<span>안녕하세요!!</span>');
+        sayHi.insertAdjacentHTML('afterbegin', '<span>안녕히가세요!!!</span>');
+        sayHi.insertAdjacentHTML('beforeend', '<span>안녕히가세요!!!!</span>');
+        sayHi.insertAdjacentHTML('afterend', '<span>안녕히가세요!!!!!</span>');
+    </script>
+</body>
+
+</html>
