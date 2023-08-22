@@ -121,6 +121,7 @@
             <li><button type="button">JavaScript</button></li>
             <li><button type="button">C#</button></li>
             <li><button type="button">C/C++</button></li> -->
+
         </ul>
     </div>
 
@@ -131,13 +132,43 @@
             btn.classList.toggle('on');
         });
         // 2. 목록의 버튼을 누르면 버튼의 텍스트가 첫번째 버튼에 반영되어야 한다.
-        const btns = document.querySelectorAll('.list button');
-        btns.forEach((itemBtn) => {
-            itemBtn.addEventListener('click', function () {
-                btn.textContent = itemBtn.textContent;
-                btn.classList.remove('on');
-            });
+        // const btns = document.querySelectorAll('.list button');
+        // btns.forEach((itemBtn) => {
+        //     itemBtn.addEventListener('click', function () {
+        //         btn.textContent = itemBtn.textContent;
+        //         btn.classList.remove('on');
+        //     });
+        // });
+
+        // 3. li 를 동적으로 생성해주세요.
+        const list = document.querySelector('.list');
+        const arrLang = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'];
+
+        // HTML 요소를 생성하는 예전 방식
+        // arrLang.forEach((item) => {
+        //     const li = document.createElement('li');
+        //     const btn = document.createElement('button');
+        //     btn.setAttribute('type', 'button');
+        //     btn.textContent = item;
+        //     li.append(btn);
+        //     list.appendChild(li);
+        // });
+
+        // 배열을 통한 동적인 요소 생성
+        arrLang.forEach((item) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<button type='button'>${item}</button>`;
+            list.appendChild(li);
         });
+
+        // 4. 이벤트를 이벤트 위임을 통해서 구현해주세요.
+        list.addEventListener('click', (event) => {
+            if (event.target.nodeName === "BUTTON") {
+                btn.textContent = event.target.textContent;
+                btn.classList.remove('on');
+            }
+        });
+
     </script>
 </body>
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const me = {
+            name: '한재현',
+            address: '제주도 제주시 인다 1길',
+            phoneNum: '010-8000-0000',
+            canWalk: function () {
+                console.log('재현이가 걷는다.');
+            },
+            teaching: function (student) {
+                student.levelUp();
+            }
+        }
+
+        const lion = {
+            level: 1,
+            levelUp: function () {
+                this.level++;
+            }
+        }
+
+        me.teaching(lion);
+
+        const arr = new Array(1, 2, 3);
+        const arr2 = new Array(1, 2, 3);
+
+        // 생성자 함수의 this는 생성자를 통해 만들어진 인스턴스를 참조합니다.
+        function Factory(name) {
+            this.myname = name;
+            // robot1_1.myname = '재현';
+
+            this.sayYourName = function () {
+                console.log('삘비리비비리 제 이름은 ' + this.myname + '입니다....!!!');
+            }
+        }
+
+        const robot1_1 = new Factory('재현');
+
+
+
+
+    </script>
+</body>
+
+</html>
