@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //생성자함수로 생성
+
+        // function Slave(이름, 경력) {
+        //     this.이름 = 이름,
+        //         this.경력 = 경력
+        //     console.log(`새로운 Slave가 도착하였습니다. 집사이름 : ${this.이름} 집사경력 : ${this.경력}`)
+        // }
+
+        // Slave.prototype.serving = function (lord) {
+        //     lord.CIAO();
+        // }
+
+        // let 이주연 = new Slave('이주연', 7);
+
+
+
+        // function Lord(name, happy, angry, tired, bored) {
+        //     this.name = name,
+        //         this.happy = happy,
+        //         this.angry = angry,
+        //         this.tired = tired,
+        //         this.bored = bored,
+
+        //         console.log(`${this.name}주인님의 현재 행복지수는 ${happy}, 짜증지수는 ${angry}, 피곤함은 ${tired}, 지루함은 ${bored} 이렇습니다. 집사는 얼른 맛있는 츄르를 가져다드리세요 `)
+        // }
+
+
+        // Lord.prototype.CIAO = function () {
+        //     this.happy++;
+        //     this.angry--;
+        //     this.tired--;
+        //     this.bored--;
+
+        //     console.log(`${this.name}주인님의 현재 행복지수는 ${this.happy}로 증가, 짜증지수는 ${this.angry}로 감소, 피곤함은 ${this.tired}로 감소, 지루함은 ${this.bored}로 감소되었습니다.  집사는 더욱 분발하세요! `)
+        // }
+
+
+        // let 야옹 = new Lord('야옹', 3, 4, 5, 6); // 현재 주인님상태
+        // let 미옹 = new Lord('미옹', 6, 3, 8, 8); // 현재 주인님상태
+
+        // 이주연.serving(야옹); //CIAO 츄르가져다드림
+        // 이주연.serving(미옹); //CIAO 츄르가져다드림
+
+
+
+
+
+        //class로 생성
+        class Slave {
+            constructor(이름, 경력) {
+                this.이름 = 이름;
+                this.경력 = 경력;
+                console.log(`새로운 Slave가 도착하였습니다. 집사이름 : ${this.이름} 집사경력 : ${this.경력}`)
+            }
+            serving(lord) {
+                lord.CIAO();
+            }
+        }
+
+        let 이주연 = new Slave('이주연', 7);
+
+
+
+        class Lord {
+            constructor(name, happy, angry, tired, bored) {
+                this.name = name;
+                this.happy = happy;
+                this.angry = angry;
+                this.tired = tired;
+                this.bored = bored;
+
+                console.log(`${this.name}주인님의 현재 행복지수는 ${happy}, 짜증지수는 ${angry}, 피곤함은 ${tired}, 지루함은 ${bored} 이렇습니다. 집사는 얼른 맛있는 츄르를 가져다드리세요 `)
+            }
+
+            CIAO() {
+                this.happy++;
+                this.angry--;
+                this.tired--;
+                this.bored--;
+
+                console.log(`${this.name}주인님의 현재 행복지수는 ${this.happy}로 증가, 짜증지수는 ${this.angry}로 감소, 피곤함은 ${this.tired}로 감소, 지루함은 ${this.bored}로 감소되었습니다.  집사는 더욱 분발하세요! `)
+            }
+
+        }
+
+        let 야옹 = new Lord('야옹', 3, 4, 5, 6); // 현재 주인님상태
+        let 미옹 = new Lord('미옹', 6, 3, 8, 8); // 현재 주인님상태
+
+        이주연.serving(야옹); //CIAO 츄르가져다드림
+        이주연.serving(미옹); //CIAO 츄르가져다드림
+
+
+    </script>
+</body>
+
+</html>
