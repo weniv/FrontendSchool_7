@@ -1,0 +1,21 @@
+$value: 250px;
+
+.test {
+    @if $value >100px {
+        @if $value >200px {
+            width: 300px;
+        }
+
+        @else {
+            width: 200px;
+        }
+    }
+
+    @else if $value ==100px {
+        width: 100px;
+    }
+
+    @else {
+        width: 50px;
+    }
+}

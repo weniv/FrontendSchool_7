@@ -1,0 +1,11 @@
+// @each ($변수) in (리스트나 맵){ 
+// 	// 반복할 내용
+// }
+
+$test-array: 'top' 'right' 'bottom' 'left';
+
+@each $position in $test-array {
+    .border-#{$position} {
+        border-#{$position}: 1px solid #000;
+    }
+}

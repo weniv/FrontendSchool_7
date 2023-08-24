@@ -1,0 +1,30 @@
+// at-root은 저는 잘 사용하지 않습니다.
+
+.one {
+    color: red;
+
+    .two {
+        color: green;
+
+        .three {
+            color: blue;
+
+            @at-root .four {
+                color: pink;
+            }
+        }
+    }
+}
+
+// .one {
+//     color: red;
+//     .two {
+//         color: green;
+//         .three {
+//             color: blue;
+//         }
+//     }
+// }
+// .four {
+//     color: pink;
+// }

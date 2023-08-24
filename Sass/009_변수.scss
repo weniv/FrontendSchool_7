@@ -1,0 +1,16 @@
+$hojun1: #000;
+$hojun2: #fff;
+// 한글 변수는 권장하지 않습니다.
+$큰글자: 32px;
+
+.one {
+    font-size: $큰글자;
+}
+
+.two {
+    color: $hojun1;
+}
+
+.three {
+    color: $hojun2;
+}

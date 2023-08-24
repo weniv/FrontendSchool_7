@@ -1,0 +1,15 @@
+// 파라미터가 없는 믹스인
+
+@mixin box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.one {
+    @include box;
+}
+
+.two {
+    @include box;
+}

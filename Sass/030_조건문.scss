@@ -1,0 +1,48 @@
+$media-width-lg: 1000px;
+$media-width-md: 800px;
+$media-width-sm: 500px;
+
+$media-font-lg: 16px;
+$media-font-md: 14px;
+$media-font-sm: 12px;
+
+@mixin responsive($size) {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    font-size: $media-font-lg;
+
+    @if $size ==lg {
+        @media screen and (max-width: $media-width-lg) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-md;
+            @content;
+        }
+    }
+
+    @else if $size ==md {
+        @media screen and (max-width: $media-width-md) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-md;
+            @content;
+        }
+    }
+
+    @else if $size ==sm {
+        @media screen and (max-width: $media-width-sm) {
+            width: 100px;
+            height: 100px;
+            font-size: $media-font-sm;
+            @content;
+        }
+    }
+
+}
+
+.main {
+    @include responsive(lg) {
+        color: red;
+    }
+}

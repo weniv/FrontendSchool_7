@@ -1,0 +1,15 @@
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: red;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: green;
+}/*# sourceMappingURL=025_믹스인_content.css.map */

@@ -1,0 +1,74 @@
+// 'assets/img/icon_font_awesome1.png'
+// 'assets/img/icon_font_awesome2.png'
+// 'assets/img/icon_font_awesome3.png'
+$img-path: './assets/img/';
+$img-name: 'background.png';
+$icon-name: 'icon_font_awesome';
+
+.test {
+    background: url($img-path + $img-name);
+}
+
+.test2 {
+    background: url($img-path + $icon-name + '1.png');
+}
+
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #3e5e9e;
+$link-color: red;
+$p-color: #282A36;
+
+//폰트사이즈
+$font-p: 13px;
+$font-h1: 28px;
+
+//폰트
+$base-font: 'Noto Sans KR', sans-serif;
+
+// lists
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right;
+
+//maps
+$font-sizes: (
+    "h1": 45px,
+    "h2": 19px,
+    "p": 16px
+);
+
+$font-sizes-test: (
+    "one": #fff,
+    "two": #ff0,
+    "three": #f00
+);
+
+// 1. lists
+// 0부터 시작하지 않습니다.
+.title_list1 {
+    font-size: nth($sizes, 1);
+}
+
+.title_list2 {
+    font-size: nth($sizes, -1);
+}
+
+// 이 문법은 자주 사용하지 않습니다.
+.title_list3 {
+    font-size: nth($list: $sizes, $n: 2);
+}
+
+// 2. maps
+.title_map1 {
+    font-size: map-get($font-sizes, "h1");
+}
+
+.title_map2 {
+    color: map-get($font-sizes-test, "three");
+}
+
+// 이 문법은 자주 사용하지 않습니다.
+.title_map3 {
+    color: map-get($map: $font-sizes, $key: "h1");
+}

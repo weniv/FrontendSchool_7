@@ -1,0 +1,10 @@
+p {
+    @if (1==1px) {
+        //false
+        font-size: 10px;
+    }
+
+    @else {
+        font-size: 20px;
+    }
+}

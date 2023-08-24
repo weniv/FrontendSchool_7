@@ -1,0 +1,58 @@
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  border: 0;
+}
+
+header {
+  background-color: #67438f;
+  font-family: "Poppins", sans-serif;
+  height: 254px;
+}
+header h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+}
+header button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+header button:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  padding: 40px;
+  background-color: #7e438f;
+  height: 100%;
+}
+
+.text-box {
+  margin-bottom: 50px;
+}
+.text-box h2 {
+  color: #1f1f1f;
+  font-size: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.text-box p {
+  color: #313030;
+  font-size: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

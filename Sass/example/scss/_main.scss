@@ -1,0 +1,16 @@
+.text-container {
+  padding: 40px;
+  background-color: $main-color;
+  height: 100%;
+}
+
+.text-box {
+  margin-bottom: 50px;
+  h2 {
+    @include font-style($font-main, $font-22, $dark-black);
+  }
+  p {
+    @include font-style($font-main, $font-15, $light-black);
+    margin: 0;
+  }
+}

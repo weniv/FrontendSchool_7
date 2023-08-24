@@ -1,0 +1,14 @@
+nav {
+  background: #C39BD3;
+  padding: 10px;
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+nav ul li {
+  color: white;
+  margin-right: 10px;
+}/*# sourceMappingURL=002_네이스팅.css.map */

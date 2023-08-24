@@ -1,0 +1,21 @@
+.button-a {
+  background-color: #b4d455;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+}
+.button-a:hover {
+  cursor: pointer;
+  background-color: #b4d455;
+  border-color: #b4d455;
+}
+
+.button-b {
+  background-color: #c0ffee;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+}
+.button-b:hover {
+  cursor: pointer;
+  background-color: #c0ffee;
+  border-color: #c0ffee;
+}/*# sourceMappingURL=019_믹스인.css.map */

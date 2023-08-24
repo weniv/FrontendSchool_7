@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+
+/* Default */
+@function unitCheck($x) {
+
+    // 단위체크
+    @if(type-of($x)==number) {
+        @if(unitless($x)) {
+            @return $x+px;
+        }
+    }
+
+    @return $x;
+}
+
+
+/* width */
+
+@mixin media($width) {
+    $width: unitCheck($width);
+
+    @media all and (max-width:$width) {
+        @content;
+    }
+}
+
+@mixin base($w: 1350) {
+    $w: unitCheck($w);
+    max-width: $w;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+
+@mixin blur($size, $c) {
+    $size : unitCheck($size);
+    background-color: $c;
+    -webkit-backdrop-filter: blur($size);
+    backdrop-filter: blur($size);
+}
+
+
+@mixin fontSize($size, $row: null, $w: inherit) {
+    // $size: $size * 0.9;
+    font-size: $size + px;
+    font-weight: $w;
+
+    @if ($size >=38) {
+        letter-spacing: -2.4px;
+    }
+
+    @else if ($size >=28) {
+        letter-spacing: -1px;
+    }
+
+    @else if ($size >=18) {
+        letter-spacing: -0.5px;
+    }
+
+    // line-height 설정
+    @if ($row !=null) {
+        line-height: $row;
+    }
+
+    @include media(600) {
+        $size: $size * 0.15;
+        font-size: $size + vw;
+    }
+
+    @include media(480) {
+        $size: $size * 1.3;
+        font-size: $size + vw;
+    }
+
+    @include media(375) {
+        $size: $size * 1.05;
+        font-size: $size + vw;
+    }
+
+    /*
+    @else {
+        $lineHeight: $size + 10 + px;
+        line-height: $lineHeight;
+    }
+    */
+}
+
+@mixin item($space, $column) {
+    $space : unitCheck($space);
+    width:calc((100% - #{$space}) / #{$column});
+}
+
+@mixin thumb($total, $img, $type) {
+    @for $i from 1 through $total {
+        li:nth-child(#{$i}) .thumb {
+            background-image:url(#{$url} + #{$img} + #{$i} + '.' + #{$type});
+        }
+    }
+}
+
+
+
+@mixin circleBase {
+    display: block;
+    border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+@mixin sizeBg($size) {
+    $size: unitCheck($size);
+    width: $size;
+    height: $size;
+}
+
+@mixin circle($size, $color: null) {
+    $size: unitCheck($size);
+    @include circleBase;
+    width: $size;
+    height: $size;
+    background-color: $color;
+}
+
+@mixin dashB($l: auto, $b: auto, $w: 30, $c: #fff) {
+    $l: unitCheck($l);
+    $b: unitCheck($b);
+    $w: unitCheck($w);
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: $l;
+        bottom: $b;
+        width: $w;
+        height: 1px;
+        background-color: $c;
+        @content;
+    }
+}
+
+
+
+@mixin flex($align: null, $way: row) {
+    display: flex;
+    flex-direction: $way;
+    @content;
+
+    @if(#{$align}=='center') {
+        justify-content: center;
+        align-items: center;
+    }
+
+    @else if (#{$align}=='leftCenter') {
+        align-items: center;
+    }
+
+    @else if (#{$align}=='spaceCenter') {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @else if (#{$align}=='space') {
+        justify-content: space-between;
+    }
+}
+
+@mixin dashR($r: auto, $t: auto, $h: 30, $c: #fff) {
+    $r: unitCheck($r);
+    $t: unitCheck($t);
+    $h: unitCheck($h);
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: $r;
+        top: $t;
+        width: 1px;
+        height: $h;
+        background-color: $c;
+        @content;
+    }
+}
+
+@mixin dashL($l: auto, $t: auto, $h: 30, $c: #fff) {
+    $l: unitCheck($l);
+    $t: unitCheck($t);
+    $h: unitCheck($h);
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: $l;
+        top: $t;
+        width: 1px;
+        height: $h;
+        background-color: $c;
+        @content;
+    }
+}
+
+@mixin gnb($m, $h) {
+    @include flex;
+    $m: unitCheck($m);
+    $h: unitCheck($h);
+
+    li {
+        margin-left: $m;
+
+        a {
+            display: block;
+            height: $h;
+            line-height: $h;
+        }
+    }
+}
+
+@mixin dim($c) {
+    z-index: 98;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $c;
+        z-index: 99;
+    }
+}
+
+
+/*  Accessibility */
+
+@mixin ir($path: null, $p: center center, $s: contain) {
+    background:url($url + '#{$path}') no-repeat #{$p}/#{$s};
+
+    &>span {
+        @include blind;
+    }
+}
+
+@mixin fullBg($path) {
+    background:url($url + '#{$path}') no-repeat center center/cover;
+}
+
+@mixin containBg($path) {
+    background:url($url + '#{$path}') no-repeat center center/contain;
+}
+
+@mixin iconBg($path, $start, $end) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    @for $i from $start through $end {
+        &:nth-child(#{$i}) {
+            background-image:url($url + '#{$path}#{$i}.png');
+        }
+    }
+}
+
+
+@mixin triangle($size, $color, $dir) {
+    $size: unitCheck($size);
+    display: block;
+    width: 0;
+    height: 0;
+    border: $size solid transparent;
+    border-#{$dir}-color: $color;
+}
+
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+@mixin blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+
+
+/* Text */
+
+@mixin center($pos: absolute) {
+    position: $pos;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@mixin height($size) {
+    $size: unitCheck($size);
+    height: $size;
+    line-height: $size;
+}
+
+
+@mixin flexAfter {
+    &:after {
+        content: '';
+        flex: 1;
+        display: block;
+    }
+}
+
+/* Positions */
+
+@mixin columnBox($space, $count) {
+    display: flex;
+    justify-content: space-between;
+
+    &>* {
+        $w : '(100% - #{$space})';
+        width : calc(#{$w} / #{$count});
+    }
+}
+
+/* accessories */
+
+@mixin abbr($w: 100%) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: $w;
+}
+
+@mixin line_center($h, $c) {
+    position: relative;
+    $h: unitCheck($h);
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: $h;
+        background-color: $c;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+@mixin overBox($c) {
+    position: relative;
+    transition: all 0.3s;
+    // &:hover {
+    //     border-color:transparent;
+    //     color:$c;
+    //     &:before, span:before {
+    //         height:calc(100% + 2px);
+    //     }
+
+    //     &:after, span:after {
+    //         width:calc(100% + 2px);
+    //     }
+    // }
+
+    &:before,
+    &:after,
+    span:before,
+    span:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $c;
+        box-sizing: border-box;
+        transition: all 0.3s;
+    }
+
+    &:before,
+    &:after {
+        left: -1px;
+        top: -1px;
+    }
+
+    span:before,
+    span:after {
+        right: -1px;
+        bottom: -1px;
+    }
+
+    &:after,
+    span:after {
+        width: 0;
+        height: 2px;
+    }
+
+    &:before,
+    span:before {
+        width: 2px;
+        height: 0;
+    }
+
+
+}
+
+@mixin before($path: null, $size: contain, $w: null, $h: null, $top: 50%) {
+    position: relative;
+    $w: unitCheck($w);
+    $h: unitCheck($h);
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url($url + '#{$path}') no-repeat center center;
+        background-size: $size;
+        width: $w;
+        height: $h;
+        top: $top;
+        transform: translateY(-50%);
+        @content;
+    }
+}
+
+@mixin after($path: null, $size: contain, $w: null, $h: null, $top: 50%) {
+    position: relative;
+    padding-right: 10px;
+    $w: unitCheck($w);
+    $h: unitCheck($h);
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url($url + '#{$path}') no-repeat center center;
+        background-size: $size;
+        width: $w;
+        height: $h;
+        top: $top;
+        transform: translateY(-50%);
+        @content;
+    }
+}
+
+@mixin lineBox($w, $h, $bg) {
+    $w: unitCheck($w);
+    $h: unitCheck($h);
+
+    position: relative;
+
+    &:last-child:after {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: $w;
+        height: $h;
+        background-color: $bg;
+        position: absolute;
+        top: calc(50% - #{$h / 2});
+        @content;
+    }
+}
+
+@mixin roundBtn($r, $pd, $bg, $c) {
+    $r: unitCheck($r);
+    $pd: unitCheck($pd);
+    border-radius: $r;
+    padding: $pd;
+    background-color: $bg;
+    border: 1px solid $c;
+}
+
+@mixin radius($size) {
+    $size: unitCheck($size);
+    border-radius: $size;
+}

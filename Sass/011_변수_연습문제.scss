@@ -1,0 +1,49 @@
+// 연습문제 1번 maps을 사용하여 아래와 같이 출력되도록 하세요.
+// maps에 저장되어 있는 key는 'back', 'icon'이 있습니다.
+// path라는 변수도 사용하셔야 합니다.
+// 원하는 출력 결과
+// nav {
+//     background-image: url('assets/img/background.png');
+// }
+
+// .home {
+//     background: url('assets/img/icon_font_awesome_home.png');
+// }
+
+$path: "./assets/img/";
+$img-set: (
+    "back": $path + "background.png",
+    "icon": $path + "icon_font_awesome"
+);
+
+nav {
+    background-image: url(map-get($img-set, "back"));
+}
+
+
+// 연습문제 2번 lists를 사용해서 아래와 같이 출력되도록 하세요.
+// lists에 저장되어 있는 값은 'left', 'right', 'bottom'...
+// 원하는 출력 결과
+// .title {
+//     border-bottom: 1px solid black;
+// }
+
+$direction: (
+    "left",
+    "right",
+    "bottom",
+    "top"
+);
+
+// 이런 식으로 사방으로 만들 수 있습니다.
+// @each $dir in $direction {
+//     .title-#{$dir} {
+//         border-#{$dir}: 1px solid black;
+//     }
+// }
+
+.title {
+    .border-#{nth($direction, 1)} {
+        border-bottom: 1px solid black;
+    }
+}

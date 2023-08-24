@@ -1,0 +1,13 @@
+$url: './assets/img/';
+
+@mixin thumb($total, $img, $type) {
+    @for $i from 1 through $total {
+        li:nth-child(#{$i}) .thumb {
+            background-image: url(#{$url} + #{$img} + #{$i} + '.' + #{$type});
+        }
+    }
+}
+
+.test {
+    @include thumb(10, 'home_menu_icon', 'jpg');
+}

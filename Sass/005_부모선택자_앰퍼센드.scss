@@ -1,0 +1,27 @@
+// Scss
+// .box {
+//     &:focus {}
+//     // 가상선택자
+//     &:hover {}
+//     &:active {}
+//     &:first-child {}
+//     &:nth-child(2) {}
+//     &::after {}
+//     // 가상요소
+//     &::before {}
+// }
+
+ul {
+    li {
+        &:hover {
+            background: white;
+            cursor: pointer;
+            // 가상요소 
+        }
+
+        &:last-child {
+            border-bottom: 2px solid black;
+            // 가상클래스 
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// 우리가 원하는 결과물
+// 참고로 저라면 반복문 + array사용할겁니다.
+// .box-1 {
+//     background-color: red;
+// }
+
+// .box-2 {
+//     background-color: green;
+// }
+
+// .box-3 {
+//     background-color: blue;
+// }
+
+.box {
+    &-1 {
+        background-color: red;
+    }
+
+    &-2 {
+        background-color: green;
+    }
+
+    &-3 {
+        background-color: blue;
+    }
+}
+
+div {
+    &:hover {
+        background-color: red;
+    }
+}
+
+//div:hover {
+//     background-color: red;
+//}
+
+.nav {
+    height: 60px;
+    font-size: 18px;
+
+    .nav-list {
+        background: #3e68ff;
+
+        span {
+            padding: 10px 13px;
+
+            a {
+                color: white;
+
+                .one {
+                    & .two {
+                        color: skyblue;
+                    }
+                }
+            }
+        }
+    }
+}

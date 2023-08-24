@@ -1,0 +1,10 @@
+@mixin flex($align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $align; // 이렇게 넣으면 따옴표가 넣어 들어가게 됩니다.
+    align-items: #{$align}; // 이렇게 입력하면 따옴표가 사라지고 들어갑니다.
+}
+
+.one {
+    @include flex('center')
+}

@@ -1,0 +1,17 @@
+// 지역 믹스인(보자마자 잊어주세요.)
+
+.card {
+    @mixin box {
+        width: 100px;
+        height: 100px;
+    }
+
+    @include box;
+    background-color: blue;
+}
+
+// red
+// .profile {
+//     @include box;
+//     background-color: red;
+// }

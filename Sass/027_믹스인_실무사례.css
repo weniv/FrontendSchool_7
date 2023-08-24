@@ -1,0 +1,30 @@
+.test li:nth-child(1) .thumb {
+  background-image: url(./assets/img/home_menu_icon1.jpg);
+}
+.test li:nth-child(2) .thumb {
+  background-image: url(./assets/img/home_menu_icon2.jpg);
+}
+.test li:nth-child(3) .thumb {
+  background-image: url(./assets/img/home_menu_icon3.jpg);
+}
+.test li:nth-child(4) .thumb {
+  background-image: url(./assets/img/home_menu_icon4.jpg);
+}
+.test li:nth-child(5) .thumb {
+  background-image: url(./assets/img/home_menu_icon5.jpg);
+}
+.test li:nth-child(6) .thumb {
+  background-image: url(./assets/img/home_menu_icon6.jpg);
+}
+.test li:nth-child(7) .thumb {
+  background-image: url(./assets/img/home_menu_icon7.jpg);
+}
+.test li:nth-child(8) .thumb {
+  background-image: url(./assets/img/home_menu_icon8.jpg);
+}
+.test li:nth-child(9) .thumb {
+  background-image: url(./assets/img/home_menu_icon9.jpg);
+}
+.test li:nth-child(10) .thumb {
+  background-image: url(./assets/img/home_menu_icon10.jpg);
+}/*# sourceMappingURL=027_믹스인_실무사례.css.map */

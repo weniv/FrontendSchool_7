@@ -1,0 +1,24 @@
+// 반복되는 코드를 만들지 말라(Don't Repeat Yourself - 앤드루 헌트, 데이비드 토머스의 실용주의 프로그래머)
+// 중복된 코드로 인한 혼란
+// 작업 분량의 증가로 인한 효율성 악화
+
+// 1. 밴더 프리픽스를 포함한 border, gradient 등의 코드로 효율성 극대화 할 수 있음
+// 2. less보다 많은 기능을 보유하고 있음(그러나 각 장단점이 있음)
+// 3. reset.css 같은 경우에도 포함해 사용할 수 있음.(포함하지 않는 경우도 있음, 작업의 일관성)
+
+nav {
+    background: #C39BD3;
+    padding: 10px;
+    height: 50px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+
+        li {
+            color: white;
+            margin-right: 10px;
+        }
+    }
+}

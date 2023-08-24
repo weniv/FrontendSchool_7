@@ -1,0 +1,12 @@
+.profile-user, .comment-user {
+  background-image: url("../assets/user.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.comment-user {
+  border-width: 10px;
+}/*# sourceMappingURL=028_extend.css.map */

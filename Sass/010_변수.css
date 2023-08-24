@@ -1,0 +1,31 @@
+.test {
+  background: url("./assets/img/background.png");
+}
+
+.test2 {
+  background: url("./assets/img/icon_font_awesome1.png");
+}
+
+.title_list1 {
+  font-size: 40px;
+}
+
+.title_list2 {
+  font-size: 80px;
+}
+
+.title_list3 {
+  font-size: 50px;
+}
+
+.title_map1 {
+  font-size: 45px;
+}
+
+.title_map2 {
+  color: #f00;
+}
+
+.title_map3 {
+  color: 45px;
+}/*# sourceMappingURL=010_변수.css.map */

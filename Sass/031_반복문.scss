@@ -1,0 +1,24 @@
+// for ($변수) from (시작) through(끝){
+// 	// 반복할 내용
+// }
+
+$test-array: 'top' 'right' 'bottom' 'left';
+
+@for $i from 1 through 5 {
+    .box-#{$i} {
+        width: 100px * $i;
+        height: 100px * $i;
+    }
+}
+
+@for $i from 1 through 4 {
+    .border-#{nth($test-array, $i)} {
+        border: 1px solid red;
+    }
+}
+
+@for $i from 1 through 5 {
+    .photo-box:nth-child(#{$i}) {
+        background-image: url("../assets/phoster#{$i}.png");
+    }
+}

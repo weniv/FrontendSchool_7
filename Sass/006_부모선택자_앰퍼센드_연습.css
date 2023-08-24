@@ -1,0 +1,23 @@
+nav ul {
+  border: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li:first-child {
+  color: white;
+}
+nav ul li:nth-child(1) {
+  background-color: red;
+}
+nav ul li:nth-child(2) {
+  background-color: green;
+}
+nav ul li:nth-child(3) {
+  background-color: blue;
+}
+nav ul li:hover {
+  background-color: white;
+}/*# sourceMappingURL=006_부모선택자_앰퍼센드_연습.css.map */

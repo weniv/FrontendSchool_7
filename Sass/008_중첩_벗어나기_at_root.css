@@ -1,0 +1,12 @@
+.one {
+  color: red;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: blue;
+}
+.four {
+  color: pink;
+}/*# sourceMappingURL=008_중첩_벗어나기_at_root.css.map */

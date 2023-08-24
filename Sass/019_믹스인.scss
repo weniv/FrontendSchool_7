@@ -1,0 +1,22 @@
+// @mixin 이름(매개변수) //생성
+// @include 이름(인수)  //사용
+
+@mixin button($color) {
+    background-color: $color;
+    border-radius: 5px;
+    padding: .25em .5em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color;
+        border-color: $color;
+    }
+}
+
+.button-a {
+    @include button(#b4d455);
+}
+
+.button-b {
+    @include button(#c0ffee);
+}

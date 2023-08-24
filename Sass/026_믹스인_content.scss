@@ -1,0 +1,24 @@
+// 실무 content 사용 용법
+
+@mixin sample {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+
+    &:hover {
+        @content;
+    }
+}
+
+.one {
+    @include sample {
+        background-color: red;
+    }
+}
+
+.two {
+    @include sample {
+        background-color: green;
+    }
+}
