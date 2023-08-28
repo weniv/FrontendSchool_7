@@ -1,0 +1,129 @@
+body{
+  margin:0;
+  height: 4825px;
+  background: linear-gradient(to bottom, gold, royalblue);
+}
+.wrap{
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+path{
+  fill:none;
+  stroke: white;
+  stroke-width:5px;
+  stroke-linecap:round ;
+  stroke-linejoin: round;
+}
+
+/* button : inline-block 요소 */
+/* 버튼 가운데 정렬 방법 1 */
+/* .btn-open{
+  display: block;
+  margin: auto; 
+} */
+
+/* 버튼 가운데 정렬 방법 2 */
+.wrap{
+  text-align: center;
+}
+
+.btn-open{
+  border:1px solid rgba(255,255,255, 0.5);
+  background: none;
+  color:white;
+  height: 60px;
+  padding:0 100px;
+  font-size: 22px;
+  border-radius: 100px;
+  
+  opacity: 0;
+
+  transition: color 0.5s, background-color 0.3s;
+}
+.btn-open:enabled{
+  cursor: pointer;
+}
+.btn-open:enabled:hover{
+  color:royalblue;
+  background-color: white;
+}
+
+/* modal */
+.modal{
+  width:300px;
+  height:240px;
+  padding:20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 30px;
+
+  background-color: royalblue;
+  color:white;
+  text-align: center;
+}
+.modal ul{
+  list-style: none;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  gap:10px;
+
+  border-top:1px solid rgba(255,255,255, 0.3);
+  padding-top:10px;
+}
+.modal ul a{
+  display: inline-block;
+  background-color: white;
+  text-decoration: none;
+  padding:8px 16px 6px;
+  border-radius: 40px;
+  color:royalblue;
+}
+
+/* 모달 layout 위치 */
+.modal{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: none;
+}
+/* 검은 배경 */
+.dim{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  /* backdrop-filter: blur(2px); */
+  display: none;
+}
+.modal.active,
+.modal.active + .dim{
+  display: block;
+}
+
+
+/* 모달 닫기 버튼 */
+.btn-close{
+  position: absolute;
+  right:20px;
+  top:20px;
+
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-close img{
+  width:70%;
+  vertical-align: top;
+}
