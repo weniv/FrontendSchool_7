@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>필터</title>
+</head>
+
+<body>
+  <ol>
+    <li>hello <strong>world</strong></li>
+    <li class="item">hello world</li>
+    <li class="item">hello world!</li>
+    <li><strong>hello</strong> world</li>
+    <li>hello world!</li>
+    <li>hello world</li>
+    <li>hello world</li>
+    <li style="display: none;">hello world</li>
+    <li></li>
+  </ol>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    // $('li').eq(3).css('color', 'blue');
+    // document.querySelector('li:nth-child(4)').style.color = 'red';
+    // $('li').not(':eq(3)').css('text-decoration', 'underline');
+
+    // document.querySelectorAll('li').forEach((el, i) => {
+    //   if (i != 3) {
+    //     el.style.color = 'green'
+    //   }
+    // })
+
+    // $('li:lt(3)').css('color', 'blue');
+    // $('li:gt(5)').css('color', 'red');
+
+    // $('[class]').css('border', '1px solid green')
+
+    // //jQuery
+    // $('li:contains("!")').css('background-color', 'skyblue');
+
+    // // JS
+    // // console.log(document.querySelectorAll('li'))
+    // document.querySelectorAll('li').forEach((el) => {
+    //   // console.log(el.textContent.includes('!'));
+
+    //   // 방법 : includes
+    //   // if (el.textContent.includes('!')) {
+    //   //   el.style.backgroundColor = 'gold'
+    //   // }
+    //   // console.log(el.textContent.indexOf('world'));
+    //   if (el.textContent.indexOf('!') !== -1) {
+    //     el.style.backgroundColor = 'gold'
+    //   }
+    // })
+
+    // $('li:empty').css('background-color', 'pink');
+
+    // document.querySelectorAll('li').forEach(
+    //   (element) => {
+    //     console.log('hasChildNodes', element.hasChildNodes());
+    //   }
+    // );
+
+    $('li:has("strong")').css('background-color', 'pink');
+    // $("li:has('strong')").css('background-color', 'pink');
+    $("li:hidden").show();
+
+  </script>
+</body>
+
+</html>

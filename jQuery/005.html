@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <div>
+    1. div
+    <div>
+      2. div
+      <ul>
+        <li>
+          li
+          <p>p <strong>strong</strong></p>
+          <strong>strong <em>em</em></strong>
+          <p>p <em>em</em></p>
+        </li>
+        <li class="standard">
+          li.standard
+          <p>p <strong>strong</strong></p>
+          <strong>strong <em>em</em></strong>
+          <p>p <em>em</em></p>
+        </li>
+        <li>
+          li
+          <p>p <strong>strong</strong></p>
+          <strong>strong <em>em</em></strong>
+          <p>p <em>em</em></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    const standard = document.querySelector('.standard');
+
+    console.log(standard.parentElement);
+    // console.log(standard.parentNode);
+    console.log(standard.closest('div'));
+
+    console.log(standard.previousElementSibling);
+    console.log(standard.nextElementSibling);
+
+    console.log(standard.children);
+    console.log(standard.firstElementChild);
+    console.log(standard.lastElementChild);
+
+
+    console.log(standard.querySelectorAll('strong'));
+
+  </script>
+</body>
+
+</html>

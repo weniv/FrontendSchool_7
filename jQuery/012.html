@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div>
+    <h1>TITLE</h1>
+
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+  </div>
+
+
+  <script>
+    // 1. ol의 부모를 찾아 3px의 검정 테두리를 주세요.
+    document.querySelector('ol').parentElement.style.border = '3px solid black';
+
+    // 2. 2번째 li의 글자에 밑줄을 그어주세요.
+    document.querySelector('li:nth-child(2)').style.textDecoration = 'underline';
+
+    // 3. li 요소중 1~3번까지 글자를 빨간색으로 바꿔주세요.
+    const liElements = document.querySelectorAll('li');
+
+    liElements.forEach((element, index) => {
+      if (index < 3) {
+        element.style.color = 'red';
+      }
+    })
+
+    // 4. li 요소중 7~10번까지 color를 파란색, background-color를 하늘색으로 바꿔주세요.
+    liElements.forEach((element, index) => {
+      if (index >= 6) {
+        element.style.color = 'blue';
+        element.style.backgroundColor = 'skyblue';
+      }
+    })
+  </script>
+</body>
+
+</html>

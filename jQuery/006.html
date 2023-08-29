@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .fadeIn {
+      animation: fade 1s both;
+    }
+
+    .fadeOut {
+      animation: fade 1s reverse both;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .slide-up {
+      animation: slide 1s both;
+    }
+
+    .slide-down {
+      animation: slide 1s reverse both;
+    }
+
+    @keyframes slide {
+      from {
+        height: 0;
+        overflow: hidden;
+      }
+
+      to {
+        height: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- fadeIn, fadeOut class 유/무로 제어 -->
+  <p class="hello">안녕하세요</p>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    // $(".hello").hide();
+    // $(".hello").show();
+    // $(".hello").toggle();
+    // $(".hello").fadeIn();
+    // $(".hello").fadeOut();
+    // $(".hello").fadeToggle(10000);
+
+    const hello = document.querySelector('.hello');
+
+    // setTimeout(() => {
+    //   hello.classList.add('fadeIn');
+    // }, 100)
+
+    // setTimeout(() => {
+    //   hello.classList.add('fadeOut');
+    // }, 100)
+
+    // $(".hello").slideUp();
+    // $(".hello").slideDown();
+
+    // setTimeout(() => {
+    //   hello.classList.add('slide-up');
+    // }, 100)
+
+    setTimeout(() => {
+      hello.classList.add('slide-down');
+    }, 100)
+
+  </script>
+</body>
+
+</html>

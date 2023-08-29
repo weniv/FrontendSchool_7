@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+
+</head>
+
+<body>
+  <p>안녕</p>
+  <p class="hello">안녕</p>
+  <p id="hello">안녕</p>
+
+  <header id="header">
+    <ul>
+      <li>안녕</li>
+      <li>안녕</li>
+    </ul>
+  </header>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    // $('p').hide();
+    // $('p').show();
+
+    // jQuery
+    $(".hello").css('color', 'red')
+    $("#header ul li:first-child").css('color', 'red');
+
+    // js
+    document.querySelector("#header ul li:first-child").style.color = 'royalblue';
+
+    console.log($('p'))
+    console.log(document.querySelectorAll('p'))
+
+  </script>
+</body>
+
+</html>

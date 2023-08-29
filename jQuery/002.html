@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMLCollection/NodeList</title>
+
+</head>
+
+<body>
+  <ol id="container">
+    <li>Hello, World!</li>
+    <li>Hello, World!</li>
+  </ol>
+
+  <button id="addButton">li 요소 추가</button>
+  <button id="removeButton">li 요소 삭제</button>
+
+
+  <script>
+    const container = document.getElementById('container');
+    const addButton = document.getElementById('addButton');
+    const removeButton = document.getElementById('removeButton');
+
+    const htmlCollection = document.getElementsByTagName('li');
+    const nodeList = document.querySelectorAll('li');
+    const childNode = container.childNodes;
+
+    console.log(htmlCollection);
+    console.log(nodeList);
+    console.log(childNode);
+
+    // 인덱스를 통해 요소 접근 가능
+    console.log(htmlCollection[0]);
+    console.log(nodeList[1]);
+    console.log(childNode[1]);
+
+
+    // 순회 가능
+    for (const i of htmlCollection) {
+      console.log('htmlCollection 순회:', i);
+    }
+    for (const i of nodeList) {
+      console.log('nodeList 순회:', i);
+    }
+    // 예외적으로 nodeList만 forEach 사용 가능(map 등의 다른 배열 메서드는 사용 불가)
+    nodeList.forEach((el) => {
+      console.log('nodeList forEach:', el)
+    })
+    // htmlCollection forEach 사용 X
+    // htmlCollection.forEach((el) => {
+    //   console.log('htmlCollection forEach:', el)
+    // })
+
+    // 배열로 변환
+
+    console.log('htmlCollection 배열 변환', Array.from(htmlCollection))
+    console.log('nodeList 배열 변환', Array.from(nodeList))
+
+    Array.from(htmlCollection).map((el) => {
+      console.log('map', el)
+    })
+
+    addButton.addEventListener('click', () => {
+      const newLi = document.createElement('li');
+      const strong = document.createElement('strong');
+      newLi.textContent = 'Hello, World!';
+      container.appendChild(newLi);
+
+      console.log('---')
+      console.log('HTMLCollection:', htmlCollection.length);
+      console.log('NodeList:', nodeList.length);
+      console.log('childNodes:', container.childNodes.length);
+    });
+
+    removeButton.addEventListener('click', () => {
+      const lastLi = container.querySelector('li:last-child');
+      if (lastLi) {
+        container.removeChild(lastLi);
+      }
+
+      console.log('---')
+      console.log('HTMLCollection:', htmlCollection.length);
+      console.log('NodeList:', nodeList.length);
+      console.log('childNodes:', container.childNodes.length);
+    });
+  </script>
+</body>
+
+</html>

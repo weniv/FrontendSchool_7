@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <input type="text" />
+  <script>
+    // document.addEventListener("keyup", (e) => {
+    //   console.log('keyup code:', e.code);
+    //   console.log('keyup key:', e.key);
+    //   console.log('keyup keyCode:', e.keyCode);
+    // });
+    // document.addEventListener("keyup", (e) => {
+    //   console.log('keyup key:', e.key);
+    // });
+    // document.addEventListener("keydown", (e) => {
+    //   console.log('keydown key:', e.key);
+    // });
+    // document.addEventListener("keypress", (e) => {
+    //   console.log('keypress key:', e.key);
+    // });
+
+    document.querySelector('input').addEventListener('input', function (e) {
+      console.log(e.data);
+    })
+  </script>
+
+</body>
+
+</html>

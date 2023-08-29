@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>attr</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <label>
+    아이디
+    <input type="text" value="FES7" />
+  </label>
+
+  <script>
+    // console.log('jQuery type:', $('input').attr('type'));
+    // console.log('jQuery value:', $('input').attr('value'));
+    // console.log('jQuery value:', $('input').val());
+    // console.log('jQuery value:', $('input').removeAttr('value'));
+
+
+    const inputText = document.querySelector('input');
+    // get, set, remove + Attribute
+    console.log('JS type:', inputText.getAttribute('type'));
+    console.log('JS value:', inputText.getAttribute('value'));
+    console.log('JS value:', inputText.value);
+    inputText.removeAttribute('value');
+    inputText.setAttribute('value', '프론트엔드7기')
+    inputText.setAttribute('placeholder', '입력해주세요!')
+
+    // localStorage.setItem('프론트엔드', '서동현')
+    // console.log(localStorage.getItem('프론트엔드'))
+    // localStorage.removeItem('프론트엔드')
+
+    inputText.style.color = 'royalblue';
+
+    console.log(inputText.classList)
+    inputText.classList.add('class1')
+    inputText.classList.add('class2')
+    inputText.classList.remove('class2')
+    inputText.classList.toggle('class2')
+    console.log(inputText.classList)
+    console.log(inputText.classList.value)
+    console.log(inputText.classList.value.includes('class1'))
+  </script>
+
+</body>
+
+</html>
