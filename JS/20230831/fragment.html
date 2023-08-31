@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+
+    </main>
+    <!-- <article class="parent">
+        <figure>
+            <img class="figImg"
+                src="https://file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg"
+                alt="">
+            <figcaption class="figCap">
+                유재석씨가 수상식에서 환하게 웃고 있다.
+            </figcaption>
+        </figure>
+    </article> -->
+    <script>
+        let main2 = 1;
+        main2 = null;
+
+        const main = document.querySelector('main');
+        const frag = new DocumentFragment();
+        const frag2 = new DocumentFragment();
+        // const frag = document.createDocumentFragment();
+
+        for (let i = 0; i < 10; i++) {
+            const article = document.createElement('article');
+            article.innerHTML =
+                `<figure>
+                    <img class="figImg"
+                        src="https://file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg"
+                        alt="">
+                    <figcaption class="figCap">
+                        유재석씨가 수상식에서 환하게 웃고 있다.
+                    </figcaption>
+                </figure>`;
+            // main.appendChild(article);
+            frag.appendChild(article);
+        }
+
+        // main.appendChild();
+        console.log(frag.cloneNode());
+        // main.appendChild(frag.cloneNode(true));
+        // main.appendChild(frag.cloneNode(true));
+        // main.appendChild(frag.cloneNode(true));
+
+    </script>
+</body>
+
+</html>

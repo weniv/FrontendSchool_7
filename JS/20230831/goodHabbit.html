@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        // 선연하지 않은 변수에 값을 할당할 수 없습니다.
+        // str = 'hello';
+
+        // 읽기 전용객체에 값을 할당하면 안됩니다. 
+        // var undefined = "undefined";
+        // Math.PI = 0;
+        // var Infinity = 100;
+
+        // 지울수 없는 값을 지우려고 하면 안됩니다.
+        const employee = {
+            firstName: 'john'
+        }
+
+        delete employee.firstName;
+        // delete Object.prototype;
+
+        // 함수의 매개변수 이름으로 중복된 이름을 사용할 수 없습니다.
+        // function myFunc(a, a, b) {
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(a + a + b);
+        // }
+        // myFunc(1, 2, 3);
+
+
+        const aespa = ["카리나", "윈터", "지젤", "닝닝"];
+        // 결과 : ['카리나💖', '윈터💖', '지젤💖', '닝닝💖']
+
+        const aespa2 = aespa.map((item) => {
+            return item + '💖';
+        })
+    </script>
+</body>
+
+</html>

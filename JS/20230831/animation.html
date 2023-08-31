@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        .target {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="target"></div>
+    <script>
+        const target = document.querySelector('.target');
+        let pos = 0;
+
+        // document.addEventListener('keydown', move);
+
+        // function move(event) {
+        //     if (event.key === "ArrowRight") {
+        //         pos += 10;
+        //         target.style.transform = `translate(${pos}px)`;
+        //     }
+        //     if (event.key === "ArrowLeft") {
+        //         pos -= 10;
+        //         target.style.transform = `translate(${pos}px)`;
+        //     }
+        // }
+
+        let keys = "";
+
+        function move(event) {
+            keys = event.key;
+        }
+
+        function stop() {
+            keys = "";
+        }
+
+        document.addEventListener('keydown', move);
+        document.addEventListener('keyup', stop);
+
+        function play() {
+            switch (keys) {
+                case "ArrowRight":
+                    pos += 5;
+                    target.style.transform = `translate(${pos}px)`;
+                    break;
+                case "ArrowLeft":
+                    pos -= 5;
+                    target.style.transform = `translate(${pos}px)`;
+                    break;
+            }
+            requestAnimationFrame(play);
+        }
+
+        requestAnimationFrame(play);
+    </script>
+</body>
+
+</html>

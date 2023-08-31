@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let me = { age: 30 };
+        let you = me;
+        // 이제 {age:30}의 참조 카운트는 2가 됩니다.
+
+        me = null;
+        // 이제 {age:30}의 참조 카운트는 1가 됩니다.
+        you = null;
+        // // 이제 {age:30}의 참조 카운트는 0이 됩니다. 가비지 컬랙션의 대상이 됩니다.
+
+        let x = {
+            y: {
+                z: 1
+            }
+        };
+        // x가 참조하는 객체를 obj1, y 가 참조하는 객체를 obj2.
+
+        let a = x; // obj1 참조 카운트:  2 (x, a)
+        x = 1;      // obj1 참조카운트: 1 (a)
+
+        let b = a.y // obj2 참조카운트 : 2 (b, a.y)
+        a = 2;      // obj1 참조카운트 : 0, obj2 참조카운트 : 1 (b)
+
+        // 클로져의 경우
+        function outer() {
+            let privateVal = ['test'];
+
+            function getPrivate() {
+                return privateVal
+            }
+
+            return getPrivate;
+        }
+
+        const getPrivate = outer();
+        let secretVal = getPrivate();
+
+        secretVal = null;
+        // 사용을 마친 secretVal 은 나중에 null 혹은 undefined 를 할당하여 클로져 공간과의 연결을 끊어야합니다.
+
+    </script>
+</body>
+
+</html>

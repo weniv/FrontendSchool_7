@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title></head><body><script>class Robot {
+
+            constructor(name, pw) {
+                this.name = name;
+                this.password = pw;
+            }
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            get password() {
+                return this.password
+            }
+
+            set password(pw) {
+                this.password = pw;
+            }
+        }
+
+        const robot = new Robot('lion', 1234);</script></body></html>

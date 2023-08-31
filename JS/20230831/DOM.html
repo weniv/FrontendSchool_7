@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article class="parent">
+        <figure>
+            <img class="figImg"
+                src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202112/13/e4725896-2596-44f0-8b95-ab3faaa76d7d.jpg"
+                alt="">
+            <figcaption class="figCap">
+                유재석씨가 코로나에 돌파 감염되었다는 소식입니다.
+            </figcaption>
+        </figure>
+    </article>
+    <script>
+        const figure = document.querySelector(".parent figure");
+        const img = figure.querySelector('.figImg');
+        const figcap = figure.querySelector('.figCap');
+
+        figure.innerHTML = ` <img class="figImg"
+                src="https://file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg"
+                alt="">
+            <figcaption class="figCap">
+                유재석씨가 수상식에서 환하게 웃고 있다.
+            </figcaption>`;
+
+        // img.setAttribute('src', "https://file.mk.co.kr/meet/neds/2021/07/image_readtop_2021_654175_16256093474708254.jpg");
+        // figcap.textContent = "유재석씨가 수상식에서 환하게 웃고 있다.";
+    </script>
+</body>
+
+</html>
