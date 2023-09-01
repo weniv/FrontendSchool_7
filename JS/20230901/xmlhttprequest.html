@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>some text</p>
+    <button>통신 시작!</button>
+
+    <script>
+        // const btn = document.querySelector('button');
+        // const txt = document.querySelector('p');
+        // btn.addEventListener('click', xhrRequest);
+
+        let result;
+
+        function xhrRequest() {
+            const xhrObj = new XMLHttpRequest();
+            xhrObj.open('GET', 'message.txt');
+
+            xhrObj.onreadystatechange = () => {
+                if (xhrObj.readyState === 4 && xhrObj.status === 200) {
+                    result = xhrObj.responseText;
+                    // txt.textContent = result;
+
+                    console.log(result);
+                }
+            };
+
+            xhrObj.send();
+        };
+
+        xhrRequest();
+
+        console.log(result);
+    </script>
+</body>
+
+</html>
