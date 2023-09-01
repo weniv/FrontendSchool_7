@@ -49,7 +49,7 @@
                         // 사용자가 입력한 유저 이름과 일치하는 인사말이 존재한다면 
                         if (result) {
                             onSuccess(result);
-                            // 사용자가 입력한 유저 이름과 일치하는 인사말이 존재하지않는다면
+                            // 사용자가 입력한 유저 이름과 일치하는 인사말이 존재하지 않는다면
                         } else {
                             onError(new Error('no greetings'));
                         }
@@ -58,6 +58,7 @@
                 requestObj.send();
             }
         }
+
 
         const userStorage = new UserStorage();
 
@@ -72,15 +73,16 @@
                     name,
                     (result) => {
                         alert(`당신에게 인사합니다! ${result.userName}님 ${result.greetings}`);
-                    }),
+                    },
                     (error) => {
                         console.log(error);
-                    }
+                    });
             },
             (error) => {
                 console.log(error);
             }
         );
+
     </script>
 </body>
 
