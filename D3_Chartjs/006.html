@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D3</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <div class="canvas"></div>
+        <script>
+            const 중간고사 = [30, 70, 60, 40, 50];
+            const 기말고사 = [70, 30, 90, 90, 100];
+            const subject = ["국어", "영어", "수학", "과학", "기술과 가정"];
+
+            const $canvas = d3.select(".canvas");
+            const svg = $canvas
+                .append("svg")
+                .attr("width", 600)
+                .attr("height", 600);
+
+            중간고사.forEach((d, i) =>{
+                svg
+                    .append("rect")
+                    .attr("x", 50 + i * 100)
+                    .attr("y", 300 - d*2)
+                    .attr("width", 50)
+                    .attr("height", d*2)
+                    .attr("fill", "orange")
+                    .transition()
+                    .duration(5000)
+                    .ease(d3.easeLinear)
+                    .attr("y", 300 - 기말고사[i]*2)
+                    .attr("height", 기말고사[i]*2)
+                    .attr("fill", "blue")
+                    .attr("width", 80)
+
+
+                svg
+                    .append("text")
+                    .attr("x", 57 + i * 100)
+                    .attr("y", 320)
+                    .text(subject[i])
+            })
+        </script>
+    </body>
+</html>

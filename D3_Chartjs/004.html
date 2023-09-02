@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D3</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <div class="canvas"></div>
+        <script>
+            const sampledata = [30, 70, 60, 40, 50];
+            const subject = ["국어", "영어", "수학", "과학", "기술과 가정"];
+
+            const $canvas = d3.select(".canvas");
+            const svg = $canvas
+                .append("svg")
+                .attr("width", 1000)
+                .attr("height", 1000);
+
+            sampledata.forEach((d, i) =>{
+                svg
+                    .append("rect")
+                    .attr("x", 50 + i * 100)
+                    .attr("y", 300 - d*2)
+                    .attr("width", 50)
+                    .attr("height", d*2)
+                    .attr("fill", "orange");
+
+                // 기술과 가정같은 글자가 많이 나오는 것이 있으면 if로 분기해서 좌표를 미세하게 조정하셔야 합니다.
+                // 줄바꿈하는 함수를 만들어서 사용하셔도 됩니다.
+                // ellipsis(기술..)도 사용할 수 있지만, 사용되는 것을 본 적은 없습니다.
+                svg
+                    .append("text")
+                    .attr("x", 57 + i * 100)
+                    .attr("y", 320)
+                    .text(subject[i])
+            })
+        </script>
+    </body>
+</html>

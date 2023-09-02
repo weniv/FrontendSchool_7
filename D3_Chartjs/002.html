@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D3</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <div class="one">
+            <div class="two"></div>
+            <div class="two"></div>
+            <div class="two"></div>
+        </div>
+        <script>
+            const $one1 = document.querySelector(".one");
+            const $one2 = d3.select(".one");
+            console.log($one1);
+            console.log($one2);
+
+            const $two1 = document.querySelectorAll(".two");
+            const $two2 = d3.selectAll(".two");
+            console.log($two1);
+            console.log($two2);
+        </script>
+    </body>
+</html>

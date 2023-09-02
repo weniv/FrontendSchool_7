@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        let text = `$one: #000;
+
+.one {
+    font-size: $one;
+}
+`
+
+        function compiler(text){
+            // text에 선언된 변수를 찾아내는 정규표현식
+            let reg = /\$[a-zA-Z0-9]+/g;
+
+            // text에 선언된 변수를 찾아내는 정규표현식
+            let arr = text.match(reg);
+            console.log(arr)
+
+            // 순회를 돌면서 replace(css 문법으로 변환하는 정규표현식)
+            for(let i = 0; i < arr.length; i++){
+                
+            }
+            // console.log(text);
+        }
+
+        compiler(text);
+    </script>
+</body>
+</html>

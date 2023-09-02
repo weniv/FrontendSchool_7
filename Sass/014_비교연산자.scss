@@ -1,26 +1,26 @@
 // node sass에는 해당 값을 출력할 수 있습니다.
-@debug 100 > 50; // true
-@debug 10px <= 17px; // true
-@debug 10px == 17px; // false
-@debug 10px != 17px; // true
-@debug 96px >= 30px; // true
-@debug 1000ms <= 1s; // true
+@debug 100>50; // true
+@debug 10px <=17px; // true
+@debug 10px==17px; // false
+@debug 10px !=17px; // true
+@debug 96px>=30px; // true
+@debug 1000ms <=1s; // true
 
 // 숫자
-@debug 1px == 1px; // true
-@debug 1px != 1em; // true
-@debug 1 != 1px; // true
-@debug 96px == 1in; // true
+@debug 1px==1px; // true
+@debug 1px !=1em; // true
+@debug 1 !=1px; // true
+@debug 96px==1in; // true
 
 // 문자
-@debug "Poppins" == Poppins; // true
-@debug "Open Sans" != "Roboto"; // true
+@debug "Poppins"==Poppins; // true
+@debug "Open Sans" !="Roboto"; // true
 
 // 색상
-@debug rgba(53, 187, 169, 1) == #35bba9; // true
-@debug rgba(179, 115, 153, 0.5) != rgba(179, 115, 153, 0.8); // true
+@debug rgba(53, 187, 169, 1)==#35bba9; // true
+@debug rgba(179, 115, 153, 0.5) !=rgba(179, 115, 153, 0.8); // true
 
 // 리스트
-@debug (5px 7px 10px) != (5px, 7px, 10px); // true
+@debug (5px 7px 10px) !=(5px, 7px, 10px); // true
 // @debug (5px 7px 10px) != [5px 7px 10px]; // true
-@debug (5px 7px 10px) == (5px 7px 10px); // true
+@debug (5px 7px 10px)==(5px 7px 10px); // true
