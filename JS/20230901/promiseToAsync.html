@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class UserStorage {
+            // 사용자가 입력한 값과 유저 정보가 일치하는 유저를 찾습니다.
+            async searchUser(userName, password) {
+
+
+                // 통신의 결과로 전달받는 response 객체에 json() 메소드를 이용해서 자바스크립트 객체를 가지는 프로미스 객체를 추출합니다.
+
+                // try - catch : try 문 안의 코드를 실행시키고, 만약 에러가 중간에 발생하면 catch 안에서 처리하는 형태를 가집니다.
+                try {
+                    const response = await fetch('users.json');
+
+                    if (!response.ok) {
+                        throw new Error("HTTP ERROR!! :", response.status);
+                    }
+
+                    // .json()은 프라미스 객체를 반환하기 때문에 비동기로 작동합니다. 때문에 await 키워드가 반드시 필요합니다.
+                    const data = await response.json();
+
+                    // 전달된 자바스크립트 객체를 이용해 우리가 원하는 데이터를 추출합니다.
+                    const result = data.user.find((item) => {
+                        return item.userName === userName && item.password === password
+                    });
+
+                    // return result ? userName : null;
+
+                    // result의 값이 없다면 에러를 던집니다.
+                    if (!result) {
+                        throw new Error('user not found');
+                    }
+
+                    return userName;
+
+                } catch (error) {
+
+                    console.error('유저를 찾는 도중에 에러가 발생했습니다. :', error);
+                    // error를 던져서 searchUser함수를 실행하는 코드와 가장 가까이에 있는 catch 함수가 에러 객체를 받도록 합니다.
+                    throw error;
+                }
+            }
+
+            // 유저에 맞는 인사말을 출력합니다.
+            async sayHi(user) {
+
+                try {
+                    const response = await fetch('greetings.json');
+
+                    if (!response.ok) {
+                        throw new Error("HTTP ERROR!! :", response.status);
+                    }
+                    const data = await response.json();
+
+                    const result = data.greetings.find((item) => {
+                        return item.userName === user
+                    });
+
+                    // return result ? result : null;
+
+                    if (!result) {
+                        throw new Error('no greetings');
+                    }
+
+                    return result;
+
+                } catch (error) {
+
+                    console.error('인사말을 찾는 도중에 에러가 발생했습니다. :', error);
+                    throw error;
+                }
+            }
+        }
+
+
+        const userStorage = new UserStorage();
+
+        const userName = prompt('이름을 입력하세요.');
+        const password = prompt('비밀번호를 입력하세요.');
+
+        async function sayHello() {
+
+            try {
+                // searchUser, sayHi 모두 async 함수입니다. 따라서 await를 통해 작동 순서를 보장하도록 합니다.
+                const result = await userStorage.searchUser(userName, password);
+
+                const user = await userStorage.sayHi(result);
+
+                alert(`당신에게 인사합니다! ${user.userName}님 ${user.greetings}`);
+
+            } catch (errorMsg) {
+                console.error(errorMsg);
+            }
+        }
+
+        sayHello();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Original Cola",
+        "cost": 1000,
+        "img": "cola-original.png",
+        "count": 5
+    },
+    {
+        "name": "Violet Cola",
+        "cost": 1000,
+        "img": "cola-violet.png",
+        "count": 5
+    },
+    {
+        "name": "Yellow Cola",
+        "cost": 1000,
+        "img": "cola-yellow.png",
+        "count": 5
+    },
+    {
+        "name": "Cool Cola",
+        "cost": 1000,
+        "img": "cola-cool.png",
+        "count": 5
+    },
+    {
+        "name": "Green Cola",
+        "cost": 1000,
+        "img": "cola-green.png",
+        "count": 5
+    },
+    {
+        "name": "Orange Cola",
+        "cost": 1000,
+        "img": "cola-orange.png",
+        "count": 5
+    }
+]

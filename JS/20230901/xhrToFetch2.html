@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class UserStorage {
+            // 사용자가 입력한 값과 유저 정보가 일치하는 유저를 찾습니다.
+            searchUser(userName, password) {
+
+                return fetch('users.json')
+                    // 통신의 결과로 전달받는 response 객체에 json() 메소드를 이용해서 자바스크립트 객체를 가지는 프로미스 객체를 추출합니다.
+                    .then((response) => {
+                        console.log(response);
+                        if (!response.ok) {
+                            throw new Error("HTTP ERROR!! :", response.status);
+                        }
+                        return response.json();
+                    })
+                    // 전달된 자바스크립트 객체를 이용해 우리가 원하는 데이터를 추출합니다.
+                    .then((data) => {
+                        const result = data.user.find((item) => {
+                            return item.userName === userName && item.password === password
+                        });
+
+                        return result ? userName : null;
+
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            }
+
+            // 유저에 맞는 인사말을 출력합니다.
+            sayHi(user) {
+                return fetch('greetings.json')
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("HTTP ERROR!! :", response.status);
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        const result = data.greetings.find((item) => {
+                            return item.userName === user
+                        });
+
+                        return result ? result : null;
+
+                        // if (result) {
+                        //     resolve(result);
+                        //     // 사용자가 입력한 유저 이름과 일치하는 인사말이 존재하지 않는다면
+                        // } else {
+                        //     reject(new Error('no greetings'));
+                        // }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+
+            }
+        }
+
+
+        const userStorage = new UserStorage();
+
+        const userName = prompt('이름을 입력하세요.');
+        const password = prompt('비밀번호를 입력하세요.');
+
+        userStorage.searchUser(userName, password)
+            .then((result) => {
+
+                if (!result) {
+                    throw new Error('user not found');
+                }
+
+                return userStorage.sayHi(result);
+            }).then((result) => {
+
+                if (!result) {
+                    throw new Error('no greetings');
+                }
+
+                alert(`당신에게 인사합니다! ${result.userName}님 ${result.greetings}`);
+            }).catch((errorMsg) => {
+                console.error(errorMsg);
+            });
+
+    </script>
+</body>
+
+</html>
