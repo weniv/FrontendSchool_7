@@ -22,6 +22,7 @@ ul,
 li {
   list-style: none;
 }
+
 input {
   font: inherit;
 }
@@ -35,6 +36,7 @@ button {
 button:enabled {
   cursor: pointer;
 }
+
 img {
   vertical-align: top;
 }
@@ -61,6 +63,7 @@ body {
 h1 {
   text-align: center;
 }
+
 h1 img {
   max-width: 50%;
 }
@@ -71,6 +74,7 @@ main {
   max-width: 100%;
   display: grid;
 }
+
 /* 749부터 적용하겠다. */
 @media (min-width: 749px) {
   main {
@@ -83,6 +87,7 @@ main {
     margin: 67px auto;
   }
 }
+
 /* 768까지 적용하겠다. */
 @media (max-width: 748px) {
   main {
@@ -92,6 +97,7 @@ main {
       'section3';
     margin: 18px auto;
   }
+
   body {
     background-color: white;
   }
@@ -102,11 +108,13 @@ main {
   background-color: white;
   padding: 30px 27px;
 }
+
 .section2 {
   grid-area: section2;
   background-color: white;
   padding: 9px 27px;
 }
+
 .section3 {
   grid-area: section3;
   background-color: white;
@@ -115,6 +123,7 @@ main {
   display: flex;
   flex-direction: column;
 }
+
 .section3 .get-list {
   flex-grow: 1;
   flex-basis: 364px;
@@ -147,23 +156,28 @@ main {
   font-size: 13px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
+
 .btn-cola {
   border-radius: 10px;
   padding: 11px 12px 9px;
 }
+
 .btn-cola img,
 .cola-name,
 .cola-price {
   display: block;
 }
+
 .btn-cola img {
   width: 36px;
   margin: 0 auto;
 }
+
 .cola-name {
   font-size: 9px;
   margin: 6px 0;
 }
+
 .cola-price {
   font-size: 12px;
   background-color: #6327fe;
@@ -174,7 +188,11 @@ main {
 }
 
 /* 선택한 버튼 */
-.btn-cola.on {
+/* .btn-cola.on {
+  box-shadow: 0 0 0 4px #6327fe;
+} */
+
+.btn-cola:active {
   box-shadow: 0 0 0 4px #6327fe;
 }
 
@@ -184,6 +202,7 @@ main {
   position: relative;
   overflow: hidden;
 }
+
 .btn-cola:disabled::after {
   content: '';
   display: block;
@@ -195,6 +214,7 @@ main {
   left: 0;
   /* border-radius: 10px; */
 }
+
 .soldout {
   color: #eae8fe;
   font-size: 14px;
@@ -230,6 +250,7 @@ main {
   box-sizing: border-box;
   border-radius: 5px;
 }
+
 #input-money::placeholder {
   color: #bdbdbd;
   font-size: 13px;
@@ -248,6 +269,7 @@ main {
   /* auto: 내용이 넘칠때만 스크롤이 생기도록함. */
   overflow: auto;
 }
+
 .get-list li {
   background-color: white;
 
@@ -261,12 +283,15 @@ main {
 
   font-size: 9px;
 }
-.get-list li ~ li {
+
+.get-list li~li {
   margin-top: 6px;
 }
+
 .get-list li img {
   width: 18px;
 }
+
 .get-list li strong {
   /* margin: 0 0 0 auto; */
   margin-left: auto;
