@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // react 컴포넌트 정의하기
+        // const el = React.createElement;
+
+        // class HelloButton extends React.Component {
+        //     constructor(props) {
+        //         super(props);
+
+        //         this.state = { liked: false };
+        //     }
+
+        //     render() {
+        //         if (this.state.liked) {
+        //             return <p>Hello World!</p>;
+        //         }
+
+        //         return (
+        //             <button onClick={() => this.setState({ liked: true })}>
+        //                 Hello
+        //             </button>
+        //         );
+        //     }
+        // }
+
+        // 함수형 컴포넌트
+        function HelloButton(props) {
+
+            const [text, setText] = React.useState('hello');
+
+            return (
+                <button onClick={() => setText('clicked!')}>
+                    {text}
+                </button>
+            );
+        }
+
+        const app = (
+            <div>
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+                <HelloButton />
+            </div>
+        )
+
+        const domContainer = document.querySelector('#root');
+        // react-dom UI 구성요소를 만들고 관리하는 목적의 라이브러리입니다. 
+        ReactDOM.render(app, domContainer);
+    </script>
+</body>
+
+</html>

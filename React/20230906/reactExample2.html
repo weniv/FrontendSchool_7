@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+    <script type="text/babel">
+        const header = (
+            <header>
+                <h1>hello world shop</h1>
+                <nav>
+                    <ul>
+                        <li>링크1</li>
+                        <li>링크2</li>
+                        <li>링크3</li>
+                        <li>링크4</li>
+                        <li>링크5</li>
+                    </ul>
+                </nav>
+            </header>
+        );
+        const main = (
+            <main>
+                <h2>hello world!</h2>
+                <p>product list</p>
+                <ul>
+                    <li>best seller 옷1</li>
+                    <li>best seller 옷2</li>
+                    <li>best seller 옷3</li>
+                    <li>best seller 옷4</li>
+                    <li>best seller 옷5</li>
+                    <li>best seller 옷6</li>
+                    <li>best seller 옷7</li>
+                    <li>best seller 옷8</li>
+                    <li>best seller 옷9</li>
+                    <li>best seller 옷10</li>
+                </ul>
+            </main>
+        );
+        const footer = (
+            <footer>
+                <h2>hello footer!</h2>
+                <address>제주시 인다 1길</address>
+            </footer>
+        );
+
+        const body = (
+            <div>
+                {header}
+                {main}
+                {footer}
+            </div>
+        );
+
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(body);
+    </script>
+</body>
+
+</html>

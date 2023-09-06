@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import "reset.css";
+
+:root {
+    --main-color: #6327FE;
+    --txt-color: #333333;
+    --border-color: #C4C4C4;
+    --sub-border-color: #E0E0E0;
+    --bg-color: #F2F2F2;
+    --emphasis-txt-color: #EB5757;
+    --sub-txt-color: #828282;
+    --button-border: #BDBDBD;
+}
+  
+div, span, article, section, header, main, footer, p, ul, li, label, a, nav, h1, h2, h3, form, input, button, img, textarea, table, thead, tbody, tr, th, td {
+    box-sizing: border-box;
+}
+  
+body, html {
+    width: 100%;
+    height: 100%;
+}
+  
+body, button {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+body {
+    font-weight: 400;
+    color: var(--txt-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+table, thead, tbody, tr {
+    display: block;
+}
+
+/* Image Replacement 약자 스크린리더가 읽을 수 있도록 대체텍스트 */
+.ir {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* 한줄 말줄임 */
+.sl-ellipsis {
+    display:block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 두줄 말줄임 */
+.multi-ellipsis {
+  overflow: hidden;
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+/* button 스타일 */
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* link-button 스타일 */
+.link-btn {
+    position: sticky;
+    top: 60px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+/* 상품 리스트 */
+/* 상품 이미지 스타일 */
+.product-img {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 상품 이름 스타일 */
+.product-name {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* 상품 가격 스타일 */
+/* medium 사이즈 */
+.m-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.m-price span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 2px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.product-price .price-discount {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.product-price .price-strikethrough {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--sub-txt-color);
+    text-decoration-line: line-through;
+    margin-right: 10px;
+}
+
+/* 좋아요 버튼 */
+.like-btn {
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: url(../assets/icon-heart.svg) no-repeat center / contain;
+}
+
+.like-btn.on {
+    background: url(../assets/icon-heart-on.svg) no-repeat center / contain;
+}
+
+/* 상품 목록 페이지 */
+.product {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+    padding-bottom: 156px;
+}
+
+.product .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    width: 1260px;
+    margin-right: 60px;
+}
+
+.product .product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product .product-item .product-name {
+    width: 338px;
+    margin: 20px 0 10px;
+}
+
+.product .product-item .like-btn {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+}
+
+.product .cart-link {
+    background: var(--main-color) url(../assets/icon-shopping-cart-white.svg) no-repeat center / 40px 40px;
+}
+

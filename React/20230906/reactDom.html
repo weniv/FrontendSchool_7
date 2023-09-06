@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="greeting">
+        hello
+        <li>
+            world
+        </li>
+        . Welcome!
+    </h1>
+
+    <script>
+        function greetingJS() {
+            const h1 = document.createElement('h1');
+            h1.classList.add('greeting');
+            h1.appendChild(document.createTextNode('hello'));
+
+            const elLi = document.createElement('li');
+            elLi.appendChild(document.createTextNode('world'));
+
+            h1.appendChild(elLi);
+            h1.appendChild(document.createTextNode('. Welcome!'));
+
+            return h1;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
