@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+
+        class Ball {
+            constructor(xPos, yPos, radius, xSpeed, ySpeed) {
+                this.xPos = xPos;
+                this.yPos = yPos;
+                this.xSpeed = xSpeed;
+                this.ySpeed = ySpeed;
+                this.radius = radius;
+            }
+
+            setup() {
+                this.drawBall();
+                this.moveBall();
+                this.collisionBall();
+            }
+
+            drawBall() {
+                ctx.beginPath();
+                ctx.arc(this.xPos, this.yPos, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'royalblue';
+                ctx.fill();
+            }
+
+            moveBall() {
+                this.xPos += this.xSpeed;
+                this.yPos += this.ySpeed;
+            }
+
+            // 충돌 체크
+            collisionBall() {
+                // x 축의 위치가 0보다 작거나, 500보다 크다면 역방향으로 이동
+                if (this.xPos - this.radius < 0 || this.xPos + this.radius > 500) {
+                    this.xSpeed = -this.xSpeed;
+                }
+
+                // y 축의 위치가 0보다 작거나, 500보다 크다면 역방향으로 이동
+                if (this.yPos - this.radius < 0 || this.yPos + this.radius > 500) {
+                    this.ySpeed = -this.ySpeed;
+                }
+            }
+        }
+
+        const ball = new Ball(100, 100, 30, 2, 1);
+
+        const ball2 = new Ball(100, 100, 30, 5, 2);
+
+        const ball3 = new Ball(100, 100, 30, 3, 4);
+
+        function play() {
+
+            ctx.clearRect(0, 0, 500, 500);
+            ball.setup();
+            ball2.setup();
+            ball3.setup();
+
+            window.requestAnimationFrame(play);
+        }
+
+        window.requestAnimationFrame(play);
+    </script>
+</body>
+
+</html>

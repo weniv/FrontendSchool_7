@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+
+        // canvas 요소의 drawing context 객체를 가져옵니다. 그림을 그리는데 필요한 방법을 제공하는 객체입니다. 
+        const ctx = canvas.getContext('2d');
+
+        //1. 사각형 그리기 (x 축의 위치, y축의 위치, 너비, 높이)
+        ctx.fillStyle = "tomato";
+        ctx.fillRect(30, 40, 30, 40);
+
+        ctx.fillRect(50, 60, 100, 40);
+
+        ctx.fillStyle = "teal";
+        ctx.fillRect(100, 100, 30, 40);
+
+
+        // 2. 직선 그리기
+        // 새로운 선을 그릴것을 알립니다.
+        ctx.beginPath();
+        // 선의 색상
+        ctx.strokeStyle = "green";
+        // 선의 두께
+        ctx.lineWidth = 10;
+        // 선의 시작 지점을 지정합니다.
+        ctx.moveTo(20, 30);
+        // 선의 끝 지점을 지정합니다.
+        ctx.lineTo(150, 300);
+        // 화면에 선을 그립니다.
+        ctx.stroke();
+
+
+        // 3. 원 그리기
+        ctx.beginPath();
+        ctx.strokeStyle = "pink";
+        ctx.lineWidth = 10;
+        // 원을 그리는 메소드
+        // 원의 중심의 X축, Y축, 반지름의 길이, 시작 각도, 종료 각도. 도(deg)X, 라디안 O
+        // 1 라디안은 반지름과 동일한 길이의 호(곡선)를 그렸을 때의 각도를 의미합니다.
+        ctx.arc(200, 200, 30, 0, Math.PI * 2);
+        // ctx.stroke();
+
+        // 원의 내부 색 체우기
+        ctx.fillStyle = 'blue';
+        ctx.fill();
+    </script>
+</body>
+
+</html>

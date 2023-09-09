@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="500" height="500"></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        let xPos = 0;
+        let flag = true;
+
+        const play = () => {
+            // 캔버스의 특정 영역을 지워줍니다.
+            // 지울 영역 x좌표, y좌표, 범위 width, 범위 height
+            ctx.clearRect(0, 0, 500, 30);
+            ctx.fillRect(xPos, 0, 30, 30);
+
+            if (flag && xPos < 470) {
+                xPos += 4;
+            } else {
+                xPos -= 4;
+            }
+
+            if (xPos < 0) {
+                flag = true;
+            } else if (xPos >= 470) {
+                flag = false;
+            }
+
+            window.requestAnimationFrame(play);
+        }
+
+        window.requestAnimationFrame(play);
+    </script>
+</body>
+
+</html>
