@@ -1,0 +1,8 @@
+.btn-item {
+    height: 50px;
+    width: 100%;
+}
+
+.btn-item:hover {
+    background-color: yellowGreen;
+}
