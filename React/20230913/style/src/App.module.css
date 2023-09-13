@@ -1,0 +1,10 @@
+.box {
+    margin: 40px;
+    background: blanchedalmond;
+  }
+  .text {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    color: Red;
+  }
