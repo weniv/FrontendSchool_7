@@ -1,0 +1,66 @@
+header {
+    margin-bottom: 95px;
+}
+
+.tit-law {
+    position: relative;
+}
+
+.tit-law .img-tit {
+    position: relative;
+    z-index: 10;
+    max-width: 564px;
+}
+
+.tit-law::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 225px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../images/title_bg.png");
+    background-position: center;
+    background-size: contain;
+    aspect-ratio: 1/1;
+}
+
+.img-txt {
+    max-width: 486px;
+    margin: 125px auto 85px;
+}
+
+.txt-desc {
+    position: relative;
+    max-width: 475px;
+    margin: 0 auto;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.txt-desc .tit-desc {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.txt-desc::before,
+.txt-desc::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 37px;
+    height: 32px;
+    margin-top: -14px;
+}
+
+.txt-desc::before {
+    left: 0;
+    background-image: url("../../images/txt-left.png");
+}
+
+.txt-desc::after {
+    right: 0;
+    background-image: url("../../images/txt-right.png");
+}

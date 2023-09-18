@@ -1,0 +1,191 @@
+/* header 스타일 시작 */
+header {
+    margin-bottom: 95px;
+}
+
+.tit-law {
+    position: relative;
+}
+
+.tit-law .img-tit {
+    position: relative;
+    z-index: 10;
+    max-width: 564px;
+}
+
+.tit-law::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 225px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/title_bg.png);
+    background-position: center;
+    background-size: contain;
+    aspect-ratio: 1/1;
+}
+
+.img-txt {
+    max-width: 486px;
+    margin: 125px auto 85px;
+}
+
+.txt-desc {
+    position: relative;
+    max-width: 475px;
+    margin: 0 auto;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.txt-desc .tit-desc {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.txt-desc::before,
+.txt-desc::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 37px;
+    height: 32px;
+    margin-top: -14px;
+}
+
+.txt-desc::before {
+    left: 0;
+    background-image: url("../images/txt-left.png");
+}
+
+.txt-desc::after {
+    right: 0;
+    background-image: url("../images/txt-right.png");
+}
+
+/* header 스타일 끝 */
+
+/* main 스타일 시작 */
+main {
+    margin-bottom: 130px;
+}
+
+.cont-input,
+.cont-result {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.cont-input .txt-wannabe {
+    margin-bottom: 30px;
+}
+
+.cont-input .txt-time {
+    margin-bottom: 120px;
+}
+
+.cont-input input {
+    width: 224px;
+    height: 57px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    margin: 0 17px;
+}
+
+.cont-input .btn-exc {
+    position: relative;
+}
+
+.cont-input .btn-exc::after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 72px;
+    right: -70px;
+    bottom: -20px;
+    background-image: url("../images/hand.png");
+}
+
+.cont-result .txt-wannabe {
+    margin: 147px 0 127px;
+    line-height: 72px;
+}
+
+.cont-result .txt-wannabe strong {
+    margin: 0 12px;
+    font-size: 72px;
+    font-family: GmarketSansBold;
+    vertical-align: -14px;
+}
+
+.btn-share {
+    margin-left: 18px;
+    background-color: #fff;
+}
+
+/* main 스타일 끝 */
+
+/* footer 스타일 시작! */
+
+.cont-footer {
+    padding-bottom: 70px;
+    font-size: 12px;
+    line-height: 17px;
+    font-family: Noto Sans KR;
+}
+
+.cont-footer .img-footer {
+    width: 125px;
+    margin-bottom: 20px;
+}
+
+/* footer 스타일 끝! */
+
+/* modal 스타일 시작! */
+
+#modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+}
+
+#modal .modal-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 76px 126px 68px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #5B2386;
+}
+
+#modal h2 {
+    font-size: 66px;
+}
+
+#modal h3 {
+    font-size: 30px;
+}
+
+#modal img {
+    max-width: 344px;
+}
+
+#modal .btn-close {
+    margin-top: 74px;
+}
+
+/* modal 스타일 끝! */

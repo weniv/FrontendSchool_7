@@ -1,0 +1,58 @@
+main {
+    margin-bottom: 130px;
+}
+
+.cont-input,
+.cont-result {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.cont-input .txt-wannabe {
+    margin-bottom: 30px;
+}
+
+.cont-input .txt-time {
+    margin-bottom: 120px;
+}
+
+.cont-input input {
+    width: 224px;
+    height: 57px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    margin: 0 17px;
+}
+
+.cont-input .btn-exc {
+    position: relative;
+}
+
+.cont-input .btn-exc::after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 72px;
+    right: -70px;
+    bottom: -20px;
+    background-image: url("../../images/hand.png");
+}
+
+.cont-result .txt-wannabe {
+    margin: 147px 0 127px;
+    line-height: 72px;
+}
+
+.cont-result .txt-wannabe strong {
+    margin: 0 12px;
+    font-size: 72px;
+    font-family: GmarketSansBold;
+    vertical-align: -14px;
+}
+
+.btn-share {
+    margin-left: 18px;
+    background-color: #fff;
+}
