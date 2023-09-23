@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * 왜 객체지향 프로그래밍을 해야할까?
+         * 1. 깔끔하고 이해하기 쉬운 코드를 짤 수 있습니다.
+         * 2. 확장하기 쉬운 코드를 짤 수 있다.
+         * 3. 유지보수 하기 쉬운 코드를 짤 수 있다.
+         * 4. 메모리를 절약하는 코드를 짤 수 있다.
+        */
+
+        // let name = "재현",
+        //     weapon = "검";
+
+        // function attack() {
+        //     return `${name}이 ${weapon}으로 공격합니다!`;
+        // }
+
+        // function changeWeapon() {
+        //     weapon = '창';
+        //     return `무기가 ${weapon}으로 교체되었습니다.`;
+        // }
+
+        // const knight = {
+        //     name: "재현",
+        //     weapon: "검",
+        //     attack() {
+        //         return `${this.name}이 ${knight.weapon}으로 공격합니다!`;
+        //     },
+        //     changeWeapon(newWeapon) {
+        //         this.weapon = newWeapon;
+        //         return `무기가 ${this.weapon}으로 교체되었습니다.`;
+        //     }
+        // };
+
+        // const knight2 = {
+        //     name: "호준",
+        //     weapon: "창",
+        //     attack() {
+        //         return `${this.name}이 ${knight.weapon}으로 공격합니다!`;
+        //     },
+        //     changeWeapon(newWeapon) {
+        //         this.weapon = newWeapon;
+        //         return `무기가 ${this.weapon}으로 교체되었습니다.`;
+        //     }
+        // };
+
+        // const knight3 = {
+        //     name: "지현",
+        //     weapon: "활",
+        //     attack() {
+        //         return `${this.name}이 ${knight.weapon}으로 공격합니다!`;
+        //     },
+        //     changeWeapon(newWeapon) {
+        //         this.weapon = newWeapon;
+        //         return `무기가 ${this.weapon}으로 교체되었습니다.`;
+        //     }
+        // };
+
+        // encapsulation ==> 캡슐화 한다.
+        // 데이터와 데이터를 조작하는 메서드들을 하나의 단위로 묶는것!
+        //  위와 같은 방법은 두가지 문제가 있다.
+        // 1. 객체가 필요할 때마다 새롭게 선언한다.
+        // 2. 똑같은 기능을 하는 함수가 반복되고 있다.
+
+
+        // function Knight(name, weapon) {
+        //     this.name = name;
+        //     this.weapon = weapon;
+        // };
+
+        // Knight.prototype.attack = function () {
+        //     return `${this.name}이 ${this.weapon}으로 공격합니다!`
+        // }
+
+        // Knight.prototype.changeWeapon = function (newWeapon) {
+        //     return `무기가 ${this.weapon = newWeapon}으로 교체되었습니다.`;
+        // }
+
+
+        class BaseCharactor {
+            constructor(name, weapon) {
+                this.name = name;
+                this.weapon = weapon;
+            }
+
+            attack() {
+                return `${this.name}이 ${this.weapon}으로 공격합니다!`;
+            }
+
+            changeWeapon(newWeapon) {
+                this.weapon = newWeapon;
+                return `무기가 ${this.weapon}으로 교체되었습니다.`;
+            }
+        }
+
+        // const knight = new Knight('재현', '검');
+
+        class Skeleton extends BaseCharactor {
+            // constructor(name, weapon, unitType) {
+            //     super(name, weapon);
+            //     this.unitType = unitType;
+            // }
+        }
+
+        const skeleton = new Skeleton("재현", "방패", "악마");
+
+    </script>
+</body>
+
+</html>
