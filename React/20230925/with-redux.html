@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.js"></script>
+</head>
+
+<body>
+    <style>
+        .container {
+            border: 5px solid black;
+            padding: 10px;
+        }
+    </style>
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="green"></div>
+    <script>
+        // state는 현재 상태, action은 주문 받은 것! 
+        function reducer(state, action) {
+            console.log(state, action);
+
+            // state 초기화
+            if (state === undefined) {
+                return { color: 'yellow' }
+            }
+
+            var newState;
+            if (action.type === 'CHANGE_COLOR') {
+                //복제해야 합니다. 그냥 {color:'red'}이런 식으로 리턴해줘도 되긴 하는데 리덕스의 고급기능을 쓰지 못합니다.
+                // Object.assign({}, 빈객체에 복제할 값1, 빈객체에 복제할 값2...);
+                console.log(state)
+                newState = Object.assign({}, state, { color: action.color });
+            }
+            return newState;
+        }
+        // Redux는 cdn으로 생깁니다.
+        var store = Redux.createStore(
+            reducer,
+            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // redux dev tools를 사용하기 위한 코드
+        );
+        function red() {
+            var state = store.getState();
+            //type은 반드시 있어야 합니다.
+            // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+            document.querySelector('#red').innerHTML = `
+                <div class="container" id="component_red" style="background-color:${state.color}">
+                        <h1>red</h1>
+                        <input type="button" value="fire" onclick="
+                            store.dispatch({type:'CHANGE_COLOR', color:'red'});
+                        ">
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(red);
+        red();
+
+        function blue() {
+            var state = store.getState();
+            document.querySelector('#blue').innerHTML = `
+                <div class="container" id="component_blue" style="background-color:${state.color}">
+                    <h1>blue</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'blue'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(blue);
+        blue();
+
+        function green() {
+            var state = store.getState();
+            document.querySelector('#green').innerHTML = `
+                <div class="container" id="component_green" style="background-color:${state.color}">
+                    <h1>green</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'green'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(green);
+        green();
+
+    </script>
+</body>
+
+</html>
