@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .viewer {
+            display: block;
+            font-size: 24px;
+            color: teal;
+            margin: 50px 0 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <strong class="viewer"></strong>
+        <input class="inp-txt" type="text">
+        <!-- 서로 다른 언어의 코드가 섞여있다. -->
+        <button class="btn-push" onclick="push()">적용</button>
+    </article>
+
+    <script>
+        // 전역변수의 사용. 함수가 아니기 때문에 테스트 자체가 불가능합니다.
+        const viewer = document.querySelector('.viewer');
+        viewer.textContent = "hello lions";
+
+        // 재사용성이 떨어집니다.
+        function push() {
+            const inpTxt = document.querySelector('.inp-txt');
+            viewer.textContent = inpTxt.value;
+        }
+
+        // 테스트가 가능하려면!
+        /**
+         * 1. 테스트 대상이 UI에서 완전히 분리되어야합니다.
+         * 2. 모든 기능은 함수로 구현해야합니다.
+        */
+    </script>
+</body>
+
+</html>

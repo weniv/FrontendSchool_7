@@ -6,6 +6,7 @@ export default function GoodsCounter() {
 
     // store의 state 접근하도록 합니다.
     const { stock, goods } = useSelector((state) => {
+        console.log(state);
         return {
             stock: state.goodsReducer.stock,
             goods: state.goodsReducer.goods,
