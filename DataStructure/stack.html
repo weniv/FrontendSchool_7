@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Stack {
+            constructor() {
+                this.items = [];
+            }
+
+            push(value) {
+                this.items.push(value);
+            }
+
+            pop() {
+                if (this.isEmpty()) {
+                    return '스택이 비어있습니다.'
+                }
+                return this.items.pop();
+            }
+
+            isEmpty() {
+                return this.items.length === 0
+            }
+        }
+
+        const stack = new Stack();
+
+    </script>
+</body>
+
+</html>

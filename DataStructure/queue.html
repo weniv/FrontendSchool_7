@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let start = Date.now();
+
+        // 실행시간을 측정하는 함수
+        const result = (x) => {
+            console.log(`${x}가 실행되는데 걸리는 시간 : ${Date.now() - start}`);
+        }
+
+        const blocking = () => {
+            let i = 0;
+            while (i < 999999999) {
+                i++
+            }
+            // return "blocking finished"
+        }
+
+        const asyncBlocking = () => {
+            return new Promise((resolve) => {
+                blocking();
+                resolve('asyncBlocking finished');
+            })
+        }
+
+
+        result('동기적 실행 코드1');
+
+        blocking();
+
+        setTimeout(() => { result('setTimeout 종료'); }, 0);
+
+        result('동기적 실행 코드2');
+
+        asyncBlocking().then((txt) => {
+            result(txt);
+        });
+
+    </script>
+</body>
+
+</html>

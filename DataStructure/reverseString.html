@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 문자열을 뒤집어보는 함수를 만들겠습니다.
+        function reverse(str) {
+            if (!str || typeof str !== 'string' || str.length < 2) return '문자열을 전달해주세요!';
+            // 'hello'
+            // const backwords = ['o','l', 'l', 'e', 'h'];
+            const backwords = [];
+            const lastIndex = str.length - 1;
+
+            // 문자열의 마지막 문자부터 배열에 순서대러 push합니다.
+            for (let i = lastIndex; i >= 0; i--) {
+                backwords.push(str[i]);
+            }
+
+            // 마지막에 하나의 문자열로 결합합니다.
+            return backwords.join('');
+        }
+
+        function reverse2(str) {
+            return str.split('').reverse().join('');
+        }
+
+        const reverse3 = str => [...str].reverse().join('');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let msg = 'hello';
+        let info = 'lions';
+        let temp = msg;
+        msg = info;
+        info = temp;
+
+
+        let a = 100;
+        let b = 200;
+
+        [a, b] = [b, a];
+
+        // a 는 300
+        a = a + b;
+
+        // b 는 300 - 200 == 100
+        b = a - b;
+
+        // a 는 300 - 100 === 200
+        a = a - b;
+    </script>
+</body>
+
+</html>
