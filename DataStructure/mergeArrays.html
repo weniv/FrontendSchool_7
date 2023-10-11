@@ -29,12 +29,12 @@
             let i = 1;
             let j = 1;
 
-            // [1,2,3] [2,3,4]
+            // [1,2,3,4] [2,3,4]
             // array1Item과 array2Item둘 모두 undefined가 되면 종료
-            while (array1Item || array2Item) {
+            while (typeof array1Item === 'number' || typeof array1Item === array2Item) {
                 // [1,2,2,3,3]
                 // array1Item의 원소가 array2Item의 원소보다 작다면 먼저 push 한다.
-                if (array1Item < array2Item) {
+                if (array2Item === undefined || array1Item < array2Item) {
                     mergedArray.push(array1Item);
                     array1Item = array1[i];
                     i++;
@@ -45,6 +45,8 @@
                     array2Item = array2[j];
                     j++;
                 }
+
+                console.log(array1Item, array2Item);
             }
 
             return mergedArray;

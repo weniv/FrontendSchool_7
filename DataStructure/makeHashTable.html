@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class HashTable {
+            constructor(size) {
+                this.data = new Array(size);
+                // {hello : 'jaehyun'}
+                // linked list 를 구현하기 위해 3중 배열로 만듭니다.
+                // [[['hello', 'jaehyun'], ['hello2', 'jaehyun']], [['good', 'jaehyun'], ['good2', 'jaehyun']]]
+            }
+
+            // 해쉬 함수
+            // 'hello'
+            generateRandomHash(key) {
+                let hash = 0;
+
+                for (let i = 0; i < key.length; i++) {
+                    hash = (hash + key.charCodeAt(i) * i) % this.data.length
+                }
+
+                return hash
+            }
+
+
+            // insertion
+            set(key, value) {
+                // 데이터의 주소값
+                const address = this.generateRandomHash(key);
+
+                // 아직 사용하지 않은 주소(해쉬)라면
+                if (!this.data[address]) {
+                    this.data[address] = [];
+                    this.data[address].push([key, value]);
+
+                    return this.data;
+
+                    // 이미 사용하고 있는 주소라면!
+                } else {
+                    // 여러개의 데이터가 이미 같은 주소를 사용하는 경우, 그리고 같은 키를 사용하는경우 덮어버리기
+                    for (let i = 0; i < this.data[address].length; i++) {
+                        if (this.data[address][i][0] === key) {
+                            this.data[address][i][1] = value;
+
+                            return this.data
+                        }
+                    }
+                    // 내가 사용하는 키가 처음 사용된 경우
+                    this.data[address].push([key, value]);
+                    return this.data;
+                }
+            }
+
+            // 키를 이용해 값을 가져옵니다.
+            get(key) {
+                // 데이터의 주소값
+                const address = this.generateRandomHash(key);
+                const target = this.data[address];
+
+                if (target) {
+                    for (let i = 0; i < target.length; i++) {
+                        // 찾고자하는 데이터의 키와 저장된 키의 값이 동일한지 확인합니다.
+                        if (target[i][0] === key) {
+                            return target[i][1]
+                        }
+                    }
+                }
+                return undefined
+            }
+
+
+            // 모든 키값을 배열로 반환합니다.
+            keys() {
+                const keyArray = [];
+                const target = this.data.filter(item => item !== undefined);
+                // 우선 모든 데이터를 순회합니다.
+                for (let i = 0; i < target.length; i++) {
+                    // if (this.data[i]) {
+                    // linked list 가 있는경우
+                    if (target[i].length > 1) {
+
+                        for (let j = 0; j < target[i].length; j++) {
+
+                            // i 데이터 안 리스트의 j 번째 키값
+                            keyArray.push(target[i][j][0]);
+                        }
+
+                        // 같은 주소에 데이터가 하나만 있을 경우
+                    } else {
+                        keyArray.push(target[i][0][0]);
+                    }
+                    // }
+                }
+
+                return keyArray;
+            }
+        }
+        const hashTable = new HashTable(10);
+
+        hashTable.set('hello1', 'lions1');
+        hashTable.set('hello2', 'lions2');
+        hashTable.set('hello3', 'lions3');
+        hashTable.set('hello4', 'lions4');
+        hashTable.set('hello5', 'lions5');
+
+
+    </script>
+</body>
+
+</html>
