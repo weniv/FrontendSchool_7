@@ -1,0 +1,34 @@
+/* 페이지 타이틀 */
+.img-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.img-title img {
+    display: block;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 29px;
+}
+
+.line {
+    box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.2);
+    border-bottom: 2px solid #ff4f6e;
+}
+
+/* footer */
+footer p {
+    text-align: center;
+    font-size: 12px;
+    color: #677880;
+}
+
+/* main */
+main {
+    width: 392px;
+    margin: 71px auto 52px;
+}
+
+.form-wrap input {
+    margin-bottom: 24px;
+}

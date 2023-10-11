@@ -1,0 +1,15 @@
+/* header */
+.header {
+    background-color: #fff;
+}
+
+.header .max-width {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    width: 156px;
+}

@@ -1,0 +1,151 @@
+/* 공통 */
+body {
+  margin: 0;
+  background: #fffaf0;
+}
+
+button {
+  border: 0;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* a-button  */
+/* .btn-join,
+.btn-login,
+.btn-logout */
+[class^="btn"] {
+  display: inline-block;
+  padding: 1em 1em 1em 2.8em;
+  text-decoration: none;
+  color: #5a6a72;
+}
+
+.btn-join {
+  background: url(./images/icon-join.svg) no-repeat 0.8em center/ 2em;
+}
+
+.btn-login {
+  background: url(./images/icon-login.svg) no-repeat 0.8em center/ 2em;
+}
+
+.btn-logout {
+  background: url(./images/icon-logout.svg) no-repeat 0.8em center/ 2em;
+}
+
+/* button */
+.black-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: #29363d;
+  color: white;
+  height: 48px;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* .black-btn:not(:disabled) {
+  cursor: pointer;
+} */
+.black-btn:disabled {
+  opacity: 0.2;
+}
+
+/* form */
+.label-style,
+.input-style {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-style {
+  border: none;
+  box-shadow: 0 1px 0 0 #677880;
+  height: 48px;
+  transition: all 0.2s;
+  border-radius: 4px 4px 0 0;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.input-style:hover {
+  box-shadow: 0 2px 0 0 #2e6ff2;
+}
+
+.input-style:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2e6ff2;
+  border-radius: 4px;
+}
+
+.label-style {
+  font-size: 14px;
+  color: #29363d;
+  margin-bottom: 8px;
+}
+
+/* layout ------------------------------- */
+.hello {
+  display: inline-block;
+}
+
+.hello strong {
+  box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.5);
+}
+
+@media (min-width: 541px) {
+  .hello::after {
+    content: "|";
+    color: #d8ddde;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hello {
+    position: absolute;
+    top: 140px;
+    right: 34px;
+  }
+}
+
+.svg {
+  display: block;
+  width: auto;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.svg .svg-heart {
+  transform: scale(1);
+  stroke: transparent;
+  stroke-width: 0px;
+  transform-origin: 50% 20px;
+  z-index: 10;
+  animation: heart 0.5s cubic-bezier(0.23, 1.08, 0.26, 0.01) infinite alternate;
+}
+
+@keyframes heart {
+  to {
+    stroke: #ffc7d1;
+    stroke-width: 2px;
+    transform: scale(3);
+  }
+}
