@@ -12,10 +12,6 @@ export const useLogin = () => {
 
     const { dispatch } = useAuthContext();
 
-    setInterval(() => {
-        console.log(appAuth.currentUser);
-    }, 1000);
-
     const login = (email, password) => {
         setIsPending(true);
         // 회원가입 처리 함수

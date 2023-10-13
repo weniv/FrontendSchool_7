@@ -24,9 +24,10 @@ const AuthContextProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = appAuth.onAuthStateChanged(function (user) {
-            if (user) {
-                dispatch({ type: 'authIsReady', payload: user });
-            }
+            // 유저 정보가 있을때만 authIsReady 값이 true 가 됨으로, 컴포넌트 랜더링이 되지 않습니다.
+            // if (user) {
+            dispatch({ type: 'authIsReady', payload: user });
+            // }
         });
 
         return () => {
