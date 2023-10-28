@@ -1,0 +1,58 @@
+.App {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: black url('assets/img/tree.svg') center/contain no-repeat;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.board {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    transform: translate(-50%, 0);
+    border-radius: 20px;
+    background: ivory;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.new-apple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    border: none;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    background: royalblue url('assets/img/apple.svg') center/cover;
+    color: white;
+    cursor: pointer;
+}
+
+.apple {
+    position: absolute;
+    background: url('assets/img/apple.svg') center/cover;
+    color: rgb(187, 56, 0);
+    text-align: center;
+    font-weight: bolder;
+    padding: 25px;
+    cursor: move;
+    user-select: "none";
+    color: white;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
