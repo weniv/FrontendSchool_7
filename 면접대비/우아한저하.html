@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <video controls poster="test.jpeg">
+        <source src="test.mp4" type="video/mp4">
+        <source src="test.webm" type="video/webm">
+        <p>
+            브라우저가 video 기술을 지원하지 않습니다.
+            <a href="test.mp4">여기서</a> 비디오를 다운받을 수 있습니다.
+        </p>
+    </video>
+
+
+    <script>
+        const canvas = document.createElement('canvas');
+
+        const ctx = canvas.getContext('webgl');
+
+        if (ctx) {
+            document.body.appendChild(canvas);
+        } else {
+            document.body.innerHTML = '이 사이트는 구형 브라우저에서 사용이 어렵습니다! 브라우저를 업데이트 해주세요 :)'
+        }
+    </script>
+</body>
+
+</html>
